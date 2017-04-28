@@ -1,0 +1,36 @@
+此结构使用一个json类型保存数据。具体如下
+
+{
+	module_id:此表单对应模型的Id,也是根据此值唯一标识一个表单
+	module_name:对应的模型名称,
+	version:版本号,
+	content:[ //结构的数组,每个控件使用一个json表示，允许容器控件有下级控件
+		{
+			id: 每一个控件的唯一标识，integer型，
+			type:此控件的类型,有效的内容有:edit、multiedit、date、time、datetime、checkbox、radio、addess、location、attachment、relevance、switch、picture、paralleling、subform、separate, 不区分大小写。
+
+			x: 相对容器位置，保留
+			y: 相对容器位置，保留
+			width: 宽度，保留
+			higth: 长度，仅multiedit有效
+			appearance:checkbox、radio 有效，指明选择方式的外观特性
+
+			defaultvalue: 默认值
+			isfillin: boolean值，指明此控件是否必填
+			texttype: 输入值的类型
+			efficacy:检验码，用以检测输入是否有效
+
+			title:此控件的名称，显示给客户看
+			hint:此控件在客户方显示时的提示值
+
+			isfixed:boolean值，指明此控件是否固定无法删除。固定的值无法修改名称与被删除
+			datasource:指明数据源
+
+			content:[]  仅容器类控件有意义
+		},
+	],
+	thumbnails:{ 缩略显示
+		title:[],
+		summary:[]
+	}
+}

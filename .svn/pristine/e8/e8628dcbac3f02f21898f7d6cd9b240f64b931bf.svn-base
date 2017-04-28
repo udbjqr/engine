@@ -1,0 +1,252 @@
+package com.jg.workflow.task;
+
+import com.alibaba.fastjson.JSONObject;
+import com.jg.common.result.ResultCode;
+import com.jg.common.util.StringUtil;
+import com.jg.identification.Company;
+import com.jg.identification.Context;
+import com.jg.identification.User;
+import com.jg.workflow.event.TaskInsertAuditEvent;
+import com.jg.workflow.exception.ProcessDefinitionNotIntegrity;
+import com.jg.workflow.exception.ProcessInstanceIsNULL;
+import com.jg.workflow.exception.TaskIsNull;
+import com.jg.workflow.exception.TaskIsOver;
+import com.jg.workflow.process.ProcessDetail;
+import com.jg.workflow.process.ProcessImpl;
+import com.jg.workflow.process.definition.ProcessDefinitionImpl;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import static com.jg.common.sql.DBHelperFactory.DB_HELPER;
+import static com.jg.workflow.event.EventMangerImpl.EVENT_MANGER;
+import static com.jg.workflow.process.ProcessFactory.PROCESS_FACTORY;
+
+/**
+ * 任务管理器对象.
+ *
+ * @author yimin
+ */
+
+public class TaskManagerImpl implements TaskManager {
+	private static final Logger log = LogManager.getLogger(TaskManagerImpl.class.getName());
+	private static final Map<Company, TaskManagerImpl> MANAGERS = new HashMap<>();
+
+	private final Company company;
+
+	private TaskManagerImpl(Company company) {
+		this.company = company;
+
+		init();
+	}
+
+	private void init() {
+	}
+
+	/**
+	 * 获得企业对应的任务管理器
+	 *
+	 * @param company 企业对象
+	 * @return 对应的任务管理器对象
+	 */
+	public synchronized static TaskManagerImpl getInstance(Company company) {
+		if (company == null) {
+			log.warn("企业为空。");
+			return null;
+		}
+
+		if (!MANAGERS.containsKey(company)) {
+			MANAGERS.put(company, new TaskManagerImpl(company));
+		}
+
+		return MANAGERS.get(company);
+	}
+
+	@Override
+	public ResultCode handle(int taskId, JSONObject variables) {
+		TaskImpl task = checkAndGetTaskNormal(taskId);
+		checkTaskIsNomal(task);
+
+		return task.run(variables);
+	}
+
+	@Override
+	public void complete(int taskId) {
+		TaskImpl task = checkAndGetTaskNormal(taskId);
+		checkTaskIsNomal(task);
+
+		task.complete();
+	}
+
+	private TaskImpl checkAndGetTaskNormal(int taskId) {
+		ProcessImpl process = PROCESS_FACTORY.getProcessByTaskId(taskId);
+		if (process == null) {
+			throw new ProcessInstanceIsNULL("获得流程实例对象异常.请求的任务ID：" + taskId);
+		}
+
+		TaskImpl task = process.getActivitiTaskById(taskId);
+		if (task == null) {
+			throw new TaskIsNull(taskId, process.getId());
+		}
+
+		return task;
+	}
+
+	private void checkTaskIsNomal(TaskImpl task) {
+		if (task.isOver()) {
+			throw new TaskIsOver(task.getId());
+		}
+	}
+
+	@Override
+	public Task setAssignee(int taskId, String users) {
+		TaskImpl task = checkAndGetTaskNormal(taskId);
+		checkTaskIsNomal(task);
+
+		task.setOperators(users);
+
+		return task;
+	}
+
+	@Override
+	public List<Task> getMyTasks() {
+		List<Task> tasks = new ArrayList<>();
+
+		//noinspection ConstantConditions
+		DB_HELPER.selectWithRow("select distinct id from task t where  t.flag in (0,2,3) and exists(select 1 from process_run_control c where t.id = c.task_id and c.operator_id =  " + Context.getCurrentOperatorUser().getId() + ")", set -> {
+			TaskImpl task = checkAndGetTaskNormal(set.getInt("id"));
+			checkTaskIsNomal(task);
+			tasks.add(task);
+		});
+
+		return tasks;
+	}
+
+	@Override
+	public void insertAudit(int taskId, String users) {
+		TaskImpl task = checkAndGetTaskNormal(taskId);
+		checkTaskIsNomal(task);
+		ProcessImpl process = (ProcessImpl) task.getProcess();
+
+
+		Integer acc = DB_HELPER.selectOneValues("select COALESCE(accumulative,0) + 1 as acc from process_insert_audit where task_id = " + taskId);
+		//noinspection ConstantConditions
+		DB_HELPER.update(String.format("insert into process_insert_audit(task_id, operators, sponsor, flag,accumulative) VALUES (%d,%s,%d,1,%d);", taskId, DB_HELPER.getString(users), Context.getCurrentOperatorUser().getId(), acc));
+
+		task.setOperators(users);
+		ProcessDetail processDetail = process.getDetail(taskId);
+		//noinspection ConstantConditions
+		processDetail.set("employee_id", Context.getCurrentOperatorUser().getId());
+		processDetail.set("flag", 5);
+		process.saveDetail(processDetail);
+
+		task.set("flag", 2);
+		task.flush();
+
+		//noinspection ConstantConditions
+		EVENT_MANGER.triggerEvent(new TaskInsertAuditEvent(task, Context.getCurrentOperatorUser().getId()));
+	}
+
+	private void checkProcessIncludeTaskDefinition(ProcessImpl process, int taskDefinitionId) {
+		ProcessDefinitionImpl processDefinition = (ProcessDefinitionImpl) process.getDefinition();
+
+		if (processDefinition.getTaskDefinition(taskDefinitionId) == null) {
+			throw new ProcessDefinitionNotIntegrity("当前流程不包括此节点定义，流程Id:" + process.getId() + " 节点Id" + taskDefinitionId);
+		}
+	}
+
+	@Override
+	public void replaceAudit(int taskId, String users) {
+		if (StringUtil.isEmpty(users)) {
+			throw new RuntimeException("此操作需要指定具体的操作人.当前传入为空");
+		}
+
+		TaskImpl task = (TaskImpl) setAssignee(taskId, users);
+
+		//noinspection ConstantConditions
+		DB_HELPER.update(String.format("insert into process_detail_data(execution_id, employee_id, flag, remark) VALUES (%s,%s,2,'代签移交');",
+			DB_HELPER.getString(task.getProcess().getId()),
+			DB_HELPER.getString(Context.getCurrentOperatorUser().getId())));
+	}
+
+	@Override
+	public void reject(int taskId) {
+		TaskImpl task = checkAndGetTaskNormal(taskId);
+		ProcessImpl process = (ProcessImpl) task.getProcess();
+
+		jumpToTask(process, taskId, process.getDefinition().getStartNode().getId(), 2);
+	}
+
+	@Override
+	public void backTo(int taskId, int toTaskDefinitionId) {
+		TaskImpl task = checkAndGetTaskNormal(taskId);
+		ProcessImpl process = (ProcessImpl) task.getProcess();
+
+		jumpToTask(process, taskId, toTaskDefinitionId, 3);
+	}
+
+	/**
+	 * 这个动作将跳转至流程的某一个位置.
+	 */
+	private void jumpToTask(ProcessImpl process, int fromTaskId, int toTaskDefinitionId, int flag) {
+		checkProcessIncludeTaskDefinition(process, toTaskDefinitionId);
+
+		ProcessDetail detail = process.getDetail(fromTaskId);
+		detail.set("flag", flag);
+		//noinspection ConstantConditions
+		detail.set("employee_id", Context.getCurrentOperatorUser().getId());
+
+		detail.flush();
+
+		process.jumpToTask(fromTaskId, toTaskDefinitionId, false);
+	}
+
+	@Override
+	public Process getProcessInstance(int taskId) {
+		return null;
+	}
+
+	@Override
+	public void addCopyTo(int taskId, User user) {
+		DB_HELPER.update(String.format("INSERT INTO task_copy_to (task_id, user_id, user_name) VALUES (%s,%d,%s);",
+			DB_HELPER.getString(taskId),
+			user.getId(),
+			DB_HELPER.getString(user.get("login_name"))));
+	}
+
+	@Override
+	public List<User> getCopyToUsers(int taskId) {
+		List<User> users = new ArrayList<>();
+		DB_HELPER.selectWithRow("select user_id from task_copy_to where task_id = " + DB_HELPER.getString(taskId), set -> users.add(Context.getUserById(set.getInt(1))));
+
+		return users;
+	}
+
+	@Override
+	public void removeCopyTo(int taskId, User user) {
+		DB_HELPER.update(String.format("delete from task_copy_to where task_id = %s and user_id = %d",
+			DB_HELPER.getString(taskId), user.getId()));
+	}
+
+	@Override
+	public Company getCompany() {
+		return company;
+	}
+
+	@Override
+	public void setEmptyTaskOperator(int taskId, String operator) {
+		int count = DB_HELPER.selectOneValues("select count(*) from process_set_operator where flag = 0 and task_id = " + taskId);
+
+		if (count == 0) {
+			throw new RuntimeException("当前任务节点无法使用此方法。taskId:" + taskId);
+		}
+
+		DB_HELPER.update(String.format("update process_set_operator set operators = %s,flag = 1 where task_id = %d", DB_HELPER.getString(operator), taskId));
+
+		setAssignee(taskId, operator);
+	}
+}

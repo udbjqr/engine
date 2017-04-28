@@ -1,0 +1,1 @@
+INSERT INTO public.module (id, company_id, module_name, remark, flag, create_time, create_user, update_time, update_user, form_structure) VALUES (1, 1, '测试模块', '', 1, '2017-04-19 11:23:46.232800', 1, null, 1, null);

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="desginExplorer:war">
+    <output-path>$PROJECT_DIR$/designExplorer/target</output-path>
+    <root id="archive" name="designer.war">
+      <element id="artifact" artifact-name="desginExplorer:war exploded" />
+    </root>
+  </artifact>
+</component>

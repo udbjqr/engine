@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="desginExplorer:war exploded">
+    <output-path>$PROJECT_DIR$/designExplorer/target/designer</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="desginExplorer" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.8.2" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.8.2" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.0.0" />
+          <element id="archive" name="identification-1.0.jar">
+            <element id="module-output" name="identification" />
+          </element>
+          <element id="archive" name="workflow-1.0.jar">
+            <element id="module-output" name="workflow" />
+          </element>
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.31" />
+          <element id="archive" name="common-1.0.jar">
+            <element id="module-output" name="common" />
+          </element>
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/designExplorer/target/designer/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="desginExplorer/web/Web" />
+    </root>
+  </artifact>
+</component>

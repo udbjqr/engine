@@ -1,0 +1,82 @@
+package com.jg.common.result;
+
+
+import com.alibaba.fastjson.JSONObject;
+
+/**
+ * 返回结果
+ */
+public final class ResultCode {
+	public static final ResultCode NORMAL = new ResultCode(0, "正常结束");
+	public static final ResultCode ISNULL = new ResultCode(1, "返回结果为空");
+	public static final ResultCode NOPARAMETER = new ResultCode(2, "未指定参数，请检查", false);
+	public static final ResultCode NOSETREQUESTTYPE = new ResultCode(3, "未写请求参数，请检查", false);
+	public static final ResultCode UNKNOW = new ResultCode(-1, "未知错误", false);
+	public static final ResultCode NOTLOGIN = new ResultCode(4, "用户未登录", false);
+	public static final ResultCode NOTFOUNDOBJECT = new ResultCode(101, "未找到指定对象。", false);
+	public static final ResultCode SUCCESS = new ResultCode(0, "成功");
+	private JSONObject data;
+	private final int code;
+	private final String message;
+	private final boolean success;
+	private String value = null;
+
+	public ResultCode() {
+		this(0, "OK");
+	}
+
+	public ResultCode(int code, String message) {
+		this(code, message, true);
+	}
+
+	public ResultCode(int code, String message, Boolean success) {
+		data = new JSONObject();
+		this.code = code;
+		this.message = message;
+		this.success = success;
+	}
+
+	public ResultCode(int code, String message, Boolean success, JSONObject data) {
+		this(code, message, success);
+		this.data = new JSONObject(data);
+	}
+
+	public boolean isSuccess() {
+		return success;
+	}
+
+	public ResultCode put(String name, Object value) {
+		data.put(name, value);
+		return this;
+	}
+
+	/**
+	 * 需要双引号时，自己增加.
+	 * @param value 传入的值。可以使用String的json格式。
+	 * @return 对象本身
+	 */
+	public ResultCode setValue(String value) {
+		this.value = value;
+		return this;
+	}
+
+	@Override
+	public String toString() {
+		String string = "{\"code\":" + code;
+		if (value == null) {
+			string += ((data == null || data.isEmpty()) ? "" : "," + "\"data\":" + data.toString()) + "}";
+		} else {
+			string += "," + "\"data\":" + value + "}";
+		}
+
+		return string;
+	}
+
+	public int getCode() {
+		return code;
+	}
+
+	public ResultCode clone() {
+		return new ResultCode(code, message, success, data);
+	}
+}

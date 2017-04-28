@@ -1,0 +1,29 @@
+访问地址根目录：
+http://192.168.1.198:8080/designServlet/
+
+访问方式：post
+参数方式：
+传输内容： para:{type：请求类型,。。。。。}
+
+所有返回值：
+{
+	'code' 返回值代码
+	'message' 字符串的后台返回消息
+	'success': boolean   表明是否成功
+	'data': 返回值
+}
+
+模块表单：
+url：FormDesign
+读：
+	'type':'load',
+	'id':模型的id.
+保存：
+	'type':'save',
+	'id':'id',
+	'content':模型表单的对象。
+列表：
+	'type':'list'
+	返回：
+		{.....'values':[{'id':id,'name':module_name}]}
+
