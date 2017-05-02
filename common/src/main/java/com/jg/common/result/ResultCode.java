@@ -48,7 +48,12 @@ public final class ResultCode {
 
 	public ResultCode(int code, String message, Boolean success, JSONObject data) {
 		this(code, message, success);
-		this.data = new JSONObject(data);
+
+		if (data == null) {
+			this.data = null;
+		} else {
+			this.data = new JSONObject(data);
+		}
 	}
 
 	public boolean isSuccess() {

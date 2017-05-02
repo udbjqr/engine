@@ -40,7 +40,7 @@ public class ExpressionControl implements Bindings {
 
 	private final List<Resolver> resolvers = new LinkedList<>();
 	private final Result result = new Result();
-	private final Map<String,Object> map = new HashMap<>();
+	private final Map<String, Object> map = new HashMap<>();
 
 	public ExpressionControl(Process process) {
 		this.process = process;
@@ -49,7 +49,7 @@ public class ExpressionControl implements Bindings {
 	}
 
 	private void init() {
-		map.put("result",result);
+		map.put("result", result);
 
 		addResolver(new ProcessVarResolver());
 		addResolver(new SystemVarResolver());
@@ -67,10 +67,12 @@ public class ExpressionControl implements Bindings {
 		Object value;
 		for (Resolver resolver : resolvers) {
 			if ((value = resolver.getValue(process, (String) name)) != null) {
+				log.trace("返回对象：" + value);
 				return value;
 			}
 		}
 
+		log.trace("从map内尝试获取。");
 		return map.get(name);
 	}
 
@@ -80,7 +82,7 @@ public class ExpressionControl implements Bindings {
 
 	@Override
 	public Object put(String name, Object value) {
-		return map.put(name,value);
+		return map.put(name, value);
 	}
 
 	@Override

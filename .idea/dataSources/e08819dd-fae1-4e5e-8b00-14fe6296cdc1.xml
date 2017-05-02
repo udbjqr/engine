@@ -9,7 +9,7 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-04-28.14:42:16.196</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-05-02.10:38:26.011</IntrospectionTimestamp>
       <IntrospectionStateNumber>1505</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
@@ -916,7 +916,7 @@ user_id</ColNames>
     </column>
     <column id="155" parent="33" name="sponsor">
       <Position>4</Position>
-      <Comment>需要设置操作人的操作者，通常为最后执行过程中的执行人</Comment>
+      <Comment>需要设置操作人的操作者，通常为最后执行过程中的执行人 </Comment>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>986</StateNumber>

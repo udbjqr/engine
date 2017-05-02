@@ -35,14 +35,12 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 		return id;
 	}
 
-	protected ProcessDefinitionImpl(AbstractPersistenceFactory factory) {
+	ProcessDefinitionImpl(AbstractPersistenceFactory factory) {
 		super(factory);
 	}
 
-	public ProcessDefinitionImpl deploy(Model model, int companyId) {
+	public ProcessDefinitionImpl deploy(Model model, int companyId, JSONObject content) {
 		if ((int) model.get("flag") == 0) {
-
-			JSONObject content = model.get("content");
 			set("content", content);
 			set("view_infomation", model.get("view_infomation"));
 			set("name", model.get("name"));
@@ -51,8 +49,6 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 			set("category", model.get("category"));
 			set("description", model.get("description"));
 			set("flag", 1);
-
-			buildStructure(content);
 
 			model.set("flag", 1);
 			model.flush();
@@ -64,6 +60,11 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 	}
 
 	private void buildStructure(JSONObject content) {
+		links.clear();
+		tasks.clear();
+		startNode = null;
+		endNode = null;
+
 		JSONArray array = content.getJSONArray("nodes");
 		array.forEach(t -> {
 			JSONObject task = (JSONObject) t;

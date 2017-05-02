@@ -36,19 +36,18 @@ import static com.jg.common.result.ResultCode.UNKNOWN;
  */
 public abstract class BaseServlet extends HttpServlet {
 	private final static Logger log = LogManager.getLogger(BaseServlet.class.getName());
-	protected static final String WRITER = "writer";
-	protected static final String TYPE = "type";
-	protected static final String REQUEST = "request";
-	protected static final String RESPONSE = "response";
+	private static final String WRITER = "writer";
+	private static final String TYPE = "type";
+	private static final String REQUEST = "request";
+	private static final String RESPONSE = "response";
 	protected static final String USER = "user";
 	protected static final String COMPANY = "company";
-	protected static final String COMPANY_ID = "company_id";
+	static final String COMPANY_ID = "company_id";
 	protected static final String JSON_DATA = "jsonData";
 	protected static final String CONTENT = "content";
 	protected static final String NAME = "name";
 	protected static final String ID = "id";
-	protected static final String DATA = "data";
-	protected static final String RESULTLIST = "list";
+	protected static final String RESULT_LIST = "list";
 
 	@Override
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {

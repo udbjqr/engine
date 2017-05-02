@@ -50,7 +50,7 @@ public class FormDesign extends BaseServlet {
 	private ResultCode list(JSONObject jsonData, Company company, ServletData servletData) {
 		User user = (User) servletData.get(USER);
 
-		return SUCCESS.clone().setListToData(RESULTLIST, MODULE_FACTORY.getAllObjects(user), "id", "module_name");
+		return SUCCESS.clone().setListToData(RESULT_LIST, MODULE_FACTORY.getAllObjects(user), "id", "module_name");
 	}
 
 	private ResultCode saveToModule(JSONObject jsonData, Company company, ServletData servletData) {

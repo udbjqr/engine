@@ -7,7 +7,7 @@
 	<!-- Copyright 1998-2017 by Northwoods Software Corporation. -->
 	<meta charset="UTF-8">
 	<script src="go.js"></script>
-	<script src="qwest.min.js"></script>
+	<script src="axios.min.js"></script>
 
 	<script id="code">
 		function init() {
@@ -100,7 +100,7 @@
 
 			// define the Node templates for regular nodes
 			var lightText = 'whitesmoke';
-			myDiagram.nodeTemplateMap.add("Task",  // the default category
+			myDiagram.nodeTemplateMap.add("UserTask",  // the default category
 				$(go.Node, "Spot", nodeStyle(),
 					// the main object is a Panel that surrounds a TextBlock with a rectangular Shape
 					$(go.Panel, "Auto",
@@ -260,7 +260,7 @@
 						nodeTemplateMap: myDiagram.nodeTemplateMap,  // share the templates used by myDiagram
 						model: new go.GraphLinksModel([  // specify the contents of the Palette
 							{category: "Start", text: "Start"},
-							{category: "Task",text: "任务"},
+							{category: "UserTask", text: "任务"},
 							{category: "Serial"},
 							{category: "Parallel"},
 							{category: "End", text: "End"},
@@ -291,22 +291,23 @@
 		}
 		// Show the diagram's model in JSON format that the user may edit
 		function save() {
-			document.getElementById("mySavedModel").value = myDiagram.model.toJson();
+
+			let json = myDiagram.model.toJson();
+			document.getElementById("mySavedModel").value = json;
 			myDiagram.isModified = false;
 			let parameter = {
 				'name': 'name',
 				'type': 'save',
-				'description':'description',
-				'view_infomation':'view_infomation',
-				'content':document.getElementById("mySavedModel").value
+				'description': 'description',
+				'view_infomation': 'view_infomation',
+				'content': JSON.parse(json)
 			};
-			qwest.post('/designServlet/FlowDesign',parameter)
-				.then(function(xhr, response) {
-					console.log(response);
-				})
-				.catch(function(e, xhr, response) {
-					console.log(e,xhr,response);
-				});
+
+			axios({
+				method: 'post',
+				url: '/designServlet/FlowDesign',
+				data: parameter
+			});
 		}
 		function load() {
 			myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
@@ -369,6 +370,10 @@
 	      对应操作
 	      <input id="handle" value="" onchange="setPort()"/>
 	      </p>
+	      <p>
+	      操作人
+	      <input id="assignees" value="" onchange="setPort()"/>
+	      </p>
       </div>
     </span>
 	</div>
@@ -383,13 +388,13 @@
 	<button onclick="load()">Load</button>
 	Diagram Model saved in JSON format:
 	<textarea id="mySavedModel" style="width:100%;height:300px">
-{ "class": "go.GraphLinksModel",
+{"class": "go.GraphLinksModel",
   "linkFromPortIdProperty": "fromPort",
   "linkToPortIdProperty": "toPort",
   "nodeDataArray": [
 {"key":-2, "category":"Start", "loc":"175 0", "text":"Start"},
-{"key":1, "category":"Task","loc":"175 100", "text":"申请","module":1,"handle":1},
-{"key":2, "category":"Task","loc":"175 200", "text":"确定","module":1,"handle":2},
+{"key":1, "category":"UserTask","loc":"175 100", "text":"申请","module":1,"handle":1,"assignees": "CurrentOperator"},
+{"key":2, "category":"UserTask","loc":"175 200", "text":"确定","module":1,"handle":2,"assignees": "R1"},
 {"key":-1, "category":"End", "loc":"175 386", "text":"End"}
  ],
   "linkDataArray": [

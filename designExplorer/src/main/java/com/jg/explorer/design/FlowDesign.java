@@ -6,6 +6,8 @@ import com.jg.explorer.BaseServlet;
 import com.jg.explorer.HttpRequestType;
 import com.jg.identification.Company;
 import com.jg.workflow.Context;
+import com.jg.workflow.exception.ModelHasbeenDeployed;
+import com.jg.workflow.process.definition.ProcessDefinition;
 import com.jg.workflow.process.model.Model;
 import com.jg.workflow.process.model.ModelManager;
 import org.apache.logging.log4j.LogManager;
@@ -14,6 +16,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.annotation.WebServlet;
 
 import static com.jg.common.result.ResultCode.SUCCESS;
+import static com.jg.common.result.ResultCode.UNKNOWN;
 
 /**
  * 提供流程设计WEB接口
@@ -50,16 +53,37 @@ public class FlowDesign extends BaseServlet {
 	}
 
 	private ResultCode saveToModel(Model model, JSONObject jsonData, Company company) {
+		JSONObject content = (JSONObject) jsonData.get(CONTENT);
+		content.put("name", jsonData.get(NAME));
+
 		model.set(NAME, jsonData.get(NAME));
 		model.set("category", jsonData.get("category"));
 		model.set("company_id", company.getId());
 		model.set("description", jsonData.get("description"));
-		model.set(CONTENT, jsonData.get(CONTENT));
+		model.set(CONTENT, content);
 		model.set("view_infomation", jsonData.get("view_infomation"));
 
 		model.flush();
+		ProcessDefinition definition = null;
+		try {
+			definition = Context.getProcessManager(company).deploymentProcess(model.get(ID));
+		} catch (ModelHasbeenDeployed e) {
+			log.error("部署出现异常：", e);
+			return UNKNOWN;
+		}
 
+		ResultCode resultCode = SUCCESS.clone().put(ID, model.get(ID));
+		if (definition == null) {
+			resultCode.put("process_definitionID", definition.getId());
+		}
 
-		return SUCCESS.clone().put(ID, model.get(ID));
+		return resultCode;
 	}
 }
+
+
+
+
+
+
+

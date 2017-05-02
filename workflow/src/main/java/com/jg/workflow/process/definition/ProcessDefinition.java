@@ -1,5 +1,6 @@
 package com.jg.workflow.process.definition;
 
+import com.alibaba.fastjson.JSONObject;
 import com.jg.common.persistence.Persistence;
 import com.jg.workflow.process.model.Model;
 
@@ -18,6 +19,6 @@ public interface ProcessDefinition extends Persistence {
 
 	TaskDefinition getTaskDefinition(Integer taskId);
 
-	ProcessDefinitionImpl deploy(Model model, int companyId);
+	ProcessDefinitionImpl deploy(Model model, int companyId, JSONObject content);
 
 }

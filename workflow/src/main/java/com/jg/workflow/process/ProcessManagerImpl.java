@@ -1,5 +1,7 @@
 package com.jg.workflow.process;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.jg.common.util.StringUtil;
 import com.jg.identification.Company;
 import com.jg.identification.Context;
@@ -94,10 +96,53 @@ public class ProcessManagerImpl implements ProcessManager {
 
 		ProcessDefinitionImpl definition = PROCESS_DEFNITION_FACTORY.getNewObject(Context.getCurrentOperatorUser());
 
-		definition.deploy(model, company.getId()).flush();
+		definition.deploy(model, company.getId(), getContentFromGOJS(model.get("content"))).flush();
 
 		return definition;
 	}
+
+	/**
+	 * 将GoJS生成的json格式转换成流程必须的JSON格式。
+	 *
+	 * @param content GoJS生成的json格式
+	 * @return 流程需要的Json格式
+	 */
+	private JSONObject getContentFromGOJS(JSONObject content) {
+		JSONObject newC = new JSONObject();
+
+		newC.put("name", content.get("name"));
+
+		int i = 2001;
+		JSONArray array = new JSONArray();
+		for (Object object : ((JSONArray) content.get("linkDataArray"))) {
+			JSONObject link = (JSONObject) object;
+			JSONObject newLink = new JSONObject();
+
+			newLink.put("id", i++);
+			newLink.put("to", link.get("to"));
+			newLink.put("from", link.get("from"));
+			array.add(newLink);
+		}
+		newC.put("links", array);
+
+		array = new JSONArray();
+		for (Object object : ((JSONArray) content.get("nodeDataArray"))) {
+			JSONObject data = (JSONObject) object;
+			JSONObject newData = new JSONObject();
+
+			newData.put("id", data.get("key"));
+			newData.put("name", data.get("text"));
+			newData.put("type", ((String) data.get("category")).toUpperCase());
+			newData.put("handle", data.get("module"));
+			newData.put("assignees", data.get("assignees"));
+			newData.put("module", data.get("module"));
+			array.add(newData);
+		}
+		newC.put("nodes", array);
+
+		return newC;
+	}
+
 
 	@Override
 	public void suspendProcessDefinition(int deploymentId) {
