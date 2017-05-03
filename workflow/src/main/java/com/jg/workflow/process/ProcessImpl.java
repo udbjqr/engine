@@ -44,7 +44,7 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 
 	private int id;
 	private List<User> attentionUsers = new ArrayList<>();
-	private List<ProcessDetail> details;
+	private List<ProcessDetail> details = new ArrayList<>();
 	private ProcessDefinitionImpl definition;
 	//流程当中当前活跃的任务
 	private List<TaskImpl> activityTasks = new ArrayList<>();
@@ -172,7 +172,6 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 		}
 	}
 
-
 	@Override
 	public Object getVariable(String name) {
 		return ((JSONObject) get("variable")).get(name);
@@ -185,9 +184,6 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 		detail.set("task_id", taskId);
 		detail.set("flag", 0);
 
-		if (details == null) {
-			details = new ArrayList<>();
-		}
 		details.add(detail);
 
 		return detail;
@@ -215,8 +211,7 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 		set("data", new JSONObject());
 		set("flag", 1);
 		flush();
-
-		setIdBySequence();
+		id = get("id");
 
 		EVENT_MANGER.triggerEvent(new ProcessStartEvent(this));
 		isStart = true;
@@ -447,6 +442,12 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 	 */
 	public boolean IsCancel() {
 		return get("flag").equals(9);
+	}
+
+
+	@Override
+	public String toString() {
+		return "id:" + id + "\t definition:" + definition.getId();
 	}
 }
 

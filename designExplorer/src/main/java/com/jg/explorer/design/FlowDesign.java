@@ -64,7 +64,7 @@ public class FlowDesign extends BaseServlet {
 		model.set("view_infomation", jsonData.get("view_infomation"));
 
 		model.flush();
-		ProcessDefinition definition = null;
+		ProcessDefinition definition;
 		try {
 			definition = Context.getProcessManager(company).deploymentProcess(model.get(ID));
 		} catch (ModelHasbeenDeployed e) {
@@ -73,7 +73,7 @@ public class FlowDesign extends BaseServlet {
 		}
 
 		ResultCode resultCode = SUCCESS.clone().put(ID, model.get(ID));
-		if (definition == null) {
+		if (definition != null) {
 			resultCode.put("process_definitionID", definition.getId());
 		}
 

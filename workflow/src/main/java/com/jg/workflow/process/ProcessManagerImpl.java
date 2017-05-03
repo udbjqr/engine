@@ -215,12 +215,12 @@ public class ProcessManagerImpl implements ProcessManager {
 	}
 
 	@Override
-	public void startProcessByName(String processDefinitionName) {
+	public Process startProcessByName(String processDefinitionName) {
 		List<ProcessDefinitionImpl> defs;
 
 		defs = PROCESS_DEFNITION_FACTORY.getObjectsForString(" where t.name = " + DB_HELPER.getString(processDefinitionName) + " order by version desc limit 1;", null);
 
-		startProcess(defs.size() > 0 ? defs.get(0) : null, processDefinitionName);
+		return startProcess(defs.size() > 0 ? defs.get(0) : null, processDefinitionName);
 	}
 
 	@Override
@@ -228,7 +228,7 @@ public class ProcessManagerImpl implements ProcessManager {
 		return PROCESS_FACTORY.getProcessByTaskId(taskId);
 	}
 
-	private void startProcess(ProcessDefinitionImpl definition, String var) {
+	private ProcessImpl startProcess(ProcessDefinitionImpl definition, String var) {
 		if (definition == null) {
 			throw new ProcessDefinitionNotFount("流程定义未找到" + var);
 		}
@@ -240,17 +240,19 @@ public class ProcessManagerImpl implements ProcessManager {
 		ProcessImpl process = ProcessFactory.getInstance().createObject(Context.getCurrentOperatorUser());
 
 		process.start(definition);
+
+		return process;
 	}
 
 	@Override
-	public void startProcess(int processDefinitionId) {
+	public Process startProcess(int processDefinitionId) {
 		ProcessDefinitionImpl definition = PROCESS_DEFNITION_FACTORY.getObject("id", processDefinitionId);
 
 		if (definition == null) {
 			throw new ProcessDefinitionNotFount("流程定义未找到,流程Id：" + processDefinitionId);
 		}
 
-		startProcess(definition, definition.get("name"));
+		return startProcess(definition, definition.get("name"));
 	}
 
 	@Override

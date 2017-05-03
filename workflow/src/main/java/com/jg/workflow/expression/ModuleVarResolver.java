@@ -30,7 +30,7 @@ public class ModuleVarResolver implements Resolver {
 
 		String[] s = name.split("_");
 		if (s.length != 2) {
-			log.trace("模块变量解析未对应，名称：{}，请检查名称是否有且仅有一个'_'.", name);
+			log.trace("模块变量解析未对应，名称：{}，只处理名称是否有且仅有一个'_'.", name);
 			return null;
 		}
 

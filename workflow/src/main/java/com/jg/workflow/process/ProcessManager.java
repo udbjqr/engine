@@ -186,7 +186,7 @@ public interface ProcessManager {
 	 *
 	 * @param processDefinitionId 流程定义的Id
 	 */
-	void startProcess(int processDefinitionId);
+	Process startProcess(int processDefinitionId);
 
 
 	/**
@@ -196,7 +196,7 @@ public interface ProcessManager {
 	 *
 	 * @param processDefinitionName 流程定义的名称
 	 */
-	void startProcessByName(String processDefinitionName);
+	Process startProcessByName(String processDefinitionName);
 
 	/**
 	 * 从任务Id获得流程对象

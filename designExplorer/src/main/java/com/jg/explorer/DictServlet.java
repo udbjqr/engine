@@ -59,7 +59,7 @@ public class DictServlet extends BaseServlet {
 	private ResultCode list(Company company) {
 		final ResultCode[] resultCode = {null};
 
-		DB_HELPER.selectWithSet("select distinct dict_name from data_dictionary where company_id = " + company.getId(), set -> resultCode[0] = SUCCESS.clone().setListToData(RESULT_LIST, set, "dict_name"));
+		DB_HELPER.selectWithSet("select distinct dict_name as value,dict_name as label from data_dictionary where company_id = " + company.getId(), set -> resultCode[0] = SUCCESS.clone().setListToData(RESULT_LIST, set, "label", "value"));
 
 		return resultCode[0];
 	}

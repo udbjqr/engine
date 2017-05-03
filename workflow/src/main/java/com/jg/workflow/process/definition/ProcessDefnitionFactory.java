@@ -39,4 +39,15 @@ public class ProcessDefnitionFactory extends AbstractPersistenceFactory<ProcessD
 	protected ProcessDefinitionImpl createObject(User user) {
 		return new ProcessDefinitionImpl(this);
 	}
+
+	/**
+	 * 得到流程定义最新对象.
+	 * <p>
+	 * 使用此方法必然得到流程定义最新的数据对象。
+	 */
+	@Override
+	public synchronized ProcessDefinitionImpl getObject(String key, Object value) {
+		int id_value = dbHelper.selectOneValues("select id   from process_definition p where exists(select 1 from process_definition d where d." + key + " = " + dbHelper.getString(value) + " and p.name = d.name) order by version desc limit 1");
+		return super.getObject("id", id_value);
+	}
 }

@@ -10,11 +10,9 @@ import com.jg.workflow.process.definition.Link;
 
 public class StartPerformer extends AbstractPerformer {
 
-
 	StartPerformer(TaskImpl task) {
 		super(task);
 	}
-
 
 	@Override
 	protected void turnInTask(Link link) {

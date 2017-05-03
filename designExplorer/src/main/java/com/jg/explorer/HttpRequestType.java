@@ -11,5 +11,5 @@ public enum  HttpRequestType {
 	delete,
 	save,
 	modify,
-	list, listName, load
+	list, listName, start, load
 }

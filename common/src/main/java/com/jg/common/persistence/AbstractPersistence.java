@@ -304,6 +304,7 @@ public abstract class AbstractPersistence implements Persistence {
 	public boolean canViewField(User user, String fieldName) {
 		return user == null || user.canViewField(fieldName);
 	}
+
 	public void setIdBySequence()
 	{
 		if (factory.sequenceField != null) {

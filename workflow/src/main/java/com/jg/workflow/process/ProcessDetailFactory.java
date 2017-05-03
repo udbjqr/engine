@@ -12,8 +12,8 @@ public final class ProcessDetailFactory extends AbstractPersistenceFactory<Proce
 
 	private ProcessDetailFactory() {
 		this.tableName = "process_detail_data";
-		this.sequenceField = addField("id", Integer.class, "nextval('seq_process_data')", true, true);
-		sequenceField.setSerial("seq_process_data");
+		this.sequenceField = addField("id", Integer.class, "nextval('seq_processdetail_data')", true, true);
+		sequenceField.setSerial("seq_processdetail_data");
 
 		addField("execution_id", String.class, null, true, false);
 		addField("task_id", String.class, null, true, false);
