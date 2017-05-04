@@ -2,7 +2,7 @@ package com.jg.workflow.task;
 
 import com.alibaba.fastjson.JSONObject;
 import com.jg.common.persistence.Persistence;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.workflow.process.Process;
 
 import java.util.Set;
@@ -46,7 +46,7 @@ public interface Task extends Persistence {
 	/**
 	 * 执行流程的动作.
 	 */
-	ResultCode run(JSONObject variables);
+	HttpResult run(JSONObject variables);
 
 	/**
 	 * 流程执行完毕.

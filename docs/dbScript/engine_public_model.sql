@@ -1,4 +1,4 @@
-INSERT INTO public.model (id, name, category, create_time, update_time, content, view_infomation, company_id, description, flag) VALUES (3, '修改', '1', '2017-04-18 11:11:34.000000', '2017-04-18 12:08:41.000000', '{
+INSERT INTO public.model (id, name, category, create_time, update_time, content, view_information, company_id, description, flag) VALUES (3, '修改', '1', '2017-04-18 11:11:34.000000', '2017-04-18 12:08:41.000000', '{
 	"name": "测试数据",
 	"description": "现在这是一个测试的model,准备用以测试使用.",
 	"nodes": [

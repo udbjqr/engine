@@ -1,7 +1,7 @@
 package com.jg.workflow.task;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.identification.Context;
 import com.jg.workflow.process.definition.TaskDefinition;
 import com.jg.workflow.process.handle.Handle;
@@ -20,19 +20,19 @@ public class UserTaskPerformer extends AbstractPerformer {
 	}
 
 	@Override
-	protected synchronized ResultCode execute(JSONObject variables) {
+	protected synchronized HttpResult execute(JSONObject variables) {
 		TaskDefinition definition = task.getDefinition();
 		Module module = definition.getModule();
 		Handle handle = definition.getHandle();
 
 
-		ResultCode resultCode = handle.run(Context.getCurrentOperatorUser(), task, module, process, variables);
+		HttpResult httpResult = handle.run(Context.getCurrentOperatorUser(), task, module, process, variables);
 
 
 		processDetail.set("result_data", ((JSONObject) process.get("variable")).clone());
 		process.saveDetail(processDetail);
 
-		return resultCode;
+		return httpResult;
 	}
 
 }

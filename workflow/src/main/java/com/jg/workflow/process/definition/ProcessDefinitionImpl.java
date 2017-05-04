@@ -42,12 +42,13 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 	public ProcessDefinitionImpl deploy(Model model, int companyId, JSONObject content) {
 		if ((int) model.get("flag") == 0) {
 			set("content", content);
-			set("view_infomation", model.get("view_infomation"));
+			set("view_information", model.get("view_information"));
 			set("name", model.get("name"));
 			set("version", DB_HELPER.selectOneValues("select nextval('seq_process_def_version')"));
 			set("company_id", companyId);
 			set("category", model.get("category"));
 			set("description", model.get("description"));
+			set("model_content",model.get("content"));
 			set("flag", 1);
 
 			model.set("flag", 1);

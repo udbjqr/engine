@@ -2,10 +2,10 @@ package com.jg.workflow.process;
 
 import com.jg.identification.Company;
 import com.jg.workflow.Context;
-import com.jg.workflow.util.TestIdentificationUtil;
 import com.jg.workflow.process.Model.TestModel;
 import com.jg.workflow.task.Task;
 import com.jg.workflow.task.TaskManager;
+import com.jg.workflow.util.TestIdentificationUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.BeforeClass;
@@ -36,7 +36,7 @@ public class TestTaskManager {
 	@Test
 	public void testGetMyTasks(){
 		for (Task task : taskManager.getMyTasks()) {
-			log.info(task.get("id") + " \t "  + task.get("name"));
+			log.info(task.getId() + " \t "  + task.get("name"));
 		}
 	}
 

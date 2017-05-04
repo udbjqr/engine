@@ -1,7 +1,7 @@
 package com.jg.workflow.task;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.common.util.StringUtil;
 import com.jg.identification.Context;
 import com.jg.identification.User;
@@ -78,14 +78,14 @@ public abstract class AbstractPerformer {
 		turnInTask(link);
 	}
 
-	final ResultCode run(JSONObject variables) {
+	final HttpResult run(JSONObject variables) {
 		checkProcessRunning();
 
 		EVENT_MANGER.triggerEvent(new TaskBeforeRun(task, variables));
-		ResultCode resultCode = execute(variables);
+		HttpResult httpResult = execute(variables);
 		EVENT_MANGER.triggerEvent(new TaskEndRun(task));
 
-		return resultCode;
+		return httpResult;
 	}
 
 	final void complete() {
@@ -140,14 +140,14 @@ public abstract class AbstractPerformer {
 		return false;
 	}
 
-	protected ResultCode execute(JSONObject variables) {
+	protected HttpResult execute(JSONObject variables) {
 		processDetail.set("result_data", ((JSONObject) process.get("variable")).clone());
 		//noinspection ConstantConditions
 		processDetail.set("employee_id", Context.getCurrentOperatorUser().getId());
 
 		process.saveDetail(processDetail);
 
-		return ResultCode.NORMAL;
+		return HttpResult.NORMAL;
 	}
 
 	protected void turnInTask(Link link) {
@@ -176,6 +176,7 @@ public abstract class AbstractPerformer {
 
 	void setProcessDetail() {
 		processDetail.set("now_data", ((JSONObject) process.get("variable")).clone());
+		processDetail.set("task_id", task.getId());
 		processDetail.set("create_time", new Date(System.currentTimeMillis()));
 		processDetail.set("flag", 0);
 

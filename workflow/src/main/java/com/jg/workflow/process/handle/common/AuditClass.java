@@ -2,7 +2,7 @@ package com.jg.workflow.process.handle.common;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.identification.User;
 import com.jg.workflow.process.Process;
 import com.jg.workflow.process.handle.AbstractHandle;
@@ -31,7 +31,7 @@ public class AuditClass extends AbstractHandle {
 	}
 
 	@Override
-	protected ResultCode execute(User user, Task task, Module module, Process processData, JSONObject jsonData) {
+	protected HttpResult execute(User user, Task task, Module module, Process processData, JSONObject jsonData) {
 		FormData formData = FormDataFactory.getInstance().getNewObject(user);
 		JSONObject formStructure = module.getFormStructure();
 		JSONObject data = new JSONObject();
@@ -50,10 +50,10 @@ public class AuditClass extends AbstractHandle {
 			}
 		} catch (WriteValueException e) {
 			logger.error("写数据出现异常。", e);
-			return ResultCode.ADD_ERROR;
+			return HttpResult.ADD_ERROR;
 		}
 
 		formData.flush();*/
-		return ResultCode.NORMAL;
+		return HttpResult.NORMAL;
 	}
 }

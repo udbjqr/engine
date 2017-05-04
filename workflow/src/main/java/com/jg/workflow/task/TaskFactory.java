@@ -29,6 +29,7 @@ public final class TaskFactory extends AbstractPersistenceFactory<TaskImpl> {
 		addField("can_view", String.class, null, false, false);
 		addField("can_modify", String.class, null, false, false);
 		addField("already_enter", String.class, null, false, false);
+		addField("name", String.class, null, false, false, true);
 
 		setIsCheck(false);
 		init();
@@ -42,4 +43,12 @@ public final class TaskFactory extends AbstractPersistenceFactory<TaskImpl> {
 	protected TaskImpl createObject(User user) {
 		return new TaskImpl(this, user);
 	}
+
+	@Override
+	protected String setSelectStr() {
+		selectStr = " select * from (select t.*,getTaskDefition(d.definition_id,t.defition_id)->>'name' as name from task t inner join process_data d on t.execution_id = d.id) t ";
+
+		return selectStr;
+	}
+
 }

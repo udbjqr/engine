@@ -1,7 +1,7 @@
 package com.jg.workflow.process.handle;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.identification.User;
 import com.jg.workflow.process.Process;
 import com.jg.workflow.process.module.Module;
@@ -35,34 +35,34 @@ public abstract class AbstractHandle implements Handle {
 
 
 	@Override
-	public ResultCode run(User user, Task task, Module module, Process processData, JSONObject jsonData) {
-		ResultCode resultCode = beforeRun(user, task, module, processData, jsonData);
-		if (resultCode != null) {
-			return resultCode;
+	public HttpResult run(User user, Task task, Module module, Process processData, JSONObject jsonData) {
+		HttpResult httpResult = beforeRun(user, task, module, processData, jsonData);
+		if (httpResult != null) {
+			return httpResult;
 		}
 
-		resultCode = execute(user, task, module, processData, jsonData);
+		httpResult = execute(user, task, module, processData, jsonData);
 
-		resultCode = afterRun(user, task, module, processData, jsonData, resultCode);
+		httpResult = afterRun(user, task, module, processData, jsonData, httpResult);
 
-		return resultCode;
+		return httpResult;
 	}
 
 	/**
 	 * 实际的执行动作.
 	 */
-	protected ResultCode execute(User user, Task task, Module module, Process processData, JSONObject jsonData) {
+	protected HttpResult execute(User user, Task task, Module module, Process processData, JSONObject jsonData) {
 		return null;
 	}
 
 	/**
 	 * 实际执行之前的操作.
 	 */
-	protected ResultCode beforeRun(User user, Task task, Module module, Process processData, JSONObject jsonData) {
-		ResultCode resultCode = checkPara(user, task, module, processData, jsonData);
+	protected HttpResult beforeRun(User user, Task task, Module module, Process processData, JSONObject jsonData) {
+		HttpResult httpResult = checkPara(user, task, module, processData, jsonData);
 
-		if (resultCode != null) {
-			return resultCode;
+		if (httpResult != null) {
+			return httpResult;
 		}
 
 		logger.debug("操作{}将被执行", id);
@@ -70,7 +70,7 @@ public abstract class AbstractHandle implements Handle {
 		return null;
 	}
 
-	private ResultCode checkPara(User user, Task task, Module module, Process processData, JSONObject jsonData) {
+	private HttpResult checkPara(User user, Task task, Module module, Process processData, JSONObject jsonData) {
 		if (task == null) {
 			logger.error("任务为空，无法继续执行。");
 		}
@@ -89,9 +89,9 @@ public abstract class AbstractHandle implements Handle {
 	/**
 	 * 实际执行之后的操作.
 	 */
-	protected ResultCode afterRun(User user, Task task, Module module, Process processData, JSONObject jsonData, ResultCode resultCode) {
+	protected HttpResult afterRun(User user, Task task, Module module, Process processData, JSONObject jsonData, HttpResult httpResult) {
 		logger.debug("操作{}执行结束", id);
-		return resultCode;
+		return httpResult;
 	}
 
 	/**

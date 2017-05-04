@@ -2,7 +2,7 @@ package com.jg.explorer;
 
 import com.alibaba.fastjson.JSONObject;
 import com.jg.common.objects.Dict;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.identification.Company;
 import com.jg.identification.User;
 
@@ -10,7 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import java.util.List;
 
 import static com.jg.common.objects.DictFactory.DICT_FACTORY;
-import static com.jg.common.result.ResultCode.*;
+import static com.jg.common.result.HttpResult.*;
 import static com.jg.common.sql.DBHelperFactory.DB_HELPER;
 
 /**
@@ -22,7 +22,7 @@ import static com.jg.common.sql.DBHelperFactory.DB_HELPER;
 public class DictServlet extends BaseServlet {
 
 	@Override
-	protected ResultCode execute(HttpRequestType type, ServletData servletData) {
+	protected HttpResult execute(HttpRequestType type, ServletData servletData) {
 		Company company = (Company) servletData.get(COMPANY);
 		JSONObject jsonData = (JSONObject) servletData.get(JSON_DATA);
 
@@ -39,11 +39,11 @@ public class DictServlet extends BaseServlet {
 			case insert:
 
 			default:
-				return ResultCode.UNKNOWN;
+				return HttpResult.UNKNOWN;
 		}
 	}
 
-	private ResultCode load(JSONObject jsonData, Company company, ServletData servletData) {
+	private HttpResult load(JSONObject jsonData, Company company, ServletData servletData) {
 		String dictName = jsonData.getString("dict_name");
 		User user = (User) servletData.get(USER);
 
@@ -56,16 +56,16 @@ public class DictServlet extends BaseServlet {
 		return SUCCESS.clone().setListToData(RESULT_LIST, lists, "label", "value");
 	}
 
-	private ResultCode list(Company company) {
-		final ResultCode[] resultCode = {null};
+	private HttpResult list(Company company) {
+		final HttpResult[] httpResult = {null};
 
-		DB_HELPER.selectWithSet("select distinct dict_name as value,dict_name as label from data_dictionary where company_id = " + company.getId(), set -> resultCode[0] = SUCCESS.clone().setListToData(RESULT_LIST, set, "label", "value"));
+		DB_HELPER.selectWithSet("select distinct dict_name as value,dict_name as label from data_dictionary where company_id = " + company.getId(), set -> httpResult[0] = SUCCESS.clone().setListToData(RESULT_LIST, set, "label", "value"));
 
-		return resultCode[0];
+		return httpResult[0];
 	}
 
 
-	private ResultCode saveTo(JSONObject jsonData, Company company, ServletData servletData) {
+	private HttpResult saveTo(JSONObject jsonData, Company company, ServletData servletData) {
 		User user = (User) servletData.get(USER);
 		Integer id = jsonData.getInteger(ID);
 		Dict dict;
@@ -97,6 +97,6 @@ public class DictServlet extends BaseServlet {
 
 		dict.flush();
 
-		return new ResultCode().put(ID, dict.get(ID));
+		return new HttpResult().put(ID, dict.get(ID));
 	}
 }

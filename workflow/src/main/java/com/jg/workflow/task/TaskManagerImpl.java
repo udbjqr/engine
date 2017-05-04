@@ -1,7 +1,7 @@
 package com.jg.workflow.task;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.common.util.StringUtil;
 import com.jg.identification.Company;
 import com.jg.identification.Context;
@@ -67,7 +67,7 @@ public class TaskManagerImpl implements TaskManager {
 	}
 
 	@Override
-	public ResultCode handle(int taskId, JSONObject variables) {
+	public HttpResult handle(int taskId, JSONObject variables) {
 		TaskImpl task = checkAndGetTaskNormal(taskId);
 		checkTaskIsNomal(task);
 

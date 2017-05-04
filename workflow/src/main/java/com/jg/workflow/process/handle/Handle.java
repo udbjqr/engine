@@ -2,7 +2,7 @@ package com.jg.workflow.process.handle;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.identification.User;
 import com.jg.workflow.process.Process;
 import com.jg.workflow.process.module.Module;
@@ -30,7 +30,7 @@ public interface Handle {
 	 * @param jsonData    此次需要操作的数据
 	 * @return 返回一个错误提示，正常结束返回
 	 */
-	ResultCode run(User user, Task task, Module module, Process processData, JSONObject jsonData);
+	HttpResult run(User user, Task task, Module module, Process processData, JSONObject jsonData);
 
 	/**
 	 * 对操作做回退操作

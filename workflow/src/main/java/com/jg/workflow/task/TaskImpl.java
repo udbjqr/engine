@@ -5,7 +5,7 @@ import com.jg.common.persistence.AbstractPersistence;
 import com.jg.common.persistence.AbstractPersistenceFactory;
 import com.jg.common.persistence.Field;
 import com.jg.common.persistence.WriteValueException;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.common.util.DateUtil;
 import com.jg.identification.User;
 import com.jg.workflow.process.Process;
@@ -89,7 +89,7 @@ public class TaskImpl extends AbstractPersistence implements Task {
 	}
 
 	@Override
-	public ResultCode run(JSONObject variables) {
+	public HttpResult run(JSONObject variables) {
 		return performer.run(variables);
 	}
 

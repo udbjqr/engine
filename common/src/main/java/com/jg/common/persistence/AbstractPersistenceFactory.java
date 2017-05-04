@@ -422,7 +422,6 @@ public abstract class AbstractPersistenceFactory<T extends AbstractPersistence> 
 	 */
 	protected Field addField(String name, Class fieldClass,
 	                         Object defaultValue, boolean isMandatory, boolean isPrimaryKey, boolean isViewField) {
-
 		Field field = new Field(name, fieldClass, defaultValue, isMandatory, isPrimaryKey, isViewField, orderIndex++);
 
 		fields.add(field);

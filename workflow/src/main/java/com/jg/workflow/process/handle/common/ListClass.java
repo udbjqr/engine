@@ -2,7 +2,7 @@ package com.jg.workflow.process.handle.common;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.identification.User;
 import com.jg.workflow.process.Process;
 import com.jg.workflow.process.handle.AbstractHandle;
@@ -29,7 +29,7 @@ public class ListClass extends AbstractHandle {
 		return url;
 	}
 
-	public ResultCode run(User user, Task task, Module module, Process processData, JSONObject jsonData) {
+	public HttpResult run(User user, Task task, Module module, Process processData, JSONObject jsonData) {
 		JSONObject resultJson = new JSONObject();
 		//表单数据
 		FormData formData = null;
@@ -55,7 +55,7 @@ public class ListClass extends AbstractHandle {
 		resultJson.put("task_id", task.getId());
 		resultJson.put("processData", processData);
 		resultJson.put("jsonData", jsonData);
-		return new ResultCode(0, "", true, resultJson);
+		return new HttpResult(0, "", true, resultJson);
 	}
 
 	@Override

@@ -24,7 +24,7 @@ import java.util.Map;
 import static com.jg.common.sql.DBHelperFactory.DB_HELPER;
 import static com.jg.workflow.event.EventMangerImpl.EVENT_MANGER;
 import static com.jg.workflow.process.ProcessFactory.PROCESS_FACTORY;
-import static com.jg.workflow.process.definition.ProcessDefnitionFactory.PROCESS_DEFNITION_FACTORY;
+import static com.jg.workflow.process.definition.ProcessDefinitionFactory.PROCESS_DEFNITION_FACTORY;
 
 /**
  * 流程管理器.
@@ -264,6 +264,15 @@ public class ProcessManagerImpl implements ProcessManager {
 		});
 
 		return tasks;
+	}
+
+	@Override
+	public Process getProcessById(Integer processId) {
+		ProcessImpl process = PROCESS_FACTORY.getObject("id", processId);
+		if (process == null) {
+			throw new NotFoundProcess("未找到指定的流程对象.Id:" + processId);
+		}
+		return process;
 	}
 }
 

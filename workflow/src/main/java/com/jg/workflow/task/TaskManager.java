@@ -1,7 +1,7 @@
 package com.jg.workflow.task;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.identification.Company;
 import com.jg.identification.User;
 
@@ -23,7 +23,7 @@ public interface TaskManager {
 	 * @param variables 任务所使用参数
 	 * @return 返回执行结果对象
 	 */
-	ResultCode handle(int taskId, JSONObject variables);
+	HttpResult handle(int taskId, JSONObject variables);
 
 	/**
 	 * 对一个任务进行完成操作.

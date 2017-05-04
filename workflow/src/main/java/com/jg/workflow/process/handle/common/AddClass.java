@@ -3,7 +3,7 @@ package com.jg.workflow.process.handle.common;
 
 import com.alibaba.fastjson.JSONObject;
 import com.jg.common.persistence.WriteValueException;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.identification.User;
 import com.jg.workflow.process.Process;
 import com.jg.workflow.process.handle.AbstractHandle;
@@ -38,7 +38,7 @@ public class AddClass extends AbstractHandle {
 	}
 
 	@Override
-	protected ResultCode execute(User user, Task task, Module module, Process processData, JSONObject jsonData) {
+	protected HttpResult execute(User user, Task task, Module module, Process processData, JSONObject jsonData) {
 		//表单数据
 		FormData form = null;
 		//表单ID
@@ -82,7 +82,7 @@ public class AddClass extends AbstractHandle {
 
 		form.flush();
 
-		return ResultCode.NORMAL;
+		return HttpResult.NORMAL;
 	}
 
 }

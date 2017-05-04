@@ -1,12 +1,13 @@
 package com.jg.explorer.design;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.explorer.BaseServlet;
 import com.jg.explorer.HttpRequestType;
 import com.jg.identification.Company;
 import com.jg.workflow.Context;
 import com.jg.workflow.exception.ModelHasbeenDeployed;
+import com.jg.workflow.exception.ModelNotFound;
 import com.jg.workflow.process.definition.ProcessDefinition;
 import com.jg.workflow.process.model.Model;
 import com.jg.workflow.process.model.ModelManager;
@@ -15,8 +16,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.annotation.WebServlet;
 
-import static com.jg.common.result.ResultCode.SUCCESS;
-import static com.jg.common.result.ResultCode.UNKNOWN;
+import static com.jg.common.result.HttpResult.*;
 
 /**
  * 提供流程设计WEB接口
@@ -30,7 +30,7 @@ public class FlowDesign extends BaseServlet {
 	private static final Logger log = LogManager.getLogger(FormDesign.class.getName());
 
 	@Override
-	protected ResultCode execute(HttpRequestType type, ServletData servletData) {
+	protected HttpResult execute(HttpRequestType type, ServletData servletData) {
 		Company company = (Company) servletData.get(COMPANY);
 		JSONObject jsonData = (JSONObject) servletData.get(JSON_DATA);
 		ModelManager modelManager = Context.getModelManager(company);
@@ -38,21 +38,40 @@ public class FlowDesign extends BaseServlet {
 
 		switch (type) {
 			case modify:
+			case save:
 				model = modelManager.getModel((Integer) jsonData.get(ID));
 				if (model == null) {
-					return ResultCode.NOT_FOUND_OBJECT.clone().put(ID, jsonData.get(ID));
+					return NOT_FOUND_OBJECT.clone().put(ID, jsonData.get(ID));
 				}
 				return saveToModel(model, jsonData, company);
-			case save:
+			case load:
+				return loadModel(modelManager, jsonData);
+			case create:
 				model = modelManager.createModel();
 				return saveToModel(model, jsonData, company);
 			default:
 				log.error("未找到此类型定义的操作。type:" + type.name());
-				return ResultCode.UNKNOWN;
+				return UNKNOWN;
 		}
 	}
 
-	private ResultCode saveToModel(Model model, JSONObject jsonData, Company company) {
+	private HttpResult loadModel(ModelManager modelManager, JSONObject jsonData) {
+		Integer modelId = (Integer) jsonData.get("modelId");
+		if (modelId == null) {
+			return NO_SET_REQUEST_TYPE.clone().setMessage("未找到需要的参数：modelId");
+		}
+
+		Model model;
+		try {
+			model = modelManager.getModel(modelId);
+		} catch (ModelNotFound e) {
+			return NOT_FOUND_OBJECT.clone().put(ID, jsonData.get(ID));
+		}
+
+		return SUCCESS.clone().addInfoToValue("model", model, "id", "name", "category", "content", "view_information", "company_id", "description", "flag");
+	}
+
+	private HttpResult saveToModel(Model model, JSONObject jsonData, Company company) {
 		JSONObject content = (JSONObject) jsonData.get(CONTENT);
 		content.put("name", jsonData.get(NAME));
 
@@ -61,7 +80,7 @@ public class FlowDesign extends BaseServlet {
 		model.set("company_id", company.getId());
 		model.set("description", jsonData.get("description"));
 		model.set(CONTENT, content);
-		model.set("view_infomation", jsonData.get("view_infomation"));
+		model.set("view_information", jsonData.get("view_information"));
 
 		model.flush();
 		ProcessDefinition definition;
@@ -72,12 +91,12 @@ public class FlowDesign extends BaseServlet {
 			return UNKNOWN;
 		}
 
-		ResultCode resultCode = SUCCESS.clone().put(ID, model.get(ID));
+		HttpResult httpResult = SUCCESS.clone().put(ID, model.get(ID));
 		if (definition != null) {
-			resultCode.put("process_definitionID", definition.getId());
+			httpResult.put("process_definitionID", definition.getId());
 		}
 
-		return resultCode;
+		return httpResult;
 	}
 }
 

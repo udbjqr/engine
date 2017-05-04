@@ -1,7 +1,7 @@
 package com.jg.explorer.design;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.explorer.BaseServlet;
 import com.jg.explorer.HttpRequestType;
 import com.jg.identification.Company;
@@ -13,8 +13,9 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.annotation.WebServlet;
 import java.util.Date;
+import java.util.List;
 
-import static com.jg.common.result.ResultCode.*;
+import static com.jg.common.result.HttpResult.*;
 import static com.jg.workflow.process.module.ModuleFactory.MODULE_FACTORY;
 
 /**
@@ -29,13 +30,13 @@ public class FormDesign extends BaseServlet {
 	private static final Logger log = LogManager.getLogger(FormDesign.class.getName());
 
 	@Override
-	protected ResultCode execute(HttpRequestType type, ServletData servletData) {
+	protected HttpResult execute(HttpRequestType type, ServletData servletData) {
 		Company company = (Company) servletData.get(COMPANY);
 		JSONObject jsonData = (JSONObject) servletData.get(JSON_DATA);
 
 		switch (type) {
 			case list:
-				return list(jsonData, company, servletData);
+				return list(servletData);
 			case load:
 				return load(jsonData);
 			case modify:
@@ -43,17 +44,22 @@ public class FormDesign extends BaseServlet {
 				return saveToModule(jsonData, company, servletData);
 			default:
 				log.error("未找到此类型定义的操作。type:" + type.name());
-				return ResultCode.UNKNOWN;
+				return HttpResult.UNKNOWN;
 		}
 	}
 
-	private ResultCode list(JSONObject jsonData, Company company, ServletData servletData) {
+	private HttpResult list(ServletData servletData) {
 		User user = (User) servletData.get(USER);
 
-		return SUCCESS.clone().setListToData(RESULT_LIST, MODULE_FACTORY.getAllObjects(user), "id", "module_name");
+		List<ModuleImpl> list = MODULE_FACTORY.getAllObjects(user);
+		if (list != null) {
+			return SUCCESS.clone().setListToData(RESULT_LIST, list, "id", "module_name");
+		}
+
+		return UNKNOWN;
 	}
 
-	private ResultCode saveToModule(JSONObject jsonData, Company company, ServletData servletData) {
+	private HttpResult saveToModule(JSONObject jsonData, Company company, ServletData servletData) {
 		ModuleImpl module;
 
 		Integer moduleId = jsonData.getInteger("module_id");
@@ -83,10 +89,10 @@ public class FormDesign extends BaseServlet {
 
 		module.flush();
 
-		return new ResultCode().put(ID, module.get(ID));
+		return new HttpResult().put(ID, module.get(ID));
 	}
 
-	private ResultCode load(JSONObject jsonData) {
+	private HttpResult load(JSONObject jsonData) {
 		Integer moduleId = jsonData.getInteger(ID);
 		if (moduleId == null) {
 			return NO_PARAMETER.clone().put("possible", ID);

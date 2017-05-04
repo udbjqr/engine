@@ -1,6 +1,6 @@
 package com.jg.workflow;
 
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import org.junit.Test;
 
 import java.util.regex.Matcher;
@@ -32,7 +32,7 @@ public class TestPattern {
 
 	@Test
 	public void test2(){
-		ResultCode t = new ResultCode(0,"");
+		HttpResult t = new HttpResult(0,"");
 
 		System.out.println(t);
 	}

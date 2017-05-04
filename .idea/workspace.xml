@@ -2,30 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8539492f-943f-47b4-801d-af205d802865" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/ProcessServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/TaskServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/exception/NotFoundProcess.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/designExplorer/src/main/webapp/test/testpost.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/common/src/main/java/com/jg/common/result/ResultCode.java" afterPath="$PROJECT_DIR$/common/src/main/java/com/jg/common/result/HttpResult.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/ProcessServlet.java" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefnitionFactory.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata_i.len" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata_i.len" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.values.at" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java" afterPath="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistenceFactory.java" afterPath="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistenceFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/BaseServlet.java" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/BaseServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/DictServlet.java" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/DictServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/HttpRequestType.java" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/HttpRequestType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FormDesign.java" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FormDesign.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designExplorer/src/main/webapp/test/i.html" afterPath="$PROJECT_DIR$/designExplorer/src/main/webapp/test/i.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/dbScript/engine_public_model.sql" afterPath="$PROJECT_DIR$/docs/dbScript/engine_public_model.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/designer/formal.pdm" afterPath="$PROJECT_DIR$/docs/designer/formal.pdm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/develop/表达式.txt" afterPath="$PROJECT_DIR$/docs/develop/表达式.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ModuleVarResolver.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ModuleVarResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/SystemVarResolver.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/SystemVarResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessDetailFactory.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessDetailFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/designer/建管.prj" afterPath="$PROJECT_DIR$/docs/designer/建管.prj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/develop/WEB接口说明.txt" afterPath="$PROJECT_DIR$/docs/develop/WEB接口说明.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessImpl.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefnitionFactory.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefnitionFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/StartPerformer.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/StartPerformer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/AbstractHandle.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/AbstractHandle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/Handle.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/Handle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AddClass.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AddClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AuditClass.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AuditClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/ListClass.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/ListClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelFactory.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/Task.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/Task.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskFactory.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskImpl.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskManager.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskManagerImpl.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/UserTaskPerformer.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/UserTaskPerformer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/TestPattern.java" afterPath="$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/TestPattern.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/process/TestTaskManager.java" afterPath="$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/process/TestTaskManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
@@ -96,6 +112,24 @@
         <option name="myItemId" value="public" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="本地数据库" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="engine" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
       <PATH_ELEMENT>
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
@@ -123,237 +157,316 @@
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="process_run_control" />
+        <option name="myItemId" value="task" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="本地数据库" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="engine" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="process_detail_data" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="本地数据库" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="engine" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="process_definition" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="本地数据库" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="engine" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="process_data" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="本地数据库" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="engine" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="model" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.490625">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="AbstractPerformer.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="StartPerformer.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/StartPerformer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#220#221#0" expanded="true" />
-                    <element signature="e#238#239#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ModuleVarResolver.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ModuleVarResolver.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="265">
-                  <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="92" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ExpressionControl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ExpressionControl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="561">
-                  <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProcessImpl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="447">
-                  <caret line="260" column="19" lean-forward="true" selection-start-line="260" selection-start-column="19" selection-end-line="260" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-            <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="108">
-                  <caret line="5" column="137" lean-forward="false" selection-start-line="5" selection-start-column="137" selection-end-line="5" selection-end-column="137" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SystemVarResolver.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/SystemVarResolver.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="engine.public.process_definition" pinned="false" current-in-tab="false">
-            <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.process_definition">
-              <provider editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                  <column-attributes>
-                    <column name="content" languageId="JSON" />
-                  </column-attributes>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="engine.public.process_run_control" pinned="false" current-in-tab="true">
-            <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.process_run_control">
-              <provider editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AbstractDataBaseHandle.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/sql/AbstractDataBaseHandle.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="321">
-                  <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AbstractPersistence.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="321">
-                  <caret line="264" column="0" lean-forward="false" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProcessManagerImpl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="241" column="0" lean-forward="false" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="i.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/designExplorer/src/main/webapp/test/i.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="246">
-                  <caret line="378" column="8" lean-forward="true" selection-start-line="378" selection-start-column="8" selection-end-line="378" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="JSONObject.java" pinned="false" current-in-tab="false">
-            <entry file="jar://$PROJECT_DIR$/../../../mavenRepository/com/alibaba/fastjson/1.2.31/fastjson-1.2.31-sources.jar!/com/alibaba/fastjson/JSONObject.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="903">
-                  <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#7488#7489#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ResultCode.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/result/ResultCode.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2322">
-                  <caret line="141" column="7" lean-forward="false" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
-                  <folding>
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#1330#1331#0" expanded="false" />
-                    <element signature="e#1350#1351#0" expanded="false" />
-                    <element signature="e#1398#1399#0" expanded="false" />
-                    <element signature="e#1430#1431#0" expanded="false" />
-                    <element signature="e#1814#1815#0" expanded="false" />
-                    <element signature="e#1835#1836#0" expanded="false" />
-                    <element signature="e#4153#4154#0" expanded="false" />
-                    <element signature="e#4171#4172#0" expanded="false" />
-                    <element signature="e#4201#4202#0" expanded="false" />
-                    <element signature="e#4259#4260#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="BaseServlet.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/BaseServlet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2862">
-                  <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#4942#4943#0" expanded="false" />
-                    <element signature="e#4960#4961#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TaskImpl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="401">
-                  <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProcessServlet.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/ProcessServlet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="576">
-                  <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="HttpResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/result/HttpResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="181" column="42" lean-forward="false" selection-start-line="181" selection-start-column="42" selection-end-line="181" selection-end-column="42" />
+              <folding>
+                <element signature="e#1691#1692#0" expanded="true" />
+                <element signature="e#1709#1710#0" expanded="true" />
+                <element signature="e#1953#1954#0" expanded="true" />
+                <element signature="e#1974#1975#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/BaseServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="283" column="5" lean-forward="false" selection-start-line="283" selection-start-column="5" selection-end-line="283" selection-end-column="5" />
+              <folding>
+                <element signature="e#6655#6656#0" expanded="true" />
+                <element signature="e#6752#6753#0" expanded="true" />
+                <element signature="e#9749#9750#0" expanded="true" />
+                <element signature="e#9770#9771#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="57" column="20" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractHandle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/AbstractHandle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTaskPerformer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/UserTaskPerformer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="116" column="20" lean-forward="false" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/TaskServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestTaskManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/process/TestTaskManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+              <folding>
+                <element signature="e#1147#1148#0" expanded="true" />
+                <element signature="e#1182#1183#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WEB接口说明.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/develop/WEB接口说明.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlowDesign.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="266" column="3" lean-forward="false" selection-start-line="266" selection-start-column="3" selection-end-line="266" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessDefinitionImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessDefinitionFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding>
+                <marker date="1493888286000" expanded="true" signature="464:1212" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FormDesign.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FormDesign.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -365,7 +478,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>METHOD_DELETE</find>
-      <find>data</find>
       <find>PropertyAccessor</find>
       <find>myDiagram.model = go.Model.fromJson(document.getElementById(&quot;mySavedModel&quot;).value);</find>
       <find>odel = go.Model.fromJson(document.getElementById(&quot;mySavedModel&quot;).value);</find>
@@ -379,7 +491,23 @@
       <find>setid</find>
       <find>processdetail</find>
       <find>请检查名称是否有且仅有一个</find>
+      <find>processDetail.set(&quot;task_id&quot;</find>
+      <find>显示字段</find>
+      <find>select</find>
+      <find>请求不存在的字段名</find>
+      <find />
+      <find>砌筑z</find>
+      <find>砌筑</find>
+      <find>砌</find>
+      <find>d</find>
+      <find>da</find>
+      <find>servletdata</find>
+      <find>data</find>
+      <find>view_infomation</find>
     </findStrings>
+    <replaceStrings>
+      <replace>view_information</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -388,30 +516,46 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/BaseServlet.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/jg/common/result/ResultCode.java" />
         <option value="$PROJECT_DIR$/designExplorer/src/main/webapp/test/axios.min.js" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinition.java" />
         <option value="$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/process/TestProcessManager.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/Resolver.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistenceFactory.java" />
         <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/DictServlet.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefnitionFactory.java" />
-        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java" />
         <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/ProcessServlet.java" />
         <option value="$PROJECT_DIR$/docs/develop/表达式.txt" />
-        <option value="$PROJECT_DIR$/designExplorer/src/main/webapp/test/i.html" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessDetailFactory.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/StartPerformer.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessImpl.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ExpressionControl.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ModuleVarResolver.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/SystemVarResolver.java" />
+        <option value="$PROJECT_DIR$/common/src/main/resources/log4j2-test.xml" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java" />
+        <option value="dbsequence:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.seq_processdetail_data" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/jg/common/result/ResultCode.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistenceFactory.java" />
+        <option value="$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/process/TestTaskManager.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskFactory.java" />
+        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/BaseServlet.java" />
+        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/HttpRequestType.java" />
+        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FormDesign.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/exception/NotFoundProcess.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/ListClass.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql" />
+        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/TaskServlet.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessImpl.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelFactory.java" />
+        <option value="$PROJECT_DIR$/designExplorer/src/main/webapp/test/i.html" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefnitionFactory.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionFactory.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java" />
+        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java" />
+        <option value="$PROJECT_DIR$/docs/designer/formal.pdb" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/jg/common/result/HttpResult.java" />
+        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java" />
+        <option value="$PROJECT_DIR$/docs/develop/WEB接口说明.txt" />
       </list>
     </option>
   </component>
@@ -462,7 +606,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -643,90 +787,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workflow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workflow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workflow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workflow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="expression" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -802,6 +862,130 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="designExplorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="designExplorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="designExplorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="explorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="designExplorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="explorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -845,10 +1029,40 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -860,6 +1074,11 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="FullScreen" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jg.workflow.exception" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -874,6 +1093,26 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration default="false" name="TestTaskManager.testGetMyTasks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="workflow" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.jg.workflow.process" />
+      <option name="MAIN_CLASS_NAME" value="com.jg.workflow.process.TestTaskManager" />
+      <option name="METHOD_NAME" value="testGetMyTasks" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings />
@@ -1078,9 +1317,15 @@
         </option>
       </method>
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestTaskManager.testGetMyTasks" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestTaskManager.testGetMyTasks" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1107,7 +1352,9 @@
       <workItem from="1493692641048" duration="18095000" />
       <workItem from="1493773165481" duration="263000" />
       <workItem from="1493773441381" duration="9782000" />
-      <workItem from="1493783605026" duration="1717000" />
+      <workItem from="1493783605026" duration="2866000" />
+      <workItem from="1493859670816" duration="522000" />
+      <workItem from="1493860673773" duration="21065000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1493717396678</created>
@@ -1116,35 +1363,71 @@
       <option name="project" value="LOCAL" />
       <updated>1493717396678</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="使用web方式调试流程启动。">
+      <created>1493785357771</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1493785357771</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TestTaskManager_testGetMyTasks - 2017.05.04 at 10h 11m 44s.xml">
+      <configuration name="TestTaskManager.testGetMyTasks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTaskManager_testGetMyTasks - 2017.05.04 at 10h 52m 02s.xml">
+      <configuration name="TestTaskManager.testGetMyTasks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTaskManager_testGetMyTasks - 2017.05.04 at 10h 53m 17s.xml">
+      <configuration name="TestTaskManager.testGetMyTasks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTaskManager_testGetMyTasks - 2017.05.04 at 10h 53m 36s.xml">
+      <configuration name="TestTaskManager.testGetMyTasks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTaskManager_testGetMyTasks - 2017.05.04 at 10h 55m 32s.xml">
+      <configuration name="TestTaskManager.testGetMyTasks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTaskManager_testGetMyTasks - 2017.05.04 at 12h 17m 53s.xml">
+      <configuration name="TestTaskManager.testGetMyTasks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTaskManager_testGetMyTasks - 2017.05.04 at 12h 18m 33s.xml">
+      <configuration name="TestTaskManager.testGetMyTasks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTaskManager_testGetMyTasks - 2017.05.04 at 12h 18m 54s.xml">
+      <configuration name="TestTaskManager.testGetMyTasks" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestTaskManager_testGetMyTasks - 2017.05.04 at 12h 24m 13s.xml">
+      <configuration name="TestTaskManager.testGetMyTasks" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29857000" />
+    <option name="totallyTimeSpent" value="52593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281704" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299595" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988626" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299595" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.57792836" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" x="69" y="190" width="1398" height="890" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.57792836" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" x="69" y="189" width="1355" height="891" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" x="1460" y="23" width="460" height="808" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1461" y="23" width="459" height="805" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1462" y="23" width="458" height="811" />
-      <window_info id="Debug" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.259375" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="766" y="23" width="911" height="1041" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1461" y="23" width="459" height="805" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1462" y="23" width="458" height="811" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4234375" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="545" y="23" width="911" height="1041" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1204,462 +1487,215 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="add" />
-    <option name="LAST_COMMIT_MESSAGE" value="add" />
+    <MESSAGE value="使用web方式调试流程启动。" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用web方式调试流程启动。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/develop/流程结构.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+    <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.process_run_control">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/webapp/test/go.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="5851" column="42" lean-forward="false" selection-start-line="5851" selection-start-column="36" selection-end-line="5851" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/webapp/test/go.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="5849" column="84" lean-forward="true" selection-start-line="5849" selection-start-column="84" selection-end-line="5849" selection-end-column="84" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/exception/ModelHasbeenDeployed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="56" column="5" lean-forward="false" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ProcessVarResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/InternalConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/Handle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="64" column="9" lean-forward="false" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/AbstractHandle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2088">
-          <caret line="135" column="3" lean-forward="false" selection-start-line="135" selection-start-column="3" selection-end-line="135" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/FormData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/FormDataFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="52" lean-forward="false" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/ListClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#573#574#0" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#621#622#0" expanded="false" />
-            <element signature="e#638#639#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/sql/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefnitionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1195#1196#0" expanded="false" />
-            <element signature="e#1234#1235#0" expanded="false" />
-            <element signature="e#1306#1307#0" expanded="false" />
-            <element signature="e#1351#1352#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/HttpRequestType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FormDesign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="71" column="49" lean-forward="true" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="68" column="16" lean-forward="false" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/DictServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="46" column="4" lean-forward="false" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/process/TestProcessManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1661#1662#0" expanded="false" />
-            <element signature="e#1713#1714#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3474">
-          <caret line="205" column="23" lean-forward="false" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1066#1067#0" expanded="false" />
-            <element signature="e#1120#1121#0" expanded="false" />
-            <element signature="e#1627#1628#0" expanded="false" />
-            <element signature="e#1687#1688#0" expanded="false" />
-            <element signature="e#2279#2280#0" expanded="false" />
-            <element signature="e#2346#2347#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Process.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="76" column="22" lean-forward="false" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/Process.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/develop/表达式.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="633">
+          <caret line="53" column="7" lean-forward="false" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1348#1349#0" expanded="false" />
-            <element signature="e#1377#1378#0" expanded="false" />
-            <element signature="e#1438#1439#0" expanded="false" />
-            <element signature="e#1473#1474#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistenceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1773#1774#0" expanded="false" />
-            <element signature="e#1793#1794#0" expanded="false" />
-            <element signature="e#5409#5410#0" expanded="false" />
-            <element signature="e#5478#5479#0" expanded="false" />
-            <element signature="e#5809#5810#0" expanded="false" />
-            <element signature="e#5878#5879#0" expanded="false" />
-            <element signature="e#6000#6001#0" expanded="false" />
-            <element signature="e#6076#6077#0" expanded="false" />
-            <element signature="e#13052#13053#0" expanded="false" />
-            <element signature="e#13108#13109#0" expanded="false" />
-            <element signature="e#13359#13360#0" expanded="false" />
-            <element signature="e#13394#13395#0" expanded="false" />
-            <element signature="e#13424#13425#0" expanded="false" />
-            <element signature="e#13443#13444#0" expanded="false" />
-            <element signature="e#13471#13472#0" expanded="false" />
-            <element signature="e#13491#13492#0" expanded="false" />
-            <element signature="e#13517#13518#0" expanded="false" />
-            <element signature="e#13540#13541#0" expanded="false" />
-            <element signature="e#13566#13567#0" expanded="false" />
-            <element signature="e#13589#13590#0" expanded="false" />
-            <element signature="e#13615#13616#0" expanded="false" />
-            <element signature="e#13638#13639#0" expanded="false" />
-            <element signature="e#13667#13668#0" expanded="false" />
-            <element signature="e#13694#13695#0" expanded="false" />
-            <element signature="e#13740#13741#0" expanded="false" />
-            <element signature="e#13760#13761#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.process_detail_data">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+    <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.process_definition">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
           <column-attributes>
-            <column name="now_data" languageId="JSON" />
-            <column name="result_data" languageId="JSON" />
+            <column name="content" languageId="JSON" />
           </column-attributes>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/designer/formal.pdm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="5290" column="46" lean-forward="false" selection-start-line="5290" selection-start-column="30" selection-end-line="5290" selection-end-column="46" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="205" column="3" lean-forward="true" selection-start-line="205" selection-start-column="3" selection-end-line="205" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/result/ResultCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2322">
-          <caret line="141" column="7" lean-forward="false" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1330#1331#0" expanded="false" />
-            <element signature="e#1350#1351#0" expanded="false" />
-            <element signature="e#1398#1399#0" expanded="false" />
-            <element signature="e#1430#1431#0" expanded="false" />
-            <element signature="e#1814#1815#0" expanded="false" />
-            <element signature="e#1835#1836#0" expanded="false" />
-            <element signature="e#4153#4154#0" expanded="false" />
-            <element signature="e#4171#4172#0" expanded="false" />
-            <element signature="e#4201#4202#0" expanded="false" />
-            <element signature="e#4259#4260#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/BaseServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2862">
-          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4942#4943#0" expanded="false" />
-            <element signature="e#4960#4961#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/designer/formal副本.pdm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="5443" column="43" lean-forward="true" selection-start-line="5443" selection-start-column="43" selection-end-line="5443" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessDetailFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../mavenRepository/com/alibaba/fastjson/1.2.31/fastjson-1.2.31-sources.jar!/com/alibaba/fastjson/JSONObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="301" column="0" lean-forward="false" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
-          <folding>
-            <element signature="e#7488#7489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/StartPerformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql">
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/SystemVarResolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="5" column="137" lean-forward="false" selection-start-line="5" selection-start-column="137" selection-end-line="5" selection-end-column="137" />
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/sql/AbstractDataBaseHandle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
+        <state relative-caret-position="738">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#535#536#0" expanded="false" />
+            <element signature="e#567#568#0" expanded="false" />
+            <element signature="e#638#639#0" expanded="false" />
+            <element signature="e#656#657#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/StartPerformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="178" column="4" lean-forward="false" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="264" column="0" lean-forward="false" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-          <folding />
+    <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.task">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/ProcessServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="241" column="0" lean-forward="false" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="260" column="19" lean-forward="true" selection-start-line="260" selection-start-column="19" selection-end-line="260" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/Resolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ExpressionControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.process_data">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="dbDummy://dbsequence:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.seq_processdetail_data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/designer/formal.pdm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="7012" column="13" lean-forward="true" selection-start-line="7012" selection-start-column="13" selection-end-line="7012" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="118" column="10" lean-forward="false" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+          <folding>
+            <element signature="e#2863#2864#0" expanded="false" />
+            <element signature="e#2891#2892#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/webapp/test/testpost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="41" column="11" lean-forward="true" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/DictServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-981">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/HttpRequestType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="134" column="25" lean-forward="false" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistenceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="191" column="17" lean-forward="false" selection-start-line="191" selection-start-column="17" selection-end-line="191" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/exception/NotFoundProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="e#176#177#0" expanded="false" />
+            <element signature="e#191#192#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.process_data">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1669,57 +1705,267 @@
           </column-attributes>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ModuleVarResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="92" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/SystemVarResolver.java">
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/webapp/test/go-debug.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="9" column="359" lean-forward="false" selection-start-line="9" selection-start-column="359" selection-end-line="9" selection-end-column="359" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/AbstractHandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/TaskDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/Process.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="865">
+          <caret line="137" column="10" lean-forward="false" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/UserTaskPerformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/module/Module.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/module/ModuleImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="92" column="29" lean-forward="false" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ModuleVarResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="116" column="20" lean-forward="false" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="266" column="3" lean-forward="false" selection-start-line="266" selection-start-column="3" selection-end-line="266" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/process/TestTaskManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+          <folding>
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FormDesign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="39" column="16" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AddClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="84" column="27" lean-forward="false" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AuditClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/ListClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="57" column="42" lean-forward="true" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="283" column="5" lean-forward="false" selection-start-line="283" selection-start-column="5" selection-end-line="283" selection-end-column="5" />
+          <folding>
+            <element signature="e#6655#6656#0" expanded="true" />
+            <element signature="e#6752#6753#0" expanded="true" />
+            <element signature="e#9749#9750#0" expanded="true" />
+            <element signature="e#9770#9771#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/BaseServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <marker date="1493888286000" expanded="true" signature="464:1212" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/designer/formal.pdb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="6180" column="18" lean-forward="false" selection-start-line="6180" selection-start-column="18" selection-end-line="6180" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/result/HttpResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="181" column="42" lean-forward="false" selection-start-line="181" selection-start-column="42" selection-end-line="181" selection-end-column="42" />
+          <folding>
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1709#1710#0" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#1974#1975#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/TaskServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="57" column="20" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/designExplorer/src/main/webapp/test/i.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="378" column="8" lean-forward="true" selection-start-line="378" selection-start-column="8" selection-end-line="378" selection-end-column="8" />
+        <state relative-caret-position="1220">
+          <caret line="301" column="33" lean-forward="false" selection-start-line="301" selection-start-column="33" selection-end-line="301" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.process_definition">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="content" languageId="JSON" />
-          </column-attributes>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.process_run_control">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/docs/develop/WEB接口说明.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

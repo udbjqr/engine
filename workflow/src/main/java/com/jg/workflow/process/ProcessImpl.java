@@ -65,7 +65,7 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 			createActivityTasks();
 
 		} else if (field.name.equals("definition_id")) {
-			this.definition = ProcessDefnitionFactory.getInstance().getObject("id", value);
+			this.definition = ProcessDefinitionFactory.getInstance().getObject("id", value);
 		}
 
 		super.set(field, value);
@@ -278,18 +278,18 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 		flush();
 
 		EVENT_MANGER.triggerEvent(new PorcessEndEvent(this, task));
-		clearData();
+		clearUp();
 	}
 
 	/**
 	 * 流程结束后清除所有任务
 	 */
-	private void clearData() {
+	private void clearUp() {
 		String[] sqls = new String[]{
 			"delete from process_set_operator where execution_id = " + id,
-			"delete from task where execution_id = " + id,
 			"delete from process_insert_audit where execution_id = " + id,
 			"delete from process_run_control where execution_id = " + id,
+			"delete from task where execution_id = " + id
 		};
 
 		DB_HELPER.execBatchSql(sqls);
@@ -380,6 +380,10 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 		} catch (SQLException e) {
 			log.error("执行sql语句出现异常:", e);
 		}
+	}
+
+	public List<ProcessDetail> getDetails() {
+		return details;
 	}
 
 	public TaskImpl getActivitiTaskById(int taskId) {

@@ -1,7 +1,7 @@
 package com.jg.explorer;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.result.ResultCode;
+import com.jg.common.result.HttpResult;
 import com.jg.identification.Context;
 import com.jg.identification.User;
 import com.jg.workflow.util.TestIdentificationUtil;
@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 
-import static com.jg.common.result.ResultCode.UNKNOWN;
+import static com.jg.common.result.HttpResult.UNKNOWN;
 
 /**
  * 此类为实际Servlet的基类.
@@ -61,37 +61,37 @@ public abstract class BaseServlet extends HttpServlet {
 			res.setCharacterEncoding("UTF-8");
 			((HttpServletResponse) res).setHeader("content-type", "application/json;charset=UTF-8");
 
-			ResultCode resultCode = checkAndSaveParameter(servletData, req, res);
+			HttpResult httpResult = checkAndSaveParameter(servletData, req, res);
 
-			if (resultCode != null) {
-				((PrintWriter) servletData.get(WRITER)).print(resultCode.toString());
+			if (httpResult != null) {
+				((PrintWriter) servletData.get(WRITER)).print(httpResult.toString());
 				return;
 			}
 
 			HttpRequestType type = (HttpRequestType) servletData.get(TYPE);
-			resultCode = execute(type, servletData);
+			httpResult = execute(type, servletData);
 
-			if (resultCode == null) {
-				((PrintWriter) servletData.get(WRITER)).print(ResultCode.ISNULL.toString());
+			if (httpResult == null) {
+				((PrintWriter) servletData.get(WRITER)).print(HttpResult.ISNULL.toString());
 				return;
 			}
 
-			writeToFront(servletData, resultCode);
+			writeToFront(servletData, httpResult);
 		} catch (Exception e) {
 			log.error("发生未捕获异常：", e);
 			writeToFront(servletData, UNKNOWN);
 		}
 	}
 
-	private void writeToFront(ServletData servletData, ResultCode resultCode) {
+	private void writeToFront(ServletData servletData, HttpResult httpResult) {
 
-		String result = resultCode.toString();
+		String result = httpResult.toString();
 		((PrintWriter) servletData.get(WRITER)).print(result);
 		log.debug("向前端返回：" + result);
 	}
 
 
-	private ResultCode checkAndSaveParameter(ServletData servletData, ServletRequest req, ServletResponse res) {
+	private HttpResult checkAndSaveParameter(ServletData servletData, ServletRequest req, ServletResponse res) {
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) res;
 
@@ -107,7 +107,7 @@ public abstract class BaseServlet extends HttpServlet {
 
 		JSONObject jsonData = getParameter(request);
 		if (jsonData == null) {
-			return ResultCode.NO_PARAMETER;
+			return HttpResult.NO_PARAMETER;
 		}
 
 		servletData.put(JSON_DATA, jsonData);
@@ -118,15 +118,16 @@ public abstract class BaseServlet extends HttpServlet {
 		} finally {
 			if (type == null) {
 				//noinspection ReturnInsideFinallyBlock
-				return ResultCode.NO_SET_REQUEST_TYPE;
+				log.error("缺失请求参数：" + jsonData.get(TYPE));
+				return HttpResult.NO_SET_REQUEST_TYPE;
 			}
 		}
 
 		servletData.put(TYPE, type);
 
-		ResultCode resultCode = checkUserExists(servletData, request);
-		if (resultCode != null) {
-			return resultCode;
+		HttpResult httpResult = checkUserExists(servletData, request);
+		if (httpResult != null) {
+			return httpResult;
 		}
 
 		return null;
@@ -164,10 +165,10 @@ public abstract class BaseServlet extends HttpServlet {
 	 * @param request     请求的对象。
 	 * @return 正常检查返回 null 异常返回 异常对象。
 	 */
-	private ResultCode checkUserExists(ServletData servletData, HttpServletRequest request) {
+	private HttpResult checkUserExists(ServletData servletData, HttpServletRequest request) {
 		User user = (User) request.getSession().getAttribute(USER);
 		if (user == null) {
-			return ResultCode.NOT_LOGIN;
+			return HttpResult.NOT_LOGIN;
 		}
 
 		servletData.put(USER, user);
@@ -175,7 +176,7 @@ public abstract class BaseServlet extends HttpServlet {
 		return null;
 	}
 
-	protected abstract ResultCode execute(HttpRequestType type, ServletData servletData);
+	protected abstract HttpResult execute(HttpRequestType type, ServletData servletData);
 
 	protected class ServletData extends HashMap<String, Object> {
 		ServletData() {

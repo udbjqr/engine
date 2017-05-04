@@ -216,6 +216,12 @@ public interface ProcessManager {
 	 */
 	List<Task> getNeedSetOperatorsTask();
 
+	/**
+	 * 返回指定Id的流程对象
+	 * @param processId 流程对象的ID
+	 * @return 流程对象。
+	 */
+	Process getProcessById(Integer processId);
 }
 
 

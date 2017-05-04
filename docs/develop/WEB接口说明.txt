@@ -7,40 +7,160 @@ http://192.168.1.198:8080/designServlet/
 
 所有返回值：
 {
-	'code' 返回值代码
-	'message' 字符串的后台返回消息
-	'success': boolean   表明是否成功
+	'code' 返回值代码,
 	'data': 返回值
+}
+
+流程设计：
+url: FlowDesign
+修改一个流程定义：
+{	"type":"save",	'name': 'name', 'type': 'save','id': 流程定义的Id，
+	'description': 'description', 'view_information': 'view_information', 'content': JSON.parse(json)}
+
+新增一个流程定义：
+{	"type":"save",	'name': 'name', 'type': 'save',
+	'description': 'description', 'view_information': 'view_information', 'content': JSON.parse(json)}
+
+读：
+{	"type":"load",	"modelId":225}
+返回例：
+{
+  "code": 0,
+  "data": {
+    "model": {
+      "id": 225,
+      "name": "name",
+      "category": "",
+      "content": {
+        "linkToPortIdProperty": "toPort",
+        "name": "name",
+        "linkDataArray": [
+          {
+            "visible": true,
+            "fromPort": "B",
+            "toPort": "T",
+            "from": 1,
+            "to": 2,
+            "text": "这测试一下"
+          },
+          {
+            "fromPort": "B",
+            "toPort": "T",
+            "from": -2,
+            "to": 1
+          },
+          {
+            "fromPort": "B",
+            "toPort": "T",
+            "from": 2,
+            "to": -1,
+            "points":
+          }
+        ],
+        "nodeDataArray": [
+          {
+            "loc": "175 0",
+            "text": "Start",
+            "category": "Start",
+            "key": -2
+          },
+          {
+            "loc": "175 100",
+            "module": 1,
+            "assignees": "CurrentOperator",
+            "handle": 1,
+            "text": "申请",
+            "category": "UserTask",
+            "key": 1
+          },
+          {
+            "loc": "175 200",
+            "module": 1,
+            "assignees": "R1",
+            "handle": 2,
+            "text": "确定",
+            "category": "UserTask",
+            "key": 2
+          },
+          {
+            "loc": "170.99999999999994 310.9999999999997",
+            "text": "End",
+            "category": "End",
+            "key": -1
+          }
+        ],
+        "linkFromPortIdProperty": "fromPort",
+        "class": "go.GraphLinksModel"
+      },
+      "view_information": "view_infomation",
+      "company_id": 1,
+      "description": "description",
+      "flag": 1
+    }
+  },
+  "message": "成功"
 }
 
 模块表单：
 url：FormDesign
 读：
-	'type':'load',
-	'id':模型的id.
+	{'type':'load',
+	'id':模型的id.}
 保存：
-	'type':'save',
+	{'type':'save',
 	'id':'id',
-	'content':模型表单的对象。
+	'content':模型表单的对象。}
 列表：
-	'type':'list'
+	{'type':'list'}
 	返回：
 		{.....'data':[{'id':id,'name':module_name}]}
 
 数据字典：
 url:dict
 读：
-	'type':'load',
-	'id':id.
+	{'type':'load',
+	'id':id}
 保存：
-	'type':'save',
+	{'type':'save',
 	'id':'id',
 	dict_name
 	label
-	value
+	value}
 	说明： 新增无id外，其余都必须有。
 	      同一个企业、同一个名称的 label 或 value都唯一
 列表：
 	'type':'list'
 	返回：
 		{'data': "list": [{"label": "男","value": "1"}]}
+
+
+流程：
+url:Process
+开始一个流程：
+	{'type':'start',
+	"definitionId":流程定义ID}
+返回例子：
+{
+  "code": 0,
+  "data": {"processId": 410 }}
+
+
+任务：
+url:task
+得到我的任务：
+	{'type':'loadMyTasks'}
+返回例子：
+{"code": 0,
+  "data": {
+    "list": [{
+        "id": 251,
+        "execution_id": 350,
+        "name": "节点2",
+        "module_id": 1,
+        "handle_id": 2
+      }
+    ]}}
+
+操作：
+{	"type":"handle",	"taskId":281,	"variable":{}}
+

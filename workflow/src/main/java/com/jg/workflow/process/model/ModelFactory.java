@@ -23,7 +23,7 @@ class ModelFactory extends AbstractPersistenceFactory<ModeImpl> {
 		addField("create_time", Date.class, " now()", false, false);
 		addField("update_time", Date.class, " now()", false, false);
 		addField("content", JSONObject.class, null, false, false);
-		addField("view_infomation", String.class, null, false, false);
+		addField("view_information", String.class, null, false, false);
 		addField("company_id", Integer.class, null, true, false);
 		addField("description", String.class, null, false, false);
 		addField("flag", Integer.class, 0, false, false);
