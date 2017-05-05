@@ -10,7 +10,7 @@ import java.util.Date;
  * @author yimin
  */
 
-class ModelFactory extends AbstractPersistenceFactory<ModeImpl> {
+public class ModelFactory extends AbstractPersistenceFactory<ModeImpl> {
 	public static final ModelFactory MODEL_FACTORY = new ModelFactory();
 
 	private ModelFactory() {

@@ -38,7 +38,7 @@ public class ModuleImpl extends AbstractPersistence implements Module {
 		Object o = get("form_structure");
 		if (o != null && o instanceof JSONObject) {
 			//noinspection unchecked
-			formStructures = (List<JSONObject>) ((JSONObject) o).get("formArr");
+			formStructures = (List<JSONObject>) ((JSONObject) o).get("content");
 		}
 	}
 

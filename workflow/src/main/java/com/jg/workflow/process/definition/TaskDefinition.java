@@ -7,10 +7,7 @@ import com.jg.workflow.process.handle.Handle;
 import com.jg.workflow.process.handle.HandleFactory;
 import com.jg.workflow.process.module.Module;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static com.jg.workflow.process.module.ModuleFactory.MODULE_FACTORY;
 
@@ -23,8 +20,6 @@ import static com.jg.workflow.process.module.ModuleFactory.MODULE_FACTORY;
  */
 
 public class TaskDefinition {
-	private final ProcessDefinitionImpl definition;
-
 	private List<Link> fromLinks = new ArrayList<>();
 	private List<Link> toLinks = new ArrayList<>();
 	private final int id;
@@ -34,10 +29,11 @@ public class TaskDefinition {
 	private Handle handle;
 	private String assignees;
 	//到期时间
-	private Long durationtime;
+	private Long durationTime;
 	private Set<String> canSeeColumn;
 	private Set<String> canModifyColumn;
-	private TaskType taskType;
+	private NodeType nodeType;
+	private final JSONObject structure;
 
 	public List<Link> getFromLinks() {
 		return fromLinks;
@@ -71,8 +67,8 @@ public class TaskDefinition {
 		return assignees;
 	}
 
-	public Long getDurationtime() {
-		return durationtime == null ? 0 : durationtime;
+	public Long getDurationTime() {
+		return durationTime == null ? 0 : durationTime;
 	}
 
 	public Set<String> getCanSeeColumn() {
@@ -83,12 +79,12 @@ public class TaskDefinition {
 		return canModifyColumn;
 	}
 
-	public TaskType getTaskType() {
-		return taskType;
+	public NodeType getNodeType() {
+		return nodeType;
 	}
 
-	TaskDefinition(ProcessDefinitionImpl definition, JSONObject structure) {
-		this.definition = definition;
+	TaskDefinition(JSONObject structure) {
+		this.structure = structure;
 		this.id = structure.getInteger("id");
 
 		this.name = structure.getString("name");
@@ -97,14 +93,14 @@ public class TaskDefinition {
 		this.handle = HandleFactory.getHandle(structure.getInteger("handle"));
 		this.assignees = structure.getString("assignees");
 		try {
-			this.durationtime = Long.parseLong(structure.getString("durationTime"));
+			this.durationTime = Long.parseLong(structure.getString("durationTime"));
 		} catch (NumberFormatException e) {
-			this.durationtime = -1L;
+			this.durationTime = -1L;
 		}
 
 		this.canModifyColumn = getSet(structure.get("canModifyColumn"));
 		this.canSeeColumn = getSet(structure.get("canSeeColumn"));
-		this.taskType = TaskType.valueOf(structure.getString("type"));
+		this.nodeType = NodeType.valueOf(structure.getString("type"));
 
 		if (module != null && !module.containHandle(handle)) {
 			throw new ModuleNotContainHandle(module, handle);
@@ -124,13 +120,14 @@ public class TaskDefinition {
 		if (object != null && object instanceof String) {
 			HashSet<String> set = new HashSet<>();
 
-			for (String str : ((String) object).split(",")) {
-				set.add(str);
-			}
+			set.addAll(Arrays.asList(((String) object).split(",")));
 			return set;
 		}
 		return null;
 	}
 
+	Object get(String name) {
+		return structure.get(name);
+	}
 
 }

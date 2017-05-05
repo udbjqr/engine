@@ -48,7 +48,7 @@ public class TaskImpl extends AbstractPersistence implements Task {
 			set("execution_id", process.getId());
 			set("defition_id", taskDefinition.getId());
 			set("create_time", new Date(System.currentTimeMillis()));
-			set("due_time", DateUtil.toDateNowAddInterval(taskDefinition.getDurationtime()));
+			set("due_time", DateUtil.toDateNowAddInterval(taskDefinition.getDurationTime()));
 			if (taskDefinition.getModule() != null) {
 				set("module_id", taskDefinition.getModule().getId());
 			}
@@ -141,7 +141,7 @@ public class TaskImpl extends AbstractPersistence implements Task {
 		performer.setOperators(operators);
 	}
 
-	public boolean isInsterAudit() {
+	public boolean isInsertAudit() {
 		return get("flag").equals(2);
 	}
 }

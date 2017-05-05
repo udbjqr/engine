@@ -205,7 +205,6 @@ public abstract class AbstractPersistence implements Persistence {
 		return false;
 	}
 
-
 	@Override
 	public boolean flush() {
 		if (isNewCreate) {

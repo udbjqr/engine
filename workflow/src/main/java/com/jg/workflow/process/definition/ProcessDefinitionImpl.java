@@ -25,7 +25,7 @@ import static com.jg.common.sql.DBHelperFactory.DB_HELPER;
  */
 
 public class ProcessDefinitionImpl extends AbstractPersistence implements ProcessDefinition {
-	private Map<Integer, TaskDefinition> tasks = new HashMap<>();
+	private Map<Integer, TaskDefinition> nodes = new HashMap<>();
 	private List<Link> links = new ArrayList<>();
 	private TaskDefinition startNode;
 	private TaskDefinition endNode;
@@ -48,7 +48,8 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 			set("company_id", companyId);
 			set("category", model.get("category"));
 			set("description", model.get("description"));
-			set("model_content",model.get("content"));
+			set("model_content", model.get("content"));
+			set("model_id", model.get("id"));
 			set("flag", 1);
 
 			model.set("flag", 1);
@@ -62,14 +63,14 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 
 	private void buildStructure(JSONObject content) {
 		links.clear();
-		tasks.clear();
+		nodes.clear();
 		startNode = null;
 		endNode = null;
 
 		JSONArray array = content.getJSONArray("nodes");
 		array.forEach(t -> {
 			JSONObject task = (JSONObject) t;
-			tasks.put(task.getInteger("id"), new TaskDefinition(this, task));
+			nodes.put(task.getInteger("id"), new TaskDefinition(task));
 		});
 
 		array = content.getJSONArray("links");
@@ -79,9 +80,9 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 	}
 
 	private void checkDefinitionIntegrity() {
-		tasks.forEach((k, node) -> {
+		nodes.forEach((k, node) -> {
 			if (node.getFromLinks().isEmpty()) {
-				if (node.getTaskType() == TaskType.START) {
+				if (node.getNodeType() == NodeType.START) {
 					this.startNode = node;
 				} else {
 					throw new ProcessDefinitionNotIntegrity("流程节点定义有误，节点需要有接入对象。对象:" + node.getName());
@@ -89,14 +90,14 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 			}
 
 			if (node.getToLinks().isEmpty()) {
-				if (node.getTaskType() == TaskType.END) {
+				if (node.getNodeType() == NodeType.END) {
 					this.endNode = node;
 				} else {
 					throw new ProcessDefinitionNotIntegrity("流程节点定义有误，节点需要有向下链接.对象:" + node.getName());
 				}
 			}
 
-			if ((node.getTaskType() == TaskType.USERTASK || node.getTaskType() == TaskType.MULTITASK) && (node.getModule() == null || node.getHandle() == null)) {
+			if ((node.getNodeType() == NodeType.USERTASK || node.getNodeType() == NodeType.MULTITASK) && (node.getModule() == null || node.getHandle() == null)) {
 				throw new ProcessDefinitionNotIntegrity("流程节点定义有误，节点必须指定模块与操作.节点对象:" + node.getName());
 			}
 		});
@@ -110,7 +111,7 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 	}
 
 	public TaskDefinition getTaskDefinition(Integer taskId) {
-		return tasks.get(taskId);
+		return nodes.get(taskId);
 	}
 
 	public TaskDefinition getStartNode() {

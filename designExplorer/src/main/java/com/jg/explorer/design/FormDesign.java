@@ -77,6 +77,7 @@ public class FormDesign extends BaseServlet {
 			structure.put("version", 0);
 			structure.put("module_id", module.getId());
 			structure.put("module_name", jsonData.get("module_name"));
+			module.set("form_structure", structure);
 		}
 
 		JSONObject oldStru = module.get("form_structure");

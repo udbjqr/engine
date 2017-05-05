@@ -13,6 +13,8 @@ http://192.168.1.198:8080/designServlet/
 
 流程设计：
 url: FlowDesign
+列表：
+{"type":"list"}
 修改一个流程定义：
 {	"type":"save",	'name': 'name', 'type': 'save','id': 流程定义的Id，
 	'description': 'description', 'view_information': 'view_information', 'content': JSON.parse(json)}

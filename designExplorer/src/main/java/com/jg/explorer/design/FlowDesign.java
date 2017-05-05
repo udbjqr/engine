@@ -17,6 +17,7 @@ import org.apache.logging.log4j.Logger;
 import javax.servlet.annotation.WebServlet;
 
 import static com.jg.common.result.HttpResult.*;
+import static com.jg.workflow.process.model.ModelFactory.MODEL_FACTORY;
 
 /**
  * 提供流程设计WEB接口
@@ -37,6 +38,8 @@ public class FlowDesign extends BaseServlet {
 		Model model;
 
 		switch (type) {
+			case list:
+				return SUCCESS.clone().setListToData(RESULT_LIST, MODEL_FACTORY.getMultipleObjects("company_id",company.getId(),null),"id","name");
 			case modify:
 			case save:
 				model = modelManager.getModel((Integer) jsonData.get(ID));

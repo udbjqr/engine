@@ -41,7 +41,6 @@ public class AddClass extends AbstractHandle {
 	protected HttpResult execute(User user, Task task, Module module, Process processData, JSONObject jsonData) {
 		//表单数据
 		FormData form = null;
-		//表单ID
 
 		//找到表单数据ID
 		Integer formData_Id = processData.getModuleInstanceId(module.getId());
@@ -80,6 +79,7 @@ public class AddClass extends AbstractHandle {
 			logger.error("写数据出现异常。", e);
 		}
 
+		//noinspection ConstantConditions
 		form.flush();
 
 		return HttpResult.NORMAL;

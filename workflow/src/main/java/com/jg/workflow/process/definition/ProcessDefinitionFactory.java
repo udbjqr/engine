@@ -27,6 +27,7 @@ public class ProcessDefinitionFactory extends AbstractPersistenceFactory<Process
 		addField("category", String.class, null, false, false);
 		addField("description", String.class, null, false, false);
 		addField("flag", Integer.class, 0, false, false);
+		addField("model_id", Integer.class, null, false, false);
 
 		init();
 	}

@@ -38,7 +38,7 @@ public abstract class AbstractPerformer {
 
 	protected final TaskImpl task;
 	protected final ProcessImpl process;
-	protected final ProcessDetail processDetail;
+	final ProcessDetail processDetail;
 
 	AbstractPerformer(TaskImpl task) {
 		this.task = task;
@@ -47,7 +47,7 @@ public abstract class AbstractPerformer {
 	}
 
 	static AbstractPerformer getPerformer(TaskImpl task) {
-		switch (task.getDefinition().getTaskType()) {
+		switch (task.getDefinition().getNodeType()) {
 			case END:
 				return new EndPerformer(task);
 			case START:
@@ -88,7 +88,7 @@ public abstract class AbstractPerformer {
 		return httpResult;
 	}
 
-	final void complete() {
+	void complete() {
 		checkProcessRunning();
 
 		if (handleInsertAuditComplete()) {
@@ -108,7 +108,7 @@ public abstract class AbstractPerformer {
 	 * @return true 有加签
 	 */
 	private boolean handleInsertAuditComplete() {
-		if (task.isInsterAudit()) {
+		if (task.isInsertAudit()) {
 			final int[] values = new int[]{0, 0, 0};
 
 			DB_HELPER.selectWithRow("select id,sponsor,accumulative from process_insert_audit where flag = 1 and task_id = " + task.getId() + " order by accumulative desc limit 1", set -> {
