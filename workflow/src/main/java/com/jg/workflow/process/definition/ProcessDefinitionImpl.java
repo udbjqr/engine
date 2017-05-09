@@ -52,6 +52,9 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 			set("model_id", model.get("id"));
 			set("flag", 1);
 
+			flush();
+			this.id = get("id");
+
 			model.set("flag", 1);
 			model.flush();
 		} else {

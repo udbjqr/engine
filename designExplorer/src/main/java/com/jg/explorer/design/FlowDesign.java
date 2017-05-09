@@ -39,12 +39,17 @@ public class FlowDesign extends BaseServlet {
 
 		switch (type) {
 			case list:
-				return SUCCESS.clone().setListToData(RESULT_LIST, MODEL_FACTORY.getMultipleObjects("company_id",company.getId(),null),"id","name");
+				return SUCCESS.clone().setListToData(RESULT_LIST, MODEL_FACTORY.getMultipleObjects("company_id", company.getId(), null), "id", "name");
 			case modify:
 			case save:
-				model = modelManager.getModel((Integer) jsonData.get(ID));
+				Integer id = (Integer) jsonData.get(ID);
+				if (id == null) {
+					return NOT_FOUND_OBJECT.clone().put("notFound", "id");
+				}
+
+				model = modelManager.getModel(id);
 				if (model == null) {
-					return NOT_FOUND_OBJECT.clone().put(ID, jsonData.get(ID));
+					return NOT_FOUND_OBJECT.clone().put("notFound", "id");
 				}
 				return saveToModel(model, jsonData, company);
 			case load:
@@ -68,7 +73,7 @@ public class FlowDesign extends BaseServlet {
 		try {
 			model = modelManager.getModel(modelId);
 		} catch (ModelNotFound e) {
-			return NOT_FOUND_OBJECT.clone().put(ID, jsonData.get(ID));
+			return NOT_FOUND_OBJECT.clone().put("notFound", "id");
 		}
 
 		return SUCCESS.clone().addInfoToValue("model", model, "id", "name", "category", "content", "view_information", "company_id", "description", "flag");
@@ -84,6 +89,7 @@ public class FlowDesign extends BaseServlet {
 		model.set("description", jsonData.get("description"));
 		model.set(CONTENT, content);
 		model.set("view_information", jsonData.get("view_information"));
+		model.set("flag", 0);
 
 		model.flush();
 		ProcessDefinition definition;

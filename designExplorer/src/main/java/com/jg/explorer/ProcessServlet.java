@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.jg.common.result.HttpResult;
 import com.jg.identification.Company;
 import com.jg.workflow.Context;
+import com.jg.workflow.exception.ProcessDefinitionNotFount;
 import com.jg.workflow.process.Process;
 import com.jg.workflow.process.ProcessDetail;
 import com.jg.workflow.process.ProcessImpl;
@@ -66,8 +67,12 @@ public class ProcessServlet extends BaseServlet {
 		if (definitionId == null) {
 			return NO_SET_REQUEST_TYPE.clone().setMessage("未找到需要的参数：definitionId");
 		}
-
-		Process process = processManager.startProcess(definitionId);
+		Process process;
+		try {
+			process = processManager.startProcess(definitionId);
+		} catch (ProcessDefinitionNotFount e) {
+			return NO_SET_REQUEST_TYPE.clone().setMessage("指定的流程定义Id不匹配，id：" + definitionId);
+		}
 
 		if (process != null) {
 			log.trace("成功生成流程：" + process);

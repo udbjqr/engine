@@ -49,7 +49,11 @@ public class ProcessDefinitionFactory extends AbstractPersistenceFactory<Process
 	 */
 	@Override
 	public synchronized ProcessDefinitionImpl getObject(String key, Object value) {
-		int id_value = dbHelper.selectOneValues("select id   from process_definition p where exists(select 1 from process_definition d where d." + key + " = " + dbHelper.getString(value) + " and p.name = d.name) order by version desc limit 1");
-		return super.getObject("id", id_value);
+		Integer id_value = dbHelper.selectOneValues("select id from process_definition p where exists(select 1 from process_definition d where d." + key + " = " + dbHelper.getString(value) + " and p.name = d.name) order by version desc limit 1");
+		if (id_value == null) {
+			return null;
+		} else {
+			return super.getObject("id", id_value);
+		}
 	}
 }

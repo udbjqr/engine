@@ -87,6 +87,20 @@ public interface ProcessManager {
 	List<ProcessDefinition> getAllProcessDefinitions(String condition, int companyId, int offset, int limit);
 
 	/**
+	 * 返回当前企业所有可被启动的流程定义对象.
+	 * <p>
+	 * 此方法仅返回当前最大版本并且可被启动的流程定义对象。
+	 * <p>
+	 * 如limit = -1 则返回所有数据，如需要所有所有值使用:{@link #getAllProcessDefinitions(String condition, int companyId)} 方法。
+	 *
+	 * @param offset    返回的数据从多少开始取
+	 * @param limit     需要返回的条数
+	 * @param companyId 企业的Id
+	 * @return 所有流定义对象
+	 */
+	List<ProcessDefinition> getCanStartProcessDefinitions(int companyId, int offset, int limit);
+
+	/**
 	 * 返回所有流程定义对象.
 	 *
 	 * @param condition 查询的条件
@@ -218,6 +232,7 @@ public interface ProcessManager {
 
 	/**
 	 * 返回指定Id的流程对象
+	 *
 	 * @param processId 流程对象的ID
 	 * @return 流程对象。
 	 */

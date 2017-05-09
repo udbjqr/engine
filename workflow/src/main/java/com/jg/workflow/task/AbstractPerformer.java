@@ -202,12 +202,12 @@ public abstract class AbstractPerformer {
 
 		//当设置的是系统级的关联关系操作人的时候，从系统对象当中获得，并直接设置操作人。
 		ExpressionControl expressionControl = process.getExpressionControl();
-		Integer userId = (Integer) expressionControl.get(operators);
+		Object oneUser = expressionControl.get(operators);
 
-		if (userId != null) {
-			DB_HELPER.update(String.format("insert into process_run_control(execution_id,task_id,operator_id) values(%d,%d,%d)", processId, taskId, userId));
+		if (oneUser != null && oneUser instanceof User) {
+			DB_HELPER.update(String.format("insert into process_run_control(execution_id,task_id,operator_id) values(%d,%d,%d)", processId, taskId, ((User) oneUser).getId()));
 		} else {
-			List<User> users = UserExpressionUtil.getlists(operators, companyId);
+			List<User> users = UserExpressionUtil.getLists(operators, companyId);
 
 			//如果用户未设置操作人，将写需要设置操作人表，等待设置操作人.
 			if (users.size() == 0) {

@@ -90,13 +90,18 @@ public class ProcessManagerImpl implements ProcessManager {
 	}
 
 	@Override
+	public List<ProcessDefinition> getCanStartProcessDefinitions(int companyId, int offset, int limit) {
+		return new ArrayList<>(PROCESS_DEFNITION_FACTORY.getObjectsForStringByPage("where id IN (SELECT max(id) FROM process_definition d GROUP BY d.name) and company_id = " + companyId, limit, offset, Context.getCurrentOperatorUser()));
+	}
+
+	@Override
 	public ProcessDefinition deploymentProcess(int modelId) throws ModelHasbeenDeployed {
 		@SuppressWarnings("ConstantConditions")
 		Model model = ModelManagerImpl.getInstance(company).getModel(modelId);
 
 		ProcessDefinitionImpl definition = PROCESS_DEFNITION_FACTORY.getNewObject(Context.getCurrentOperatorUser());
 
-		definition.deploy(model, company.getId(), getContentFromGOJS(model.get("content"))).flush();
+		definition.deploy(model, company.getId(), getContentFromGOJS(model.get("content")));
 
 		return definition;
 	}

@@ -2,30 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8539492f-943f-47b4-801d-af205d802865" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/TaskType.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/NodeType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/src/assets/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/static/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessDefinitionServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/.babelrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/.postcssrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/config/dev.env.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/config/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/config/prod.env.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/src/Index.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/src/components/detail.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/src/components/list.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/src/components/listItem.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/src/components/processDefinition.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/flow_web/src/main.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/designExplorer/src/main/webapp/test/qwest.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/designExplorer/src/main/webapp/test/qwest.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.len" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/e08819dd-fae1-4e5e-8b00-14fe6296cdc1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java" afterPath="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designExplorer/desginExplorer.iml" afterPath="$PROJECT_DIR$/designExplorer/desginExplorer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FormDesign.java" afterPath="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FormDesign.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/designer/formal.pdm" afterPath="$PROJECT_DIR$/docs/designer/formal.pdm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/develop/WEB接口说明.txt" afterPath="$PROJECT_DIR$/docs/develop/WEB接口说明.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/develop/流程结构.txt" afterPath="$PROJECT_DIR$/docs/develop/流程结构.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/develop/表达式.txt" afterPath="$PROJECT_DIR$/docs/develop/表达式.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engine.iml" afterPath="$PROJECT_DIR$/engine.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/SystemVarResolver.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/SystemVarResolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionFactory.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/TaskDefinition.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/TaskDefinition.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AddClass.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AddClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelFactory.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/module/ModuleImpl.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/module/ModuleImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/MultiTaskPerformer.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/MultiTaskPerformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskImpl.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/util/UserExpressionUtil.java" afterPath="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/util/UserExpressionUtil.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
@@ -152,228 +167,118 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractHandle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/AbstractHandle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="12" />
-              <folding>
-                <element signature="e#885#886#0" expanded="true" />
-                <element signature="e#906#907#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/Task.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTaskPerformer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/UserTaskPerformer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="31" column="60" lean-forward="false" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-              <folding>
-                <element signature="e#446#447#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="92" column="22" lean-forward="false" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
-              <folding>
-                <element signature="e#2415#2416#0" expanded="true" />
-                <element signature="e#2453#2454#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProcessManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="116" column="20" lean-forward="false" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractPerformer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="110" column="20" lean-forward="false" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultiTaskPerformer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/MultiTaskPerformer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-              <folding>
-                <element signature="e#171#172#0" expanded="true" />
-                <element signature="e#189#190#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/module/Module.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModuleImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/module/ModuleImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="89" column="3" lean-forward="false" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
-              <folding>
-                <element signature="e#2298#2299#0" expanded="true" />
-                <element signature="e#2353#2354#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractPersistence.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="179" column="38" lean-forward="false" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProcessManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="89" column="3" lean-forward="true" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FlowDesign.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="41" column="137" lean-forward="false" selection-start-line="41" selection-start-column="137" selection-end-line="41" selection-end-column="137" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Context.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/Context.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/Model.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModeImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModeImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskDefinition.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/TaskDefinition.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-564">
-              <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding>
-                <element signature="e#2886#2887#0" expanded="true" />
-                <element signature="e#2919#2920#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="流程结构.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/develop/流程结构.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NodeType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/NodeType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="Index.vue" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/flow_web/src/Index.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="396">
+                  <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="processDefinition.vue" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flow_web/src/components/processDefinition.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="108">
+                  <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="e#373#399#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="listItem.vue" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flow_web/src/components/listItem.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="108">
+                  <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flow_web/src/main.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="486">
+                  <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                    <element signature="e#140#161#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="list.vue" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flow_web/src/components/list.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="324">
+                  <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProcessDefinitionServlet.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessDefinitionServlet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="622">
+                  <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ProcessServlet.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="408">
+                  <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="My.vue" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/My.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="151">
+                  <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="52" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+            <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="18">
+                  <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -384,40 +289,43 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>task</find>
-      <find>seq_process_data</find>
-      <find>setid</find>
-      <find>processdetail</find>
-      <find>请检查名称是否有且仅有一个</find>
-      <find>processDetail.set(&quot;task_id&quot;</find>
-      <find>显示字段</find>
-      <find>select</find>
-      <find>请求不存在的字段名</find>
+      <find>hr</find>
+      <find>h</find>
+      <find>login</find>
+      <find>todolist</find>
+      <find>back</find>
+      <find>el-row</find>
+      <find>ru</find>
+      <find>rout</find>
+      <find>route-</find>
+      <find>route-link</find>
+      <find>route-lin</find>
+      <find>route-li</find>
+      <find>route-l</find>
+      <find>route-</find>
+      <find>nowyouyouyou</find>
+      <find>rp</find>
+      <find>r</find>
+      <find>List&lt;ProcessDefinition&gt;</find>
+      <find>.</find>
       <find />
-      <find>砌筑z</find>
-      <find>砌筑</find>
-      <find>砌</find>
-      <find>d</find>
-      <find>da</find>
-      <find>servletdata</find>
-      <find>data</find>
-      <find>view_infomation</find>
-      <find>+</find>
-      <find>++</find>
-      <find>formarr</find>
-      <find>get</find>
-      <find>getU</find>
-      <find>getUr</find>
-      <find>formde</find>
-      <find>getUrl</find>
-      <find />
-      <find>dep</find>
-      <find>de</find>
-      <find>ModeImpl</find>
+      <find>ro</find>
+      <find>rou</find>
+      <find>route</find>
+      <find>router</find>
+      <find>router.</find>
+      <find>router.p</find>
+      <find>router.pu</find>
+      <find>router.pus</find>
+      <find>router.push</find>
+      <find>information</find>
     </findStrings>
     <replaceStrings>
       <replace>view_information</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -425,36 +333,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/designExplorer/src/main/webapp/test/axios.min.js" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinition.java" />
-        <option value="$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/process/TestProcessManager.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/Resolver.java" />
-        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/DictServlet.java" />
-        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/ProcessServlet.java" />
-        <option value="$PROJECT_DIR$/docs/develop/表达式.txt" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessDetailFactory.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/StartPerformer.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ExpressionControl.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ModuleVarResolver.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/SystemVarResolver.java" />
-        <option value="$PROJECT_DIR$/common/src/main/resources/log4j2-test.xml" />
-        <option value="dbsequence:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.seq_processdetail_data" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/jg/common/result/ResultCode.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistenceFactory.java" />
-        <option value="$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/process/TestTaskManager.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskFactory.java" />
-        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/BaseServlet.java" />
         <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/HttpRequestType.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/exception/NotFoundProcess.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/ListClass.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java" />
         <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/TaskServlet.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessImpl.java" />
         <option value="$PROJECT_DIR$/designExplorer/src/main/webapp/test/i.html" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefnitionFactory.java" />
-        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java" />
         <option value="$PROJECT_DIR$/docs/designer/formal.pdb" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/jg/common/result/HttpResult.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java" />
@@ -462,21 +347,59 @@
         <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FormDesign.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AddClass.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskImpl.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/MultiTaskPerformer.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/TaskDefinition.java" />
         <option value="$PROJECT_DIR$/docs/develop/流程结构.txt" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionFactory.java" />
-        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java" />
         <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelFactory.java" />
-        <option value="$PROJECT_DIR$/docs/develop/WEB接口说明.txt" />
+        <option value="$PROJECT_DIR$/docs/develop/表达式.txt" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/util/UserExpressionUtil.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/SystemVarResolver.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/designExplorer/src/main/webapp/flow/src/App.vue" />
+        <option value="$PROJECT_DIR$/flow_web/package.json" />
+        <option value="$PROJECT_DIR$/flow_web/config/index.js" />
+        <option value="$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/Todolist.vue" />
+        <option value="$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/SponsorByMeTask.vue" />
+        <option value="$PROJECT_DIR$/flow_web/src/components/content.vue" />
         <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java" />
+        <option value="$PROJECT_DIR$/flow_web/src/components/listItem.vue" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java" />
+        <option value="$PROJECT_DIR$/flow_web/src/components/list.vue" />
+        <option value="$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionFactory.java" />
+        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessDefinitionServlet.java" />
+        <option value="$PROJECT_DIR$/flow_web/src/components/detail.vue" />
+        <option value="$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql" />
+        <option value="$PROJECT_DIR$/docs/develop/WEB接口说明.txt" />
+        <option value="$PROJECT_DIR$/flow_web/src/App.vue" />
+        <option value="$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/Index.vue" />
+        <option value="$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/index.html" />
+        <option value="$PROJECT_DIR$/flow_web/index.html" />
+        <option value="$PROJECT_DIR$/../../test/index.html" />
+        <option value="$PROJECT_DIR$/../../test/src/main.js" />
+        <option value="$PROJECT_DIR$/../../test/src/App.vue" />
+        <option value="$PROJECT_DIR$/flow_web/src/main.js" />
+        <option value="$PROJECT_DIR$/flow_web/src/components/processDefinition.vue" />
+        <option value="$PROJECT_DIR$/flow_web/src/Index.vue" />
       </list>
     </option>
   </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <exe-path />
+    <config-path />
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -484,8 +407,8 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
@@ -500,6 +423,9 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/flow_web/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1920" />
@@ -523,6 +449,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -532,6 +459,96 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flow_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flow_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flow_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flow_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="flow_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,7 +612,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="designExplorer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -609,7 +626,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="designExplorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="designExplorer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -617,7 +652,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -631,7 +670,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="designExplorer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -657,7 +696,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
+              <option name="myItemId" value="designExplorer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -669,23 +708,77 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="designExplorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="explorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flow_web/src/components" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.jg.workflow.exception" />
     </key>
@@ -836,6 +929,7 @@
     </configuration>
     <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.14" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="COMMON_VM_ARGUMENTS" value="-server -XX:PermSize=128M -XX:MaxPermSize=256m" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="HOT_SWAP_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
@@ -965,7 +1059,17 @@
       <workItem from="1493783605026" duration="2866000" />
       <workItem from="1493859670816" duration="522000" />
       <workItem from="1493860673773" duration="21235000" />
-      <workItem from="1493945813692" duration="15956000" />
+      <workItem from="1493945813692" duration="16636000" />
+      <workItem from="1494205575994" duration="5895000" />
+      <workItem from="1494223141388" duration="1108000" />
+      <workItem from="1494224524300" duration="1674000" />
+      <workItem from="1494227337983" duration="332000" />
+      <workItem from="1494227693670" duration="112000" />
+      <workItem from="1494227857686" duration="1776000" />
+      <workItem from="1494229779604" duration="6109000" />
+      <workItem from="1494291324147" duration="6136000" />
+      <workItem from="1494298867151" duration="30000" />
+      <workItem from="1494298912919" duration="17177000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1493717396678</created>
@@ -988,7 +1092,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493889601175</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="支持前台流程设计开发。&#10;完善通用任务的执行过程。">
+      <created>1493976846379</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493976846379</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1021,10 +1132,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68719000" />
+    <option name="totallyTimeSpent" value="109748000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="1920" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281704" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1037,24 +1148,54 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.57792836" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" x="103" y="162" width="1355" height="891" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" x="1460" y="23" width="460" height="808" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" x="1459" y="23" width="460" height="808" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1461" y="23" width="459" height="805" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1462" y="23" width="458" height="811" />
-      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4234375" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="545" y="23" width="911" height="1041" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4234375" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="545" y="23" width="911" height="1041" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.57792836" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" x="103" y="162" width="1355" height="891" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988626" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1461" y="23" width="459" height="805" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1462" y="23" width="458" height="811" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4234375" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="545" y="23" width="911" height="1041" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281704" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.57792836" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" x="103" y="162" width="1355" height="891" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" x="1459" y="23" width="460" height="808" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1107,7 +1248,8 @@
     <MESSAGE value="add" />
     <MESSAGE value="使用web方式调试流程启动。" />
     <MESSAGE value="调试完成一个完整流程。&#10;前台web页面数据提供" />
-    <option name="LAST_COMMIT_MESSAGE" value="调试完成一个完整流程。&#10;前台web页面数据提供" />
+    <MESSAGE value="支持前台流程设计开发。&#10;完善通用任务的执行过程。" />
+    <option name="LAST_COMMIT_MESSAGE" value="支持前台流程设计开发。&#10;完善通用任务的执行过程。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1119,404 +1261,196 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="32" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="jsonData.get(&quot;modelId&quot;)" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/DictServlet.java">
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/InitiateCom.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-981">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="49" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/HttpRequestType.java">
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/inputCtrl.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/StringBuilder.java">
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/levelIndentation.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/Logininput.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/password.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/SwitchCtrl.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/Work.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow_web/node_modules/vue-router/dist/vue-router.common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="134" column="25" lean-forward="false" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+          <caret line="475" column="39" lean-forward="false" selection-start-line="475" selection-start-column="39" selection-end-line="475" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/information.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="127" column="15" lean-forward="true" selection-start-line="127" selection-start-column="15" selection-end-line="127" selection-end-column="15" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/Initiate.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/selectCtrl.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/radioCtrl.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/selectNextNode.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/Todolist.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/Message.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="77" column="1" lean-forward="false" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/ReviewInput.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="85" column="32" lean-forward="false" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/foot.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/SponsorByMeTask.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="71" column="52" lean-forward="true" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistenceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="191" column="17" lean-forward="false" selection-start-line="191" selection-start-column="17" selection-end-line="191" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/exception/NotFoundProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        <state relative-caret-position="480">
+          <caret line="241" column="17" lean-forward="false" selection-start-line="241" selection-start-column="17" selection-end-line="241" selection-end-column="17" />
           <folding>
-            <element signature="e#176#177#0" expanded="false" />
-            <element signature="e#191#192#0" expanded="false" />
+            <element signature="e#6000#6001#0" expanded="true" />
+            <element signature="e#6076#6077#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/79c2829a/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/engine.public.process_data">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="variable" languageId="JSON" />
-            <column name="data" languageId="JSON" />
-          </column-attributes>
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/webapp/test/go-debug.js">
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="359" lean-forward="false" selection-start-line="9" selection-start-column="359" selection-end-line="9" selection-end-column="359" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/Process.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="865">
-          <caret line="137" column="10" lean-forward="false" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/expression/ModuleVarResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        <state relative-caret-position="-708">
+          <caret line="46" column="72" lean-forward="false" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/test/java/com/jg/workflow/process/TestTaskManager.java">
+    <entry file="file://$PROJECT_DIR$/identification/src/main/java/com/jg/identification/OrganizationStructure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1219#1220#0" expanded="false" />
-            <element signature="e#1251#1252#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AuditClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/ListClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="57" column="42" lean-forward="true" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#6272#6273#0" expanded="false" />
-            <element signature="e#6290#6291#0" expanded="false" />
-            <element signature="e#7100#7101#0" expanded="false" />
-            <element signature="e#7121#7122#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4086">
-          <caret line="283" column="5" lean-forward="false" selection-start-line="283" selection-start-column="5" selection-end-line="283" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1916#1917#0" expanded="false" />
-            <element signature="e#1937#1938#0" expanded="false" />
-            <element signature="e#3184#3185#0" expanded="false" />
-            <element signature="e#3212#3213#0" expanded="false" />
-            <element signature="e#3265#3266#0" expanded="false" />
-            <element signature="e#3293#3294#0" expanded="false" />
-            <element signature="e#3933#3934#0" expanded="false" />
-            <element signature="e#3957#3958#0" expanded="false" />
-            <element signature="e#3991#3992#0" expanded="false" />
-            <element signature="e#4007#4008#0" expanded="false" />
-            <element signature="e#4051#4052#0" expanded="false" />
-            <element signature="e#4091#4092#0" expanded="false" />
-            <element signature="e#4131#4132#0" expanded="false" />
-            <element signature="e#4172#4173#0" expanded="false" />
-            <element signature="e#4237#4238#0" expanded="false" />
-            <element signature="e#4279#4280#0" expanded="false" />
-            <element signature="e#4318#4319#0" expanded="false" />
-            <element signature="e#4343#4344#0" expanded="false" />
-            <element signature="e#4387#4388#0" expanded="false" />
-            <element signature="e#4442#4443#0" expanded="false" />
-            <element signature="e#4768#4769#0" expanded="false" />
-            <element signature="e#4822#4823#0" expanded="false" />
-            <element signature="e#6373#6374#0" expanded="false" />
-            <element signature="e#6417#6418#0" expanded="false" />
-            <element signature="e#6862#6863#0" expanded="false" />
-            <element signature="e#6895#6896#0" expanded="false" />
-            <element signature="e#7834#7835#0" expanded="false" />
-            <element signature="e#7855#7856#0" expanded="false" />
-            <element signature="e#8618#8619#0" expanded="false" />
-            <element signature="e#8708#8709#0" expanded="false" />
-            <element signature="e#10342#10343#0" expanded="false" />
-            <element signature="e#10377#10378#0" expanded="false" />
-            <element signature="e#10459#10460#0" expanded="false" />
-            <element signature="e#10494#10495#0" expanded="false" />
-            <element signature="e#10574#10575#0" expanded="false" />
-            <element signature="e#10610#10611#0" expanded="false" />
-            <element signature="e#10692#10693#0" expanded="false" />
-            <element signature="e#10727#10728#0" expanded="false" />
-            <element signature="e#10768#10769#0" expanded="false" />
-            <element signature="e#10832#10833#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/BaseServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="48" column="40" lean-forward="false" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4989#4990#0" expanded="false" />
-            <element signature="e#5007#5008#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/designer/formal.pdb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="6180" column="18" lean-forward="false" selection-start-line="6180" selection-start-column="18" selection-end-line="6180" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/TaskServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="37" column="17" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/webapp/test/i.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1220">
-          <caret line="301" column="33" lean-forward="false" selection-start-line="301" selection-start-column="33" selection-end-line="301" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/persistence/AbstractPersistence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="179" column="38" lean-forward="false" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/develop/表单结构.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/Handle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="58" column="40" lean-forward="false" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/module/FormStructureNameFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/module/Module.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/module/ModuleImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="89" column="3" lean-forward="false" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
-          <folding>
-            <element signature="e#2298#2299#0" expanded="true" />
-            <element signature="e#2353#2354#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/result/HttpResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2283">
-          <caret line="181" column="26" lean-forward="true" selection-start-line="181" selection-start-column="26" selection-end-line="181" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FormDesign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/TaskImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="92" column="22" lean-forward="false" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
-          <folding>
-            <element signature="e#2415#2416#0" expanded="true" />
-            <element signature="e#2453#2454#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/common/AddClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/SerialGatewayPerformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/handle/AbstractHandle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="12" />
-          <folding>
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/UserTaskPerformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="31" column="60" lean-forward="false" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
-          <folding>
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/MultiTaskPerformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding>
-            <element signature="e#171#172#0" expanded="true" />
-            <element signature="e#189#190#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/task/AbstractPerformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="110" column="20" lean-forward="false" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/NodeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/TaskDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-564">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding>
-            <element signature="e#2886#2887#0" expanded="true" />
-            <element signature="e#2919#2920#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/develop/流程结构.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        <state relative-caret-position="306">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1538,92 +1472,240 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionFactory.java">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/sql/AbstractDataBaseHandle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="28" column="53" lean-forward="true" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        <state relative-caret-position="354">
+          <caret line="70" column="15" lean-forward="false" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/sql/DBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="116" column="20" lean-forward="false" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionImpl.java">
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/definition/ProcessDefinitionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="786">
+          <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jg/common/result/HttpResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="89" column="3" lean-forward="true" selection-start-line="89" selection-start-column="3" selection-end-line="89" selection-end-column="3" />
+        <state relative-caret-position="37">
+          <caret line="256" column="81" lean-forward="true" selection-start-line="256" selection-start-column="81" selection-end-line="256" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/Model.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModeImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/model/ModelFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/develop/WEB接口说明.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="15" />
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/design/FlowDesign.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="41" column="137" lean-forward="false" selection-start-line="41" selection-start-column="137" selection-end-line="41" selection-end-column="137" />
+        <state relative-caret-position="305">
+          <caret line="68" column="72" lean-forward="true" selection-start-line="68" selection-start-column="72" selection-end-line="68" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/develop/WEB接口说明.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/webapp/test/i.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6084">
+          <caret line="338" column="7" lean-forward="false" selection-start-line="338" selection-start-column="7" selection-end-line="338" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow_web/src/components/detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow_web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow_web/src/components/list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessDefinitionServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="47" column="31" lean-forward="true" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e08819dd-fae1-4e5e-8b00-14fe6296cdc1/console.sql">
+    <entry file="file://$PROJECT_DIR$/designExplorer/src/main/java/com/jg/explorer/ProcessServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="408">
+          <caret line="58" column="17" lean-forward="false" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow_web/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../test/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflow/src/main/java/com/jg/workflow/process/ProcessManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="97" column="18" lean-forward="false" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow_web/src/components/listItem.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow_web/src/components/processDefinition.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#373#399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow_web/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#140#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../taikeWork/officeplatform/modules/explorer/src/main/webapp/mobile/src/components/My.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flow_web/src/Index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1659,6 +1741,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>react-DefinitelyTyped</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

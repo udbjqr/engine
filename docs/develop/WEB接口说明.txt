@@ -11,6 +11,14 @@ http://192.168.1.198:8080/designServlet/
 	'data': 返回值
 }
 
+流程定义：
+url:processDefinition
+列表：
+{"type":"list"}
+此列表仅返回版本号最大的可用的流程定义。
+读明细：
+{	"type":"load",	"definitionId":225}
+
 流程设计：
 url: FlowDesign
 列表：

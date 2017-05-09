@@ -52,7 +52,7 @@ public final class UserExpressionUtil {
 
 
 		StringBuilder builder = new StringBuilder();
-		for (User employee : getlists(names, companyId)) {
+		for (User employee : getLists(names, companyId)) {
 			builder.append(employee.get("login_name").toString()).append(",");
 		}
 		if (builder.length() > 1) {
@@ -62,7 +62,7 @@ public final class UserExpressionUtil {
 		return builder.toString();
 	}
 
-	public static List<User> getlists(String names, Integer companyId) {
+	public static List<User> getLists(String names, Integer companyId) {
 		ArrayList<User> tempUsers = new ArrayList<>();
 		Company company = Context.getCompanyById(companyId);
 		com.jg.identification.Department department;

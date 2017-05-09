@@ -36,7 +36,9 @@ public class SystemVarResolver implements Resolver {
 
 		switch (systemVarName) {
 			case CURRENTOPERATOR:
-				return Context.getCurrentOperatorUser().getId();
+				return Context.getCurrentOperatorUser();
+			case SUPERIOR:
+				return Context.getCurrentOperatorUser().getParent();
 		}
 
 		return null;
@@ -45,6 +47,7 @@ public class SystemVarResolver implements Resolver {
 
 	enum SystemVarName {
 		//当前操作人对象
-		CURRENTOPERATOR
+		CURRENTOPERATOR,
+		SUPERIOR
 	}
 }
