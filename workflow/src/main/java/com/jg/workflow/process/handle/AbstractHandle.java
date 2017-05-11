@@ -35,15 +35,15 @@ public abstract class AbstractHandle implements Handle {
 
 
 	@Override
-	public HttpResult run(User user, Task task, Module module, Process processData, JSONObject jsonData) {
-		HttpResult httpResult = beforeRun(user, task, module, processData, jsonData);
+	public HttpResult run(User user, Task task, Module module, Process process, JSONObject jsonData) {
+		HttpResult httpResult = beforeRun(user, task, module, process, jsonData);
 		if (httpResult != null) {
 			return httpResult;
 		}
 
-		httpResult = execute(user, task, module, processData, jsonData);
+		httpResult = execute(user, task, module, process, jsonData);
 
-		httpResult = afterRun(user, task, module, processData, jsonData, httpResult);
+		httpResult = afterRun(user, task, module, process, jsonData, httpResult);
 
 		return httpResult;
 	}

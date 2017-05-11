@@ -27,12 +27,20 @@ public interface TaskManager {
 
 	/**
 	 * 对一个任务进行完成操作.
-	 *
+	 * <p>
 	 * 此方法调用任务的完成操作.
+	 *
 	 * @param taskId 需要完成的任务对象.
 	 */
 	void complete(int taskId);
 
+	/**
+	 * 得到一个任务对象
+	 *
+	 * @param taskId 任务Id
+	 * @return 任务对象
+	 */
+	Task getTask(int taskId);
 	/**
 	 *
 	 */

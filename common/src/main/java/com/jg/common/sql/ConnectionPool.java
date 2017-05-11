@@ -15,6 +15,8 @@ import java.util.Map;
  * 此对象为单一对象
  * <p>
  * 此对象支持JDBC的连接池,同时保持一个ResultSet和本对象的映射,以便于在关闭resultSet的时候能找到相对应的connect.
+ * <p>
+ * 当一个线程请求连接时，先判断是否已经提供过连接，如果有，返回原连接，如果没有，重新提供连接
  *
  * @author yimin
  */
@@ -22,18 +24,17 @@ class ConnectionPool {
 	protected static final Logger logger = LogManager.getLogger(ConnectionPool.class.getName());
 	final Map<Connection, MyConnection> rc = new Hashtable<>();
 
+	private final Map<Thread, MyConnection> tc = new Hashtable<>();
 	private final LinkedList<MyConnection> myConnections = new LinkedList<>();
 	private MyConnection nowFree = null;
 	private int size = 0;
 
-	private final int maxPoolNumber;
 	private final int connectionTimeOut;
 	private final AbstractDataBaseHandle handler;
 
 	ConnectionPool(int maxPoolNumber, int connectionTimeOut, AbstractDataBaseHandle handler) {
 		this.handler = handler;
 		this.connectionTimeOut = connectionTimeOut * 1000 * 60;
-		this.maxPoolNumber = maxPoolNumber;
 
 		while (size < maxPoolNumber) {
 			Connection connection = handler.getNewJDBCConnection();
@@ -42,7 +43,12 @@ class ConnectionPool {
 	}
 
 	synchronized Connection getFreeConn() {
-		MyConnection now = nowFree;
+		MyConnection now = tc.get(Thread.currentThread());
+		if (now != null) {
+			return now;
+		}
+
+		now = nowFree;
 		// 找到一个空闲的连接.
 		for (int i = 1; now.busy; i++) {
 			if (i % size == 0) {
@@ -58,8 +64,10 @@ class ConnectionPool {
 			now = now.next;
 		}
 
+		now.thread = Thread.currentThread();
+		tc.put(now.thread, now);
 		nowFree = now.next;
-		return handleIdle(now).setBusy(true);
+		return handleIdle(now).setBusy();
 	}
 
 	private MyConnection handleIdle(MyConnection connection) {
@@ -91,7 +99,9 @@ class ConnectionPool {
 
 	void closeConnection(Connection con) {
 		try {
-			rc.get(con).close();
+			MyConnection myConnection = rc.get(con);
+			myConnection.close();
+			tc.remove(myConnection.thread);
 		} catch (SQLException e) {
 			logger.error("关闭连接出现异常", e);
 		}

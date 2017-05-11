@@ -5,7 +5,10 @@ import com.jg.common.result.HttpResult;
 import com.jg.identification.Company;
 import com.jg.workflow.Context;
 import com.jg.workflow.exception.TaskIsNull;
+import com.jg.workflow.process.handle.Handle;
+import com.jg.workflow.process.module.ModuleImpl;
 import com.jg.workflow.task.Task;
+import com.jg.workflow.task.TaskImpl;
 import com.jg.workflow.task.TaskManagerImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -33,6 +36,8 @@ public class TaskServlet extends BaseServlet {
 		TaskManagerImpl taskManager = (TaskManagerImpl) Context.getTaskManager(company);
 
 		switch (type) {
+			case load:
+				return load(taskManager, jsonData);
 			case loadmytasks:
 				return loadMyTasks(taskManager);
 			case handle:
@@ -41,6 +46,56 @@ public class TaskServlet extends BaseServlet {
 				log.error("未找到此类型定义的操作。type:" + type.name());
 				return UNKNOWN;
 		}
+	}
+
+	private HttpResult load(TaskManagerImpl taskManager, JSONObject jsonData) {
+		Integer taskId = jsonData.getInteger("taskId");
+		if (taskId == null) {
+			return NO_SET_REQUEST_TYPE.clone().setMessage("未找到需要的参数：taskId");
+		}
+		TaskImpl task;
+		try {
+			task = (TaskImpl) taskManager.getTask(taskId);
+		} catch (TaskIsNull taskIsNull) {
+			return NO_SET_REQUEST_TYPE.clone().setMessage("指定的Id无法找到对应的任务,或任务当前非激活状态，id:" + taskId);
+		}
+
+		HttpResult result = SUCCESS.clone().addInfoToValue("task", task, "id", "execution_id", "module_id", "handle_id", "due_time", "flag", "definition_id");
+
+
+		ModuleImpl module = (ModuleImpl) task.getDefinition().getModule();
+		Handle queryHandle = module.getQueryHandle();
+		if (queryHandle == null) {
+			return HANDLE_NOT_ASSIGN.clone().addInfoToValue("moudle", module.getId());
+		}
+
+		HttpResult query = queryHandle.run(null, task, module, task.getProcess(), jsonData);
+
+		JSONObject isShows = (JSONObject) task.getDefinition().getCanSeeColumn();
+		JSONObject modifications = (JSONObject) task.getDefinition().getCanSeeColumn();
+		JSONObject values = query.getData();
+
+		@SuppressWarnings("unchecked")
+		List<JSONObject> formContent = (List<JSONObject>) module.getFormStructure().get("content");
+
+		String key;
+		for (JSONObject item : formContent) {
+			key = item.getString("id");
+
+			if (isShows != null && isShows.containsKey(key)) {
+				item.put("isShow", isShows.get(key));
+			}
+			if (values != null && values.containsKey(key)) {
+				item.put("value", values.get(key));
+			}
+			if (modifications != null && modifications.containsKey(key)) {
+				item.put("isModify", modifications.get(key));
+			}
+		}
+
+		result.addInfoToValue("taskStructure", formContent);
+
+		return result;
 	}
 
 	private HttpResult handleTask(JSONObject jsonData, TaskManagerImpl taskManager) {

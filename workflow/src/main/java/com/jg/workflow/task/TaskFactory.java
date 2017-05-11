@@ -20,7 +20,7 @@ public final class TaskFactory extends AbstractPersistenceFactory<TaskImpl> {
 		sequenceField.setSerial("seq_task");
 
 		addField("execution_id", Integer.class, null, false, false);
-		addField("defition_id", Integer.class, null, false, false);
+		addField("definition_id", Integer.class, null, false, false);
 		addField("create_time", Date.class, "now()", false, false);
 		addField("due_time", Date.class, "now()", false, false);
 		addField("module_id", Integer.class, null, false, false);
@@ -46,7 +46,7 @@ public final class TaskFactory extends AbstractPersistenceFactory<TaskImpl> {
 
 	@Override
 	protected String setSelectStr() {
-		selectStr = " select * from (select t.*,getTaskDefition(d.definition_id,t.defition_id)->>'name' as name from task t inner join process_data d on t.execution_id = d.id) t ";
+		selectStr = " select t.* from (select t.*,getTaskDefinition(d.definition_id,t.definition_id)->>'name' as name from task t inner join process_data d on t.execution_id = d.id) t ";
 
 		return selectStr;
 	}

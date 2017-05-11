@@ -10,6 +10,8 @@ import com.jg.workflow.process.handle.HandleType;
 import com.jg.workflow.process.module.Module;
 import com.jg.workflow.task.Task;
 
+import static com.jg.workflow.process.handle.common.FormDataFactory.FORM_DATA_FACTORY;
+
 
 /**
  * 通用的查询操作方式
@@ -29,38 +31,34 @@ public class ListClass extends AbstractHandle {
 		return url;
 	}
 
-	public HttpResult run(User user, Task task, Module module, Process processData, JSONObject jsonData) {
-		JSONObject resultJson = new JSONObject();
+	public HttpResult run(User user, Task task, Module module, Process process, JSONObject jsonData) {
+		JSONObject resultJson = null;
 		//表单数据
-		FormData formData = null;
+		FormData formData;
 		//表单ID
-		Integer formData_Id = null;
-		//获得功能对应的空表单
-		JSONObject formStructure = module.getFormStructure();
-		resultJson.put("formStructure", formStructure);
+		Integer formData_Id;
 
 		//查询有没有已存在的表单数据
-		JSONObject dataFromProcess = processData.get("data");
+		JSONObject dataFromProcess = process.get("data");
 		//找到表单数据ID
 		if (null != dataFromProcess) {
-			formData_Id = processData.getModuleInstanceId(module.getId());
+			formData_Id = process.getModuleInstanceId(module.getId());
+
+			if (null != formData_Id) {
+				formData = FORM_DATA_FACTORY.getObject("id", formData_Id);
+
+				if (null != formData) {
+					resultJson = formData.get("form_data");
+				}
+			}
 		}
-		if (null != formData_Id) {
-			formData = FormDataFactory.getInstance().getObject("id", formData_Id);
-		}
-		if (null != formData) {
-			JSONObject formDataJson = formData.get("form_data");
-			resultJson.put("formData", formDataJson);
-		}
-		resultJson.put("task_id", task.getId());
-		resultJson.put("processData", processData);
-		resultJson.put("jsonData", jsonData);
+
 		return new HttpResult(0, "", true, resultJson);
 	}
 
 	@Override
 	public Object getFormValue(String name, int formId) {
-		FormData data = FormDataFactory.getInstance().getObject("id", formId);
+		FormData data = FORM_DATA_FACTORY.getObject("id", formId);
 		if (data != null) {
 			return ((JSONObject) data.get("form_data")).get(name);
 		}

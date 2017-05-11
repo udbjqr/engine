@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-05-05.15:22:33.116</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1761</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-05-11.11:39:53.977</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1925</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -169,9 +169,9 @@
       <Comment>保存抄送至数据。</Comment>
       <StateNumber>992</StateNumber>
     </table>
-    <routine id="37" parent="3" name="gettaskdefition">
+    <routine id="37" parent="3" name="gettaskdefinition">
       <ObjectId>16773</ObjectId>
-      <StateNumber>1692</StateNumber>
+      <StateNumber>1925</StateNumber>
       <ArgumentsDefinition>defitionid integer, taskid integer</ArgumentsDefinition>
       <ResultsDefinition>jsonb</ResultsDefinition>
       <LanguageName>sql</LanguageName>
@@ -987,10 +987,10 @@ execution_id</ColNames>
       <DataType>integer|0</DataType>
       <StateNumber>990</StateNumber>
     </column>
-    <column id="166" parent="35" name="defition_id">
+    <column id="166" parent="35" name="definition_id">
       <Position>3</Position>
       <DataType>integer|0</DataType>
-      <StateNumber>990</StateNumber>
+      <StateNumber>1924</StateNumber>
     </column>
     <column id="167" parent="35" name="create_time">
       <Position>4</Position>

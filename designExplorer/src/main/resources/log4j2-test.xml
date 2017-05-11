@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %C{2}.%M - %msg%xEx%n"/>
+		</Console>
+		<Console name="TraceConsole" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %C{2}.%M line:%L thread:%t - %msg%xEx%n"/>
+		</Console>
+		<Console name="ErrorConsole" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %C{2}.%M line:%L thread:%t - %msg%xEx%n"/>
+		</Console>
+
+		<RollingFile name="TraceFile" fileName="${sys:catalina.home}/logs/jg/trace.log"
+		             filePattern="${sys:catalina.home}/logs/jg/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+		<PatternLayout pattern="%d{yyyy.MM.dd HH:mm:ss.SSS} %-5level %C{2}.%M line:%L thread:%t - %msg%xEx%n"/>
+		<SizeBasedTriggeringPolicy size="20 MB"/>
+		</RollingFile>
+
+		<RollingFile name="com.jg.file" fileName="${sys:catalina.home}/logs/jg/trace.log"
+		             filePattern="${sys:catalina.home}/logs/jg/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout pattern="%d{yyyy.MM.dd HH:mm:ss.SSS} %-5level %C{2} line:%L thread:%t - %msg%xEx%n"/>
+			<SizeBasedTriggeringPolicy size="20 MB"/>
+		</RollingFile>
+	</appenders>
+
+	<loggers>
+		<!--将跟踪内容输出到其他文件。包括异常在内。-->
+		<Logger name="com.jg" level="trace" additivity="false">
+			<AppenderRef ref="com.jg.file"/>
+			<AppenderRef ref="TraceConsole"/>
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="TraceFile"/>
+			<AppenderRef ref="TraceConsole"/>
+		</Root>
+	</loggers>
+</configuration>

@@ -20,7 +20,6 @@
 		mounted() {
 			this.$http.post('/designServlet/processDefinition', {'type': 'list'})
 				.then(m => {
-					console.log(m.data);
 					this.loadList = m.data.data.list;
 				});
 		},

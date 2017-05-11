@@ -304,8 +304,7 @@ public abstract class AbstractPersistence implements Persistence {
 		return user == null || user.canViewField(fieldName);
 	}
 
-	public void setIdBySequence()
-	{
+	public void setIdBySequence() {
 		if (factory.sequenceField != null) {
 			set("id", dbHelper.getNextID(factory.sequenceField.serial));
 		}

@@ -14,4 +14,4 @@
 当前操作人：
 	S_CurrentOperator //此值取系统当中的当前操作人对象。
 上级：
-	Superior    //
+	S_Superior    //取当前操作人的上级对象

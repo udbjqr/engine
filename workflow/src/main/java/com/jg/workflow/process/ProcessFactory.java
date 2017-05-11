@@ -29,7 +29,6 @@ public final class ProcessFactory extends AbstractPersistenceFactory<ProcessImpl
 		this.sequenceField = addField("id", Integer.class, "nextval('seq_process_data')", true, true);
 		sequenceField.setSerial("seq_process_data");
 
-		setIsCheck(false);
 		init();
 	}
 

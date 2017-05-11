@@ -109,7 +109,7 @@ public final class StringUtil {
 				return "\"" + object + "\"";
 			} else if (object instanceof Date) {
 				synchronized (format) {
-					return format.format(object);
+					return "\"" + format.format(object) + "\"";
 				}
 			} else {
 				return object.toString();

@@ -42,17 +42,18 @@ public class TestProcessManager {
 
 	@Test
 	public void testStrartProcess() {
-		processManager.startProcess(208);
+		processManager.startProcess(208, null);
 	}
 
 
 	@Test
 	public void testListProcessDifinition() {
-		List<ProcessDefinition> processDefinitions = processManager.getAllProcessDefinitions("",company.getId());
+		List<ProcessDefinition> processDefinitions = processManager.getAllProcessDefinitions("", company.getId());
 		processDefinitions.forEach(processDefinition -> {
 			log.info(processDefinition.getId());
 		});
 	}
+
 	@Test
 	public void testSupProcessDefinition() {
 		processManager.suspendProcessDefinition(208);

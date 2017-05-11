@@ -31,7 +31,18 @@ public interface Module extends Persistence {
 	 *
 	 * @return 查询操作对象, 多定义随机返回一个
 	 */
-	Handle getQuestHandle();
+	Handle getQueryHandle();
+
+	/**
+	 * 得到一个模块的新增操作.
+	 * <p>
+	 * 如果有多个操作，返回查询到的第一个
+	 * <p>
+	 * 如果未找到对应的值将弹出NoSuchElementException异常
+	 *
+	 * @return 查询操作对象, 多定义随机返回一个
+	 */
+	Handle getAddHandle();
 
 	/**
 	 * 得到表单的json对象.
@@ -49,6 +60,7 @@ public interface Module extends Persistence {
 
 	/**
 	 * 判断操作是否对应着此模块
+	 *
 	 * @param handle 需要对比的操作
 	 * @return true 是存在此模块当中
 	 */

@@ -83,7 +83,7 @@ public abstract class AbstractPersistenceFactory<T extends AbstractPersistence> 
 
 	private boolean checkCondition(String key, Object value) {
 		if (value == null) {
-			logger.warn("未指定需要查找的对象，返回空。class:{},key:{},value:null", this.getClass().getSimpleName(), key);
+			logger.debug("未指定需要查找的对象，返回空。class:{},key:{},value:null", this.getClass().getSimpleName(), key);
 			return false;
 		}
 
@@ -114,7 +114,7 @@ public abstract class AbstractPersistenceFactory<T extends AbstractPersistence> 
 
 		t = createObject(null);
 
-		if (readFromDB(t, "select * from " + tableName + " where " + key + " = " + dbHelper.getString(value))) {
+		if (readFromDB(t, selectStr + " where " + key + " = " + dbHelper.getString(value))) {
 			//读取到数据后进行初始化动作。
 			t.init();
 

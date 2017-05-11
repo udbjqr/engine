@@ -45,7 +45,7 @@ public class ModuleVarResolver implements Resolver {
 				return null;
 			}
 
-			Handle handle = module.getQuestHandle();
+			Handle handle = module.getQueryHandle();
 			return handle.getFormValue(s[1], moduleInstanceId);
 		} catch (NumberFormatException e) {
 			log.trace("模块变量解析，无法解析模块名。退出" + name);

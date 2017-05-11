@@ -8,8 +8,8 @@ package com.jg.workflow.process.handle;
  * @author yimin
  */
 public enum HandleType {
-	//编辑
-	Edit,
+	//新增加
+	Add,
 	//审核
 	Audit,
 	//列表

@@ -26,11 +26,11 @@ public interface Handle {
 	 *
 	 * @param module      指定的模块
 	 * @param task        指定的任务
-	 * @param processData 流程数据对象，此对象保存所有流程的数据
+	 * @param process 流程数据对象，此对象保存所有流程的数据
 	 * @param jsonData    此次需要操作的数据
 	 * @return 返回一个错误提示，正常结束返回
 	 */
-	HttpResult run(User user, Task task, Module module, Process processData, JSONObject jsonData);
+	HttpResult run(User user, Task task, Module module, Process process, JSONObject jsonData);
 
 	/**
 	 * 对操作做回退操作

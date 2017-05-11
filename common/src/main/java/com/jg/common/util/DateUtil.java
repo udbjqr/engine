@@ -19,7 +19,11 @@ public class DateUtil {
 		}
 	}
 
-	public static Date toDateNowAddInterval(long durationtime) {
-		return new Date(System.currentTimeMillis() + durationtime);
+	public static Date toDateNowAddInterval(Long durationTime) {
+		if(durationTime == null){
+			return null;
+		}
+
+		return new Date(System.currentTimeMillis() + durationTime);
 	}
 }

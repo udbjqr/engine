@@ -11,7 +11,7 @@ import com.jg.identification.User;
  */
 
 public class ProcessDefinitionFactory extends AbstractPersistenceFactory<ProcessDefinitionImpl> {
-	public static final ProcessDefinitionFactory PROCESS_DEFNITION_FACTORY = new ProcessDefinitionFactory();
+	public static final ProcessDefinitionFactory PROCESS_DEFINITION_FACTORY = new ProcessDefinitionFactory();
 
 	private ProcessDefinitionFactory() {
 		this.tableName = "process_definition";
@@ -33,7 +33,7 @@ public class ProcessDefinitionFactory extends AbstractPersistenceFactory<Process
 	}
 
 	public static ProcessDefinitionFactory getInstance() {
-		return PROCESS_DEFNITION_FACTORY;
+		return PROCESS_DEFINITION_FACTORY;
 	}
 
 
@@ -50,10 +50,18 @@ public class ProcessDefinitionFactory extends AbstractPersistenceFactory<Process
 	@Override
 	public synchronized ProcessDefinitionImpl getObject(String key, Object value) {
 		Integer id_value = dbHelper.selectOneValues("select id from process_definition p where exists(select 1 from process_definition d where d." + key + " = " + dbHelper.getString(value) + " and p.name = d.name) order by version desc limit 1");
-		if (id_value == null) {
-			return null;
-		} else {
-			return super.getObject("id", id_value);
-		}
+
+		return (id_value == null) ? null : super.getObject("id", id_value);
+	}
+
+	/**
+	 * 得到流程定义绝对的对象.
+	 * <p>
+	 * 此方法仅使用Id做为查找标准。
+	 * <p>
+	 * 使用此方法得到指定流程对象的绝对对象。
+	 */
+	public synchronized ProcessDefinitionImpl getAbsolutelyObjectById(Object value) {
+		return super.getObject("id", value);
 	}
 }

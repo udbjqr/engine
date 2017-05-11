@@ -3,17 +3,20 @@
 import Vue from 'vue'
 import axios from 'axios'
 import VueRouter from 'vue-router'
-import processDefinition from './components/processDefinition';
-import Index from './Index';
+import processDefinition from './components/definition/processDefinition.vue';
+import myTask from './components/myTask/myTask.vue';
+import Index from './Index.vue';
 
 Vue.use(VueRouter);
+//noinspection JSUnusedGlobalSymbols
 Vue.prototype.$http = axios;
 
 axios.defaults.timeout = 5000;                        //响应时间
 Vue.config.productionTip = false;
 
 const routes = [
-	{path: '/processDefinition', component: processDefinition}
+	{path: '/processDefinition', component: processDefinition},
+	{path: '/myTask', component: myTask}
 ];
 
 const router = new VueRouter({
@@ -25,6 +28,6 @@ new Vue({
 	el: '#app',
 	router,
 	template: '<Index/>',
-	components: { Index }
+	components: {Index}
 });
 

@@ -24,7 +24,7 @@ public class AddClass extends AbstractHandle {
 
 	public AddClass() {
 		super("initiatecom");
-		this.type = HandleType.Edit;
+		this.type = HandleType.Add;
 	}
 
 	@Override
@@ -38,12 +38,12 @@ public class AddClass extends AbstractHandle {
 	}
 
 	@Override
-	protected HttpResult execute(User user, Task task, Module module, Process processData, JSONObject jsonData) {
+	protected HttpResult execute(User user, Task task, Module module, Process process, JSONObject jsonData) {
 		//表单数据
 		FormData form = null;
 
 		//找到表单数据ID
-		Integer formData_Id = processData.getModuleInstanceId(module.getId());
+		Integer formData_Id = process.getModuleInstanceId(module.getId());
 
 		if (null != formData_Id) {
 			form = formDataFactory.getObject("id", formData_Id);
@@ -65,14 +65,16 @@ public class AddClass extends AbstractHandle {
 				if (user != null) {
 					form.set("create_user", user.getId());
 				}
+
+				form.setIdBySequence();
 				//虽否被锁，0：未被锁，1：被锁
 				form.set("lock", 0);
 				form.set("flag", 1);
 				form.set("create_time", new Date(System.currentTimeMillis()));
-				form.set("module_id", module.get("id"));
+				form.set("module_id", module.getId());
 
 				//把表单id更新进流程数据
-				processData.setModuleValueId(module.getId(), form.get("id"));
+				process.setModuleValueId(module.getId(), form.get("id"));
 			}
 			form.set("form_data", formData);
 		} catch (WriteValueException e) {

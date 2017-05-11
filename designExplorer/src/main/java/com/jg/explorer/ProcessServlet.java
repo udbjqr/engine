@@ -38,10 +38,17 @@ public class ProcessServlet extends BaseServlet {
 				return startProcess(processManager, jsonData);
 			case load:
 				return loadProcessDetail(processManager, jsonData);
+			case myprocesslist:
+				return getMyProcessList(processManager, jsonData, servletData, company);
 			default:
 				log.error("未找到此类型定义的操作。type:" + type.name());
 				return UNKNOWN;
 		}
+	}
+
+	private HttpResult getMyProcessList(ProcessManager processManager, JSONObject jsonData, ServletData servletData, Company company) {
+//TODO		processManager.getMyInProcesses()
+		return UNKNOWN;
 	}
 
 	private HttpResult loadProcessDetail(ProcessManager processManager, JSONObject jsonData) {
@@ -54,7 +61,7 @@ public class ProcessServlet extends BaseServlet {
 		if (list != null) {
 			HttpResult result = SUCCESS.clone().setListToData("detail", list, "id", "task_id", "employee_id", "flag");
 			result.addInfoToValue("process", process, "id", "name", "sponsor", "flag");
-			result.addInfoToValue("process_defition", process.getDefinition(), "id", "model_content", "category", "view_information");
+			result.addInfoToValue("process_definition", process.getDefinition(), "id", "model_content", "category", "view_information");
 
 			return result;
 		}
@@ -67,9 +74,15 @@ public class ProcessServlet extends BaseServlet {
 		if (definitionId == null) {
 			return NO_SET_REQUEST_TYPE.clone().setMessage("未找到需要的参数：definitionId");
 		}
+
+		JSONObject variable = (JSONObject) jsonData.get("variable");
+		if (variable == null) {
+			return NO_SET_REQUEST_TYPE.clone().setMessage("未找到需要的参数：variable");
+		}
+
 		Process process;
 		try {
-			process = processManager.startProcess(definitionId);
+			process = processManager.startProcess(definitionId, variable);
 		} catch (ProcessDefinitionNotFount e) {
 			return NO_SET_REQUEST_TYPE.clone().setMessage("指定的流程定义Id不匹配，id：" + definitionId);
 		}

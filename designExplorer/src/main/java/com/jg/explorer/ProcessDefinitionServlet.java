@@ -7,6 +7,8 @@ import com.jg.workflow.Context;
 import com.jg.workflow.exception.ModelNotFound;
 import com.jg.workflow.process.ProcessManager;
 import com.jg.workflow.process.definition.ProcessDefinition;
+import com.jg.workflow.process.definition.TaskDefinition;
+import com.jg.workflow.process.module.ModuleImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import java.util.List;
 
 import static com.jg.common.result.HttpResult.*;
-import static com.jg.workflow.process.definition.ProcessDefinitionFactory.PROCESS_DEFNITION_FACTORY;
+import static com.jg.workflow.process.definition.ProcessDefinitionFactory.PROCESS_DEFINITION_FACTORY;
 
 /**
  * create by 17/5/9.
@@ -32,6 +34,8 @@ public class ProcessDefinitionServlet extends BaseServlet {
 		JSONObject jsonData = (JSONObject) servletData.get(JSON_DATA);
 		ProcessManager processManager = Context.getProcessManager(company);
 		switch (type) {
+			case startstru:
+				return loadStartStructure(jsonData);
 			case list:
 				return listProcessDef(processManager, company);
 			case load:
@@ -42,6 +46,28 @@ public class ProcessDefinitionServlet extends BaseServlet {
 		}
 	}
 
+	private HttpResult loadStartStructure(JSONObject jsonData) {
+		Integer definitionId = (Integer) jsonData.get("definitionId");
+		if (definitionId == null) {
+			return NO_SET_REQUEST_TYPE.clone().setMessage("未找到需要的参数：definitionId");
+		}
+
+		ProcessDefinition definition;
+		definition = PROCESS_DEFINITION_FACTORY.getObject("id", definitionId);
+		if (definition == null) {
+			return NOT_FOUND_OBJECT.clone().put("notFound", "id");
+		}
+
+		TaskDefinition startTask = definition.getStartNode();
+		ModuleImpl startModule = (ModuleImpl) startTask.getModule();
+
+		if (startModule == null) {
+			return TASK_UNAVAILABLE;
+		}
+
+		return SUCCESS.clone().addInfoToValue("module", startModule, "module_name", "form_structure", "id").addInfoToValue("handle", startModule.getAddHandle().getId());
+	}
+
 	private HttpResult loadProcessDef(JSONObject jsonData) {
 		Integer definitionId = (Integer) jsonData.get("definitionId");
 
@@ -50,12 +76,8 @@ public class ProcessDefinitionServlet extends BaseServlet {
 		}
 
 		ProcessDefinition definition;
-		try {
-			definition = PROCESS_DEFNITION_FACTORY.getObject("id", definitionId);
-			if (definition == null) {
-				return NOT_FOUND_OBJECT.clone().put("notFound", "id");
-			}
-		} catch (ModelNotFound e) {
+		definition = PROCESS_DEFINITION_FACTORY.getObject("id", definitionId);
+		if (definition == null) {
 			return NOT_FOUND_OBJECT.clone().put("notFound", "id");
 		}
 

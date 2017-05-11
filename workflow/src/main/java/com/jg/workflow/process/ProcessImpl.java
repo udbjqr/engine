@@ -14,7 +14,10 @@ import com.jg.workflow.event.ProcessStartEvent;
 import com.jg.workflow.exception.ImpossibleJumpToTask;
 import com.jg.workflow.exception.RunScriptException;
 import com.jg.workflow.expression.ExpressionControl;
-import com.jg.workflow.process.definition.*;
+import com.jg.workflow.process.definition.Link;
+import com.jg.workflow.process.definition.ProcessDefinition;
+import com.jg.workflow.process.definition.ProcessDefinitionImpl;
+import com.jg.workflow.process.definition.TaskDefinition;
 import com.jg.workflow.task.Task;
 import com.jg.workflow.task.TaskImpl;
 import org.apache.logging.log4j.LogManager;
@@ -29,6 +32,7 @@ import java.util.Map;
 import static com.jg.common.sql.DBHelperFactory.DB_HELPER;
 import static com.jg.workflow.event.EventMangerImpl.EVENT_MANGER;
 import static com.jg.workflow.expression.ExpressionControl.SCRIPT_ENGINE;
+import static com.jg.workflow.process.definition.ProcessDefinitionFactory.PROCESS_DEFINITION_FACTORY;
 import static com.jg.workflow.task.TaskFactory.TASK_FACTORY;
 
 /**
@@ -65,7 +69,7 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 			createActivityTasks();
 
 		} else if (field.name.equals("definition_id")) {
-			this.definition = ProcessDefinitionFactory.getInstance().getObject("id", value);
+			this.definition = PROCESS_DEFINITION_FACTORY.getAbsolutelyObjectById(value);
 		}
 
 		super.set(field, value);
@@ -75,7 +79,7 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 		this.activityTasks = TASK_FACTORY.getObjectsForString(" where t.flag <> 10 and t.execution_id = " + id, Context.getCurrentOperatorUser());
 
 		for (TaskImpl task : this.activityTasks) {
-			task.init(this, definition.getTaskDefinition(task.get("defition_id")));
+			task.init(this, definition.getTaskDefinition(task.get("definition_id")));
 		}
 	}
 
@@ -117,8 +121,7 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 
 	@Override
 	public String getSVGXML() {
-		//TODO 将图形化的流程定义图以SVG形式返回.
-		return null;
+		return definition.get("model_content");
 	}
 
 
@@ -194,7 +197,7 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 	 * <p>
 	 * 到这一步流程才将自身存储至持久层内.
 	 */
-	synchronized void start(ProcessDefinitionImpl definition) {
+	synchronized void start(ProcessDefinitionImpl definition, JSONObject variables) {
 		if (isStart) {
 			log.error("流程已经被启动过，无法再进行启动.");
 			return;
@@ -217,6 +220,9 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 		isStart = true;
 
 		TaskDefinition taskDefinition = definition.getStartNode();
+		//开始有一个单独的申请数据到达。直接调用保存操作。
+		TaskImpl task = getTask(taskDefinition);
+		task.run(variables);
 
 		activateTask(taskDefinition, null);
 	}
@@ -227,7 +233,7 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 	 * @return 任务对象
 	 */
 	private TaskImpl getTask(TaskDefinition taskDefinition) {
-		int taskId = DB_HELPER.selectOneValues(String.format("select COALESCE(max(id),0) from task where execution_id = %d and defition_id = %d ", id, taskDefinition.getId()));
+		int taskId = DB_HELPER.selectOneValues(String.format("select COALESCE(max(id),0) from task where execution_id = %d and definition_id = %d ", id, taskDefinition.getId()));
 
 		if (taskId > 0) {
 			return TASK_FACTORY.getObject("id", taskId).init(this, taskDefinition);

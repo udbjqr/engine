@@ -90,13 +90,21 @@ public class ModuleImpl extends AbstractPersistence implements Module {
 	}
 
 
-	public Handle getQuestHandle() {
+	public Handle getAddHandle() {
+		return getHandle(HandleType.Add);
+	}
+
+	public Handle getQueryHandle() {
+		return getHandle(HandleType.List);
+	}
+
+	private Handle getHandle(HandleType type) {
 		if (handles == null) {
 			return null;
 		}
 
 		for (Handle handle : handles) {
-			if (handle.getType().equals(HandleType.List)) {
+			if (handle.getType().equals(type)) {
 				return handle;
 			}
 		}

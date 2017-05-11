@@ -7,7 +7,7 @@ import com.jg.identification.User;
 import java.util.Date;
 
 public class FormDataFactory extends AbstractPersistenceFactory<FormData> {
-	private static final FormDataFactory instance = new FormDataFactory();
+	public static final FormDataFactory FORM_DATA_FACTORY = new FormDataFactory();
 
 	private FormDataFactory() {
 		this.tableName = "form_data";
@@ -27,7 +27,7 @@ public class FormDataFactory extends AbstractPersistenceFactory<FormData> {
 	}
 
 	public static FormDataFactory getInstance() {
-		return instance;
+		return FORM_DATA_FACTORY;
 	}
 
 	@Override

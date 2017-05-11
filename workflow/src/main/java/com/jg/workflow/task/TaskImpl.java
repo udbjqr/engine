@@ -11,8 +11,6 @@ import com.jg.identification.User;
 import com.jg.workflow.process.Process;
 import com.jg.workflow.process.definition.Link;
 import com.jg.workflow.process.definition.TaskDefinition;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.Date;
 import java.util.Set;
@@ -24,7 +22,7 @@ import java.util.Set;
  */
 
 public class TaskImpl extends AbstractPersistence implements Task {
-	private static final Logger log = LogManager.getLogger(TaskImpl.class.getName());
+//	private static final Logger log = LogManager.getLogger(TaskImpl.class.getName());
 	private TaskDefinition taskDefinition;
 	private Integer id;
 	private Process process;
@@ -41,12 +39,11 @@ public class TaskImpl extends AbstractPersistence implements Task {
 	public TaskImpl init(Process process, TaskDefinition taskDefinition) {
 		this.process = process;
 		this.taskDefinition = taskDefinition;
-		this.performer = AbstractPerformer.getPerformer(this);
 
 		if(isNewCreate) {
 			this.setIdBySequence();
 			set("execution_id", process.getId());
-			set("defition_id", taskDefinition.getId());
+			set("definition_id", taskDefinition.getId());
 			set("create_time", new Date(System.currentTimeMillis()));
 			set("due_time", DateUtil.toDateNowAddInterval(taskDefinition.getDurationTime()));
 			if (taskDefinition.getModule() != null) {
@@ -60,6 +57,7 @@ public class TaskImpl extends AbstractPersistence implements Task {
 			set("can_modify", taskDefinition.getCanModifyColumn());
 		}
 
+		this.performer = AbstractPerformer.getPerformer(this);
 		return this;
 	}
 

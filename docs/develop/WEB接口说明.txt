@@ -16,8 +16,76 @@ url:processDefinition
 列表：
 {"type":"list"}
 此列表仅返回版本号最大的可用的流程定义。
+
+读一个流程的启动前结构：
+{'type':'startstru','definitionId':225}
+返回此流程启动前的模块信息，带着结构对象
+{
+  "code": 0,
+  "data": {
+    "module": {
+      "module_name": "form",
+      "form_structure": {
+        "version": 10,
+        "content": [
+          {
+            "id": "aoof5941494397006830",
+            "type": 1,
+            "title": "单行文本"
+          },
+          {
+            "dict_name": "",
+            "values": [
+              {
+                "label": "选项一",
+                "value": 1
+              },
+              {
+                "label": "选项二",
+                "value": 2
+              },
+              {
+                "label": "选项三",
+                "value": 3
+              }
+            ],
+            "id": "orm13r41494397008355",
+            "type": 3,
+            "title": "单选框"
+          },
+          {
+            "values": [
+              {
+                "label": "年-月-日",
+                "value": "YYYY-MM-DD"
+              },
+              {
+                "label": "年-月-日 时:分",
+                "value": "YYYY-MM-DD hh:mm"
+              },
+              {
+                "label": "时:分",
+                "value": "hh:mm"
+              }
+            ],
+            "format": "YYYY-MM-DD",
+            "id": "2ncnooo1494397009860",
+            "type": 5,
+            "title": "日期"
+          }
+        ]
+      },
+      "id": 215
+    },
+    "handle": 1
+  },
+  "message": "成功"
+}
+
 读明细：
 {	"type":"load",	"definitionId":225}
+
+
 
 流程设计：
 url: FlowDesign
@@ -145,15 +213,20 @@ url:dict
 
 
 流程：
-url:Process
+url:process
+
 开始一个流程：
-	{'type':'start',
-	"definitionId":流程定义ID}
+	{
+		'type':'start',
+		'definitionId':流程定义ID,
+		'variable':{}  //根据启动前获得数据提供
+	}
 返回例子：
 {
   "code": 0,
   "data": {"processId": 410 }}
-
+读流程明细：
+{'type':'load',"processId": 410}
 
 任务：
 url:task
@@ -171,6 +244,59 @@ url:task
       }
     ]}}
 
-操作：
+执行任务操作：
 {	"type":"handle",	"taskId":281,	"variable":{}}
+
+读一个任务详细：
+{	"type":"load",	"taskId":281}
+返回：
+{
+  "code": 0,
+  "data": {
+    "task": {
+      "id": 335,
+      "execution_id": 434,
+      "module_id": 1,
+      "handle_id": 1,
+      "due_time": "2017-05-11 14:57:57",
+      "flag": 0,
+      "definition_id": 1
+    },
+    "taskStructure": [
+      {
+        "isRequired": true,
+        "isfillin": true,
+        "id": "aoof5941494397006830",
+        "type": 1,
+        "title": "第一条",
+        "value": "00"
+      },
+      {
+        "isRequired": true,
+        "isfillin": true,
+        "dict_name": "规格",
+        "values": [
+          {
+            "label": "800*600",
+            "value": "1"
+          },
+          {
+            "label": "1024*768",
+            "value": "2"
+          },
+          {
+            "label": "1920*1080",
+            "value": "3"
+          }
+        ],
+        "id": "orm13r41494397008355",
+        "type": 3,
+        "title": "单选框",
+        "value": "1"
+      }
+    ]
+  },
+  "message": "成功"
+}
+
 

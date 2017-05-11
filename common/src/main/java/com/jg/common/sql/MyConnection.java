@@ -24,6 +24,7 @@ public class MyConnection implements Connection {
 	volatile boolean busy = false;
 	long beginUserTime;
 	MyConnection next = null;
+	Thread thread = null;
 
 	public MyConnection(ConnectionPool pool, Connection connection) {
 		this.connection = connection;
@@ -33,26 +34,23 @@ public class MyConnection implements Connection {
 
 	/**
 	 * 设置忙标志.
-	 *
-	 * @param busy 是否忙。
 	 */
-	MyConnection setBusy(boolean busy) {
-		this.busy = busy;
+	MyConnection setBusy() {
+		this.busy = true;
 		beginUserTime = System.currentTimeMillis();
 		return this;
 	}
 
-	MyConnection release(Connection connection) {
+	void release(Connection connection) {
 		if (connection == null) {
 			logger.error("需要更换的数据连接为空。");
-			return this;
+			return;
 		}
 
 		pool.rc.remove(this.connection);
 		realClose();
 		this.connection = connection;
 		pool.rc.put(this.connection, this);
-		return this;
 	}
 
 	@Override
@@ -182,7 +180,7 @@ public class MyConnection implements Connection {
 
 	@Override
 	public PreparedStatement prepareStatement(String sql, int resultSetType, int resultSetConcurrency)
-					throws SQLException {
+		throws SQLException {
 		return connection.prepareStatement(sql, resultSetType, resultSetConcurrency);
 	}
 
@@ -233,7 +231,7 @@ public class MyConnection implements Connection {
 
 	@Override
 	public Statement createStatement(int resultSetType, int resultSetConcurrency, int resultSetHoldability)
-					throws SQLException {
+		throws SQLException {
 		return connection.createStatement(resultSetType, resultSetConcurrency, resultSetHoldability);
 	}
 

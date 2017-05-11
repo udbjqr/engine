@@ -72,8 +72,8 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 
 		JSONArray array = content.getJSONArray("nodes");
 		array.forEach(t -> {
-			JSONObject task = (JSONObject) t;
-			nodes.put(task.getInteger("id"), new TaskDefinition(task));
+			JSONObject taskStructure = (JSONObject) t;
+			nodes.put(taskStructure.getInteger("id"), new TaskDefinition(taskStructure));
 		});
 
 		array = content.getJSONArray("links");

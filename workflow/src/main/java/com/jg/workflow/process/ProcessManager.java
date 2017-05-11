@@ -1,5 +1,6 @@
 package com.jg.workflow.process;
 
+import com.alibaba.fastjson.JSONObject;
 import com.jg.identification.Company;
 import com.jg.identification.User;
 import com.jg.workflow.exception.ModelHasbeenDeployed;
@@ -199,8 +200,9 @@ public interface ProcessManager {
 	 * 使用当前登录的用户来启动此流程
 	 *
 	 * @param processDefinitionId 流程定义的Id
+	 * @param variables           流程启动时的变量
 	 */
-	Process startProcess(int processDefinitionId);
+	Process startProcess(int processDefinitionId, JSONObject variables);
 
 
 	/**
@@ -209,8 +211,9 @@ public interface ProcessManager {
 	 * 使用当前登录的用户来启动此流程
 	 *
 	 * @param processDefinitionName 流程定义的名称
+	 * @param variables             流程启动时的变量
 	 */
-	Process startProcessByName(String processDefinitionName);
+	Process startProcessByName(String processDefinitionName, JSONObject variables);
 
 	/**
 	 * 从任务Id获得流程对象

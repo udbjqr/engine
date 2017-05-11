@@ -68,7 +68,7 @@ public class TaskManagerImpl implements TaskManager {
 
 	@Override
 	public HttpResult handle(int taskId, JSONObject variables) {
-		TaskImpl task = checkAndGetTaskNormal(taskId);
+		TaskImpl task = (TaskImpl) getTask(taskId);
 		checkTaskIsNomal(task);
 
 		return task.run(variables);
@@ -76,13 +76,14 @@ public class TaskManagerImpl implements TaskManager {
 
 	@Override
 	public void complete(int taskId) {
-		TaskImpl task = checkAndGetTaskNormal(taskId);
+		TaskImpl task = (TaskImpl) getTask(taskId);
 		checkTaskIsNomal(task);
 
 		task.complete();
 	}
 
-	private TaskImpl checkAndGetTaskNormal(int taskId) {
+	@Override
+	public Task getTask(int taskId) {
 		ProcessImpl process = PROCESS_FACTORY.getProcessByTaskId(taskId);
 		if (process == null) {
 			throw new ProcessInstanceIsNULL("获得流程实例对象异常.请求的任务ID：" + taskId);
@@ -104,7 +105,7 @@ public class TaskManagerImpl implements TaskManager {
 
 	@Override
 	public Task setAssignee(int taskId, String users) {
-		TaskImpl task = checkAndGetTaskNormal(taskId);
+		TaskImpl task = (TaskImpl) getTask(taskId);
 		checkTaskIsNomal(task);
 
 		task.setOperators(users);
@@ -118,7 +119,7 @@ public class TaskManagerImpl implements TaskManager {
 
 		//noinspection ConstantConditions
 		DB_HELPER.selectWithRow("select distinct id from task t where  t.flag in (0,2,3) and exists(select 1 from process_run_control c where t.id = c.task_id and c.operator_id =  " + Context.getCurrentOperatorUser().getId() + ")", set -> {
-			TaskImpl task = checkAndGetTaskNormal(set.getInt("id"));
+			TaskImpl task = (TaskImpl) getTask(set.getInt("id"));
 			checkTaskIsNomal(task);
 			tasks.add(task);
 		});
@@ -128,7 +129,7 @@ public class TaskManagerImpl implements TaskManager {
 
 	@Override
 	public void insertAudit(int taskId, String users) {
-		TaskImpl task = checkAndGetTaskNormal(taskId);
+		TaskImpl task = (TaskImpl) getTask(taskId);
 		checkTaskIsNomal(task);
 		ProcessImpl process = (ProcessImpl) task.getProcess();
 
@@ -175,7 +176,7 @@ public class TaskManagerImpl implements TaskManager {
 
 	@Override
 	public void reject(int taskId) {
-		TaskImpl task = checkAndGetTaskNormal(taskId);
+		TaskImpl task = (TaskImpl) getTask(taskId);
 		ProcessImpl process = (ProcessImpl) task.getProcess();
 
 		jumpToTask(process, taskId, process.getDefinition().getStartNode().getId(), 2);
@@ -183,7 +184,7 @@ public class TaskManagerImpl implements TaskManager {
 
 	@Override
 	public void backTo(int taskId, int toTaskDefinitionId) {
-		TaskImpl task = checkAndGetTaskNormal(taskId);
+		TaskImpl task = (TaskImpl) getTask(taskId);
 		ProcessImpl process = (ProcessImpl) task.getProcess();
 
 		jumpToTask(process, taskId, toTaskDefinitionId, 3);

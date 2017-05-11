@@ -4803,19 +4803,19 @@ LABL 0 Arial,8,N</a:FontList>
 <o:Procedure Id="o56">
 <a:ObjectID>E164E04A-C5B0-4627-A21E-491FEAAD8691</a:ObjectID>
 <a:Name>获得任务ID对应的任务定义内容</a:Name>
-<a:Code>getTaskDefition</a:Code>
+<a:Code>getTaskDefinition</a:Code>
 <a:CreationDate>1493879915</a:CreationDate>
 <a:Creator>yimin</a:Creator>
 <a:ModificationDate>1493881054</a:ModificationDate>
 <a:Modifier>yimin</a:Modifier>
-<a:Procedure.Text>CREATE OR REPLACE FUNCTION %FUNC%(defitionId INT,taskId int)
+<a:Procedure.Text>CREATE OR REPLACE FUNCTION %FUNC%(definitionId INT,taskId int)
   RETURNS JSONB AS
 $func$
 SELECT task
 FROM (
        SELECT jsonb_array_elements_text(content -&gt; &#39;nodes&#39;) :: JSONB AS task
        FROM process_definition
-       WHERE id = defitionId) t
+       WHERE id = definitionId) t
 WHERE task -&gt;&gt; &#39;id&#39; = taskId::text;
 
 $func$
@@ -5869,7 +5869,7 @@ LANGUAGE sql IMMUTABLE;
 <o:Column Id="o131">
 <a:ObjectID>649D8374-B872-42DF-956F-BEC0DC950588</a:ObjectID>
 <a:Name>任务定义ID</a:Name>
-<a:Code>defition_id</a:Code>
+<a:Code>definition_id</a:Code>
 <a:CreationDate>1491363958</a:CreationDate>
 <a:Creator>Administrator</a:Creator>
 <a:ModificationDate>1491537079</a:ModificationDate>

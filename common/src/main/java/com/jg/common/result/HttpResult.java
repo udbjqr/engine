@@ -23,6 +23,7 @@ public final class HttpResult {
 	public static final HttpResult LACK_VARIABLE = new HttpResult(102, "缺少必须的参数");
 	public static final HttpResult ALREADY_EXISTS = new HttpResult(103, "已经存在，不允许再次增加");
 	public static final HttpResult TASK_UNAVAILABLE = new HttpResult(104, "任务不存在或当前不可用.");
+	public static final HttpResult HANDLE_NOT_ASSIGN = new HttpResult(105, "需要所操作未被指定.");
 	public static final HttpResult SUCCESS = new HttpResult(0, "成功", true);
 
 
@@ -51,14 +52,21 @@ public final class HttpResult {
 		return data;
 	}
 
+	/**
+	 * 构造一个返回对象.
+	 * <p>
+	 * 此方法所指定的data 参数将直接赋值。
+	 * 如果此对象可能在其他地方被调用，使用new JSONObject(data)方式传入参数。
+	 *
+	 * @param code    返回码
+	 * @param message 返回消息
+	 * @param success 是否成功
+	 * @param data    返回的数据
+	 */
 	public HttpResult(int code, String message, Boolean success, JSONObject data) {
 		this(code, message, success);
 
-		if (data == null) {
-			this.data = null;
-		} else {
-			this.data = new JSONObject(data);
-		}
+		this.data = data;
 	}
 
 	public boolean isSuccess() {
@@ -171,7 +179,6 @@ public final class HttpResult {
 	 * @return 返回自身
 	 */
 	public HttpResult addInfoToValue(String name, Persistence persistence, String... columns) {
-
 		if (builder == null) {
 			builder = new StringBuilder();
 			builder.append("{");
@@ -181,6 +188,27 @@ public final class HttpResult {
 
 		builder.append("\"").append(name).append("\"").append(":");
 		addJsonToBuilder(persistence, columns);
+
+		builder.append("}");
+		return this;
+	}
+
+	/**
+	 * 用以将数据库列表字段转成可以向前面发送的数据格式.
+	 *
+	 * @param name  需要向前台显示的名称
+	 * @param value 值
+	 * @return 返回自身
+	 */
+	public HttpResult addInfoToValue(String name, Object value) {
+		if (builder == null) {
+			builder = new StringBuilder();
+			builder.append("{");
+		} else {
+			builder.replace(builder.length() - 1, builder.length(), ",");
+		}
+
+		builder.append("\"").append(name).append("\"").append(":").append(StringUtil.converToJSONString(value));
 
 		builder.append("}");
 		return this;
@@ -200,12 +228,9 @@ public final class HttpResult {
 		return String.format(format, code, "{}", message);
 	}
 
-	public int getCode() {
-		return code;
-	}
-
 	public HttpResult clone() {
-		return new HttpResult(code, message, success, data);
+		JSONObject jsonData = data == null ? null : new JSONObject(data);
+		return new HttpResult(code, message, success, jsonData);
 	}
 
 	public HttpResult setMessage(String message) {

@@ -68,7 +68,7 @@ public class TaskDefinition {
 	}
 
 	public Long getDurationTime() {
-		return durationTime == null ? 0 : durationTime;
+		return durationTime ;
 	}
 
 	public Set<String> getCanSeeColumn() {

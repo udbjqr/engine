@@ -1,5 +1,5 @@
 <template>
-	<a href="#" v-on:click="clickProcessDef">{{name}}</a>
+	<a href="javascript:void(0)" v-on:click="clickProcessDef">{{name}}</a>
 </template>
 
 <script>
@@ -20,4 +20,3 @@
 <style>
 
 </style>
-transition

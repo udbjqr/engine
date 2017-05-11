@@ -24,7 +24,7 @@ import java.util.Map;
 import static com.jg.common.sql.DBHelperFactory.DB_HELPER;
 import static com.jg.workflow.event.EventMangerImpl.EVENT_MANGER;
 import static com.jg.workflow.process.ProcessFactory.PROCESS_FACTORY;
-import static com.jg.workflow.process.definition.ProcessDefinitionFactory.PROCESS_DEFNITION_FACTORY;
+import static com.jg.workflow.process.definition.ProcessDefinitionFactory.PROCESS_DEFINITION_FACTORY;
 
 /**
  * 流程管理器.
@@ -86,12 +86,12 @@ public class ProcessManagerImpl implements ProcessManager {
 
 	@Override
 	public List<ProcessDefinition> getAllProcessDefinitions(String condition, int companyId, int offset, int limit) {
-		return new ArrayList<>(PROCESS_DEFNITION_FACTORY.getObjectsForStringByPage(" where flag in (1,2) and company_id = " + companyId + (StringUtil.isEmpty(condition) ? "" : " and ( 1=1 and " + condition + ")"), limit, offset, Context.getCurrentOperatorUser()));
+		return new ArrayList<>(PROCESS_DEFINITION_FACTORY.getObjectsForStringByPage(" where flag in (1,2) and company_id = " + companyId + (StringUtil.isEmpty(condition) ? "" : " and ( 1=1 and " + condition + ")"), limit, offset, Context.getCurrentOperatorUser()));
 	}
 
 	@Override
 	public List<ProcessDefinition> getCanStartProcessDefinitions(int companyId, int offset, int limit) {
-		return new ArrayList<>(PROCESS_DEFNITION_FACTORY.getObjectsForStringByPage("where id IN (SELECT max(id) FROM process_definition d GROUP BY d.name) and company_id = " + companyId, limit, offset, Context.getCurrentOperatorUser()));
+		return new ArrayList<>(PROCESS_DEFINITION_FACTORY.getObjectsForStringByPage("where id IN (SELECT max(id) FROM process_definition d GROUP BY d.name) and company_id = " + companyId, limit, offset, Context.getCurrentOperatorUser()));
 	}
 
 	@Override
@@ -99,7 +99,7 @@ public class ProcessManagerImpl implements ProcessManager {
 		@SuppressWarnings("ConstantConditions")
 		Model model = ModelManagerImpl.getInstance(company).getModel(modelId);
 
-		ProcessDefinitionImpl definition = PROCESS_DEFNITION_FACTORY.getNewObject(Context.getCurrentOperatorUser());
+		ProcessDefinitionImpl definition = PROCESS_DEFINITION_FACTORY.getNewObject(Context.getCurrentOperatorUser());
 
 		definition.deploy(model, company.getId(), getContentFromGOJS(model.get("content")));
 
@@ -138,7 +138,7 @@ public class ProcessManagerImpl implements ProcessManager {
 			newData.put("id", data.get("key"));
 			newData.put("name", data.get("text"));
 			newData.put("type", ((String) data.get("category")).toUpperCase());
-			newData.put("handle", data.get("module"));
+			newData.put("handle", data.get("handle"));
 			newData.put("assignees", data.get("assignees"));
 			newData.put("module", data.get("module"));
 			array.add(newData);
@@ -220,12 +220,12 @@ public class ProcessManagerImpl implements ProcessManager {
 	}
 
 	@Override
-	public Process startProcessByName(String processDefinitionName) {
+	public Process startProcessByName(String processDefinitionName,JSONObject variables) {
 		List<ProcessDefinitionImpl> defs;
 
-		defs = PROCESS_DEFNITION_FACTORY.getObjectsForString(" where t.name = " + DB_HELPER.getString(processDefinitionName) + " order by version desc limit 1;", null);
+		defs = PROCESS_DEFINITION_FACTORY.getObjectsForString(" where t.name = " + DB_HELPER.getString(processDefinitionName) + " order by version desc limit 1;", null);
 
-		return startProcess(defs.size() > 0 ? defs.get(0) : null, processDefinitionName);
+		return startProcess(defs.size() > 0 ? defs.get(0) : null, processDefinitionName,variables);
 	}
 
 	@Override
@@ -233,7 +233,7 @@ public class ProcessManagerImpl implements ProcessManager {
 		return PROCESS_FACTORY.getProcessByTaskId(taskId);
 	}
 
-	private ProcessImpl startProcess(ProcessDefinitionImpl definition, String var) {
+	private ProcessImpl startProcess(ProcessDefinitionImpl definition, String var,JSONObject variables) {
 		if (definition == null) {
 			throw new ProcessDefinitionNotFount("流程定义未找到" + var);
 		}
@@ -244,20 +244,20 @@ public class ProcessManagerImpl implements ProcessManager {
 
 		ProcessImpl process = ProcessFactory.getInstance().createObject(Context.getCurrentOperatorUser());
 
-		process.start(definition);
+		process.start(definition, variables);
 
 		return process;
 	}
 
 	@Override
-	public Process startProcess(int processDefinitionId) {
-		ProcessDefinitionImpl definition = PROCESS_DEFNITION_FACTORY.getObject("id", processDefinitionId);
+	public Process startProcess(int processDefinitionId,JSONObject variables) {
+		ProcessDefinitionImpl definition = PROCESS_DEFINITION_FACTORY.getObject("id", processDefinitionId);
 
 		if (definition == null) {
 			throw new ProcessDefinitionNotFount("流程定义未找到,流程Id：" + processDefinitionId);
 		}
 
-		return startProcess(definition, definition.get("name"));
+		return startProcess(definition, definition.get("name"), variables);
 	}
 
 	@Override
