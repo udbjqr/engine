@@ -13,7 +13,8 @@ public enum  HttpRequestType {
 	modify,
 	list, listName, start, loadmytasks, handle, create,
 	startstru,//流程开始前的结构
-	myprocesslist, //我发起的流程列表
+	myfinishprocesslist, //我的流程列表
+	mylaunchprocesslist, //我发起的流程列表
 	load
 }
 

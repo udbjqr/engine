@@ -13,8 +13,8 @@
 
 		<RollingFile name="TraceFile" fileName="${sys:catalina.home}/logs/jg/trace.log"
 		             filePattern="${sys:catalina.home}/logs/jg/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
-		<PatternLayout pattern="%d{yyyy.MM.dd HH:mm:ss.SSS} %-5level %C{2}.%M line:%L thread:%t - %msg%xEx%n"/>
-		<SizeBasedTriggeringPolicy size="20 MB"/>
+			<PatternLayout pattern="%d{yyyy.MM.dd HH:mm:ss.SSS} %-5level %C{2}.%M line:%L thread:%t - %msg%xEx%n"/>
+			<SizeBasedTriggeringPolicy size="20 MB"/>
 		</RollingFile>
 
 		<RollingFile name="com.jg.file" fileName="${sys:catalina.home}/logs/jg/trace.log"

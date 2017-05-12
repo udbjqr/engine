@@ -225,8 +225,15 @@ url:process
 {
   "code": 0,
   "data": {"processId": 410 }}
+
 读流程明细：
 {'type':'load',"processId": 410}
+
+得到我发起的正在运行的任务：
+{'type':'MyLaunchProcessList'}
+
+得到我发起的已经完成的任务：
+{'type':'MyFinishProcessList'}
 
 任务：
 url:task

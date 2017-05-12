@@ -3,6 +3,7 @@ package com.jg.explorer;
 import com.alibaba.fastjson.JSONObject;
 import com.jg.common.result.HttpResult;
 import com.jg.identification.Company;
+import com.jg.identification.User;
 import com.jg.workflow.Context;
 import com.jg.workflow.exception.ProcessDefinitionNotFount;
 import com.jg.workflow.process.Process;
@@ -32,23 +33,39 @@ public class ProcessServlet extends BaseServlet {
 		Company company = (Company) servletData.get(COMPANY);
 		JSONObject jsonData = (JSONObject) servletData.get(JSON_DATA);
 		ProcessManager processManager = Context.getProcessManager(company);
+		User user = com.jg.identification.Context.getCurrentOperatorUser();
 
 		switch (type) {
 			case start:
 				return startProcess(processManager, jsonData);
 			case load:
 				return loadProcessDetail(processManager, jsonData);
-			case myprocesslist:
-				return getMyProcessList(processManager, jsonData, servletData, company);
+			case myfinishprocesslist:
+				return getMyFinishProcessList(processManager, user);
+			case mylaunchprocesslist:
+				return getMyLaunchProcessList(processManager, user);
 			default:
 				log.error("未找到此类型定义的操作。type:" + type.name());
 				return UNKNOWN;
 		}
 	}
 
-	private HttpResult getMyProcessList(ProcessManager processManager, JSONObject jsonData, ServletData servletData, Company company) {
-//TODO		processManager.getMyInProcesses()
-		return UNKNOWN;
+	private HttpResult getMyLaunchProcessList(ProcessManager processManager, User user) {
+		List<Process> processes = processManager.getMyInProcesses(user, "");
+		if (processes == null) {
+			return UNKNOWN;
+		}
+
+		return SUCCESS.clone().setListToData(RESULT_LIST, processes, "id", "name");
+	}
+
+	private HttpResult getMyFinishProcessList(ProcessManager processManager, User user) {
+		List<Process> processes = processManager.getMyFinishedProcesses(user, "");
+		if (processes == null) {
+			return UNKNOWN;
+		}
+
+		return SUCCESS.clone().setListToData(RESULT_LIST, processes, "id", "name");
 	}
 
 	private HttpResult loadProcessDetail(ProcessManager processManager, JSONObject jsonData) {
