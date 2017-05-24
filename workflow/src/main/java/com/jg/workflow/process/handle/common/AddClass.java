@@ -23,18 +23,8 @@ public class AddClass extends AbstractHandle {
 	protected static Logger logger = LogManager.getLogger(AddClass.class.getName());
 
 	public AddClass() {
-		super("initiatecom");
+		super(null);
 		this.type = HandleType.Add;
-	}
-
-	@Override
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	@Override
-	public String getUrl() {
-		return url;
 	}
 
 	@Override

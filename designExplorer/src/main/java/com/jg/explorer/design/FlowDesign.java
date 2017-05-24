@@ -39,7 +39,7 @@ public class FlowDesign extends BaseServlet {
 
 		switch (type) {
 			case list:
-				return SUCCESS.clone().setListToData(RESULT_LIST, MODEL_FACTORY.getMultipleObjects("company_id", company.getId(), null), "id", "name");
+				return getList(jsonData, company);
 			case modify:
 			case save:
 				Integer id = (Integer) jsonData.get(ID);
@@ -61,6 +61,15 @@ public class FlowDesign extends BaseServlet {
 				log.error("未找到此类型定义的操作。type:" + type.name());
 				return UNKNOWN;
 		}
+	}
+
+	private HttpResult getList(JSONObject data, Company company) {
+		Integer moduleId = data.getInteger("moduleId");
+		if (moduleId == null) {
+			return NO_SET_REQUEST_TYPE.clone().setMessage("未找到需要的参数：moduleId");
+		}
+
+		return SUCCESS.clone().setListToData(LIST, MODEL_FACTORY.getObjectsForString(String.format(" where company_id = %d and module_id = %d", company.getId(), moduleId), null), "id", "name");
 	}
 
 	private HttpResult loadModel(ModelManager modelManager, JSONObject jsonData) {

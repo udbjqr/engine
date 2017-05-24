@@ -12,7 +12,7 @@ import java.util.TreeMap;
 public final class HandleFactory {
 	private static final Logger logger = LogManager.getLogger(AbstractHandle.class.getPackage().getName());
 	private static final Map<Integer, Handle> handles = new TreeMap<>();
-	private static final HandleDataFactory HANDLE_DATA_FACTORY;
+	public static final HandleDataFactory HANDLE_DATA_FACTORY;
 
 	static {
 		HANDLE_DATA_FACTORY = new HandleDataFactory();

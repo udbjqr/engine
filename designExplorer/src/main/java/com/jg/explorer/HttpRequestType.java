@@ -9,6 +9,7 @@ public enum  HttpRequestType {
 	query,
 	insert,
 	delete,
+	login,
 	save,
 	modify,
 	list, listName, start, loadmytasks, handle, create,

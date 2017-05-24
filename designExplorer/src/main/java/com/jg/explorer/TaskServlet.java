@@ -6,6 +6,7 @@ import com.jg.identification.Company;
 import com.jg.workflow.Context;
 import com.jg.workflow.exception.TaskIsNull;
 import com.jg.workflow.process.handle.Handle;
+import com.jg.workflow.process.handle.HandleFactory;
 import com.jg.workflow.process.module.ModuleImpl;
 import com.jg.workflow.task.Task;
 import com.jg.workflow.task.TaskImpl;
@@ -66,7 +67,7 @@ public class TaskServlet extends BaseServlet {
 		ModuleImpl module = (ModuleImpl) task.getDefinition().getModule();
 		Handle queryHandle = module.getQueryHandle();
 		if (queryHandle == null) {
-			return HANDLE_NOT_ASSIGN.clone().addInfoToValue("moudle", module.getId());
+			return HANDLE_NOT_ASSIGN.clone().addInfoToValue("module", module.getId());
 		}
 
 		HttpResult query = queryHandle.run(null, task, module, task.getProcess(), jsonData);
@@ -94,6 +95,10 @@ public class TaskServlet extends BaseServlet {
 		}
 
 		result.addInfoToValue("taskStructure", formContent);
+
+		//增加操作对应的按钮
+		Handle handle = HandleFactory.getHandle(task.get("handle_id"));
+		result.addInfoToValue("Additional", handle.getAdditionalHandle());
 
 		return result;
 	}
@@ -128,7 +133,7 @@ public class TaskServlet extends BaseServlet {
 		List<Task> tasks = taskManager.getMyTasks();
 
 		if (tasks != null) {
-			return SUCCESS.clone().setListToData(RESULT_LIST, tasks, "id", "execution_id", "name", "module_id", "handle_id");
+			return SUCCESS.clone().setListToData(LIST, tasks, "id", "execution_id", "name", "module_id", "handle_id");
 		}
 
 		return UNKNOWN;

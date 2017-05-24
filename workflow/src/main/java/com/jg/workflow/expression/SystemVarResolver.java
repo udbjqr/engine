@@ -25,7 +25,7 @@ public class SystemVarResolver implements Resolver {
 
 		String s_name;
 
-		if (("S_").equals(name.substring(0, 2))) {
+		if (name.length() > 2 && ("S_").equals(name.substring(0, 2))) {
 			s_name = name.substring(2);
 		} else {
 			log.trace("系统变量解析未找到对应，名称：{}，只处理名称以'S_'开头数据。", name);

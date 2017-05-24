@@ -27,6 +27,7 @@ public class ModelFactory extends AbstractPersistenceFactory<ModeImpl> {
 		addField("company_id", Integer.class, null, true, false);
 		addField("description", String.class, null, false, false);
 		addField("flag", Integer.class, 0, false, false);
+		addField("module_id", Integer.class, null, false, false);
 
 		setIsCheck(false);
 		init();

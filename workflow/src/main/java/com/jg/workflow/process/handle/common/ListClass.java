@@ -19,16 +19,8 @@ import static com.jg.workflow.process.handle.common.FormDataFactory.FORM_DATA_FA
 public class ListClass extends AbstractHandle {
 
 	public ListClass() {
-		super("reviewInput");
+		super(null);
 		this.type = HandleType.List;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	public String getUrl() {
-		return url;
 	}
 
 	public HttpResult run(User user, Task task, Module module, Process process, JSONObject jsonData) {

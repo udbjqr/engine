@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.jg.common.result.HttpResult;
 import com.jg.identification.Context;
 import com.jg.identification.User;
-import com.jg.workflow.util.TestIdentificationUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -47,7 +46,7 @@ public abstract class BaseServlet extends HttpServlet {
 	protected static final String CONTENT = "content";
 	protected static final String NAME = "name";
 	protected static final String ID = "id";
-	protected static final String RESULT_LIST = "list";
+	protected static final String LIST = "list";
 
 	@Override
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
@@ -185,11 +184,7 @@ public abstract class BaseServlet extends HttpServlet {
 	}
 
 	private void setTestValue(ServletRequest req) {
-		TestIdentificationUtil.setEmployers1();
-
-		User user = Context.getUserById(1, 3);
-		Context.setCurrentOperatorUser(user);
-		((HttpServletRequest) req).getSession().setAttribute(USER, user);
+		((HttpServletRequest) req).getSession().setAttribute(USER, Context.getCurrentOperatorUser());
 	}
 }
 

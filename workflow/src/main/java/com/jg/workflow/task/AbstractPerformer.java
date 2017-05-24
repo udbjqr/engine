@@ -200,22 +200,8 @@ public abstract class AbstractPerformer {
 			processId = process.getId(),
 			taskId = task.getId();
 
-		//当设置的是系统级的关联关系操作人的时候，从系统对象当中获得，并直接设置操作人。
-		ExpressionControl expressionControl = process.getExpressionControl();
-		Object oneUser = expressionControl.get(operators);
-
-		if (oneUser != null && oneUser instanceof User) {
-			DB_HELPER.update(String.format("insert into process_run_control(execution_id,task_id,operator_id) values(%d,%d,%d)", processId, taskId, ((User) oneUser).getId()));
-		} else {
-			List<User> users = UserExpressionUtil.getLists(operators, companyId);
-
-			//如果用户未设置操作人，将写需要设置操作人表，等待设置操作人.
-			if (users.size() == 0) {
-				//noinspection ConstantConditions
-				DB_HELPER.update(String.format("insert into process_set_operator(execution_id,task_id,sponsor,flag) VALUES (%d,%d,%d,0);", processId, taskId, Context.getCurrentOperatorUser().getId()));
-				return;
-			}
-
+		List<User> users = UserExpressionUtil.getLists(operators, companyId);
+		if (!users.isEmpty()) {
 			StringBuilder builder = new StringBuilder();
 
 			builder.append("insert into process_run_control(execution_id,task_id,operator_id) values");
@@ -228,7 +214,21 @@ public abstract class AbstractPerformer {
 			}
 
 			DB_HELPER.update(builder.toString());
+			return;
 		}
+
+		//当设置的是系统级的关联关系操作人的时候，从系统对象当中获得，并直接设置操作人。
+		ExpressionControl expressionControl = process.getExpressionControl();
+		Object oneUser = expressionControl.get(operators);
+
+		if (oneUser != null && oneUser instanceof User) {
+			DB_HELPER.update(String.format("insert into process_run_control(execution_id,task_id,operator_id) values(%d,%d,%d)", processId, taskId, ((User) oneUser).getId()));
+			return;
+		}
+
+		//如果用户未设置操作人，将写需要设置操作人表，等待设置操作人.
+		//noinspection ConstantConditions
+		DB_HELPER.update(String.format("insert into process_set_operator(execution_id,task_id,sponsor,flag) VALUES (%d,%d,%d,0);", processId, taskId, Context.getCurrentOperatorUser().getId()));
 	}
 
 	/**

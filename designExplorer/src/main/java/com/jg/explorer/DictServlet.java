@@ -53,13 +53,13 @@ public class DictServlet extends BaseServlet {
 
 		List<Dict> lists = DICT_FACTORY.getObjectsForString(" where company_id = " + company.getId() + " and dict_name = " + DB_HELPER.getString(jsonData.getString("dict_name")), user);
 
-		return SUCCESS.clone().setListToData(RESULT_LIST, lists, "label", "value");
+		return SUCCESS.clone().setListToData(LIST, lists, "label", "value");
 	}
 
 	private HttpResult list(Company company) {
 		final HttpResult[] httpResult = {null};
 
-		DB_HELPER.selectWithSet("select distinct dict_name as value,dict_name as label from data_dictionary where company_id = " + company.getId(), set -> httpResult[0] = SUCCESS.clone().setListToData(RESULT_LIST, set, "label", "value"));
+		DB_HELPER.selectWithSet("select distinct dict_name as value,dict_name as label from data_dictionary where company_id = " + company.getId(), set -> httpResult[0] = SUCCESS.clone().setListToData(LIST, set, "label", "value"));
 
 		return httpResult[0];
 	}

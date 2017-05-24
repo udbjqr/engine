@@ -67,6 +67,7 @@ public final class UserExpressionUtil {
 		Company company = Context.getCompanyById(companyId);
 		com.jg.identification.Department department;
 		com.jg.identification.Role role;
+
 		if (company == null) {
 			throw new CompanyIsNull("未定义的ID:" + companyId);
 		}
@@ -97,7 +98,7 @@ public final class UserExpressionUtil {
 					return role.getUsers();
 				}
 			} else {
-				logger.error("传入的参数格式错误，请检查，{}，参数开头只能是'E、D、R、S'，并以_ 分隔。", name);
+				logger.debug("传入的参数格式错误，请检查，{}，参数开头只能是'E、D、R、S'，并以_ 分隔。", name);
 			}
 		}
 

@@ -90,7 +90,7 @@ url:processDefinition
 流程设计：
 url: FlowDesign
 列表：
-{"type":"list"}
+{"type":"list","moduleId":215}
 修改一个流程定义：
 {	"type":"save",	'name': 'name', 'type': 'save','id': 流程定义的Id，
 	'description': 'description', 'view_information': 'view_information', 'content': JSON.parse(json)}
@@ -301,9 +301,49 @@ url:task
         "title": "单选框",
         "value": "1"
       }
-    ]
+    ],
+    "Additional":["TurnDown","Pass"]
   },
   "message": "成功"
 }
 
-
+人员：
+列表：
+{	"type":"list"}
+	返回：
+{
+  "code": 0,
+  "data": {
+    "current": 3,
+    "list": [
+      {
+        "label": "第一人",
+        "value": 1
+      },
+      {
+        "label": "第二人",
+        "value": 2
+      },
+      {
+        "label": "第三人",
+        "value": 3
+      },
+      {
+        "label": "第四人",
+        "value": 4
+      }
+    ]
+  },
+  "message": "成功"
+}
+设置当前操作人：
+{
+	"type":"login",
+	"userId":4
+}
+返回
+{
+  "code": 0,
+  "data": {},
+  "message": "成功"
+}

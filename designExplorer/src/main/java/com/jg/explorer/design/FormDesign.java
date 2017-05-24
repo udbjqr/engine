@@ -53,7 +53,7 @@ public class FormDesign extends BaseServlet {
 
 		List<ModuleImpl> list = MODULE_FACTORY.getAllObjects(user);
 		if (list != null) {
-			return SUCCESS.clone().setListToData(RESULT_LIST, list, "id", "module_name");
+			return SUCCESS.clone().setListToData(LIST, list, "id", "module_name");
 		}
 
 		return UNKNOWN;

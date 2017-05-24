@@ -82,6 +82,11 @@ public final class HttpResult {
 		return this;
 	}
 
+	public HttpResult setData(JSONObject data) {
+		this.data = data;
+		return this;
+	}
+
 	/**
 	 * 需要双引号时，自己增加.
 	 *

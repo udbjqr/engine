@@ -6,9 +6,12 @@ import com.jg.common.result.HttpResult;
 import com.jg.identification.User;
 import com.jg.workflow.process.Process;
 import com.jg.workflow.process.handle.AbstractHandle;
+import com.jg.workflow.process.handle.AdditionalHandle;
 import com.jg.workflow.process.handle.HandleType;
 import com.jg.workflow.process.module.Module;
 import com.jg.workflow.task.Task;
+
+import java.util.ArrayList;
 
 /**
  * 默认的审核操作.
@@ -16,18 +19,12 @@ import com.jg.workflow.task.Task;
 public class AuditClass extends AbstractHandle {
 
 	public AuditClass() {
-		super("reviewInput");
+		super();
+		additionalHandles = new ArrayList<>();
+		additionalHandles.add(AdditionalHandle.TurnDown);
+		additionalHandles.add(AdditionalHandle.Pass);
+
 		this.type = HandleType.Audit;
-	}
-
-	@Override
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	@Override
-	public String getUrl() {
-		return url;
 	}
 
 	@Override

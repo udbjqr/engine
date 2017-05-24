@@ -16,7 +16,7 @@
           <element id="archive" name="workflow-1.0.jar">
             <element id="module-output" name="workflow" />
           </element>
-          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.31" />
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.32" />
           <element id="archive" name="common-1.0.jar">
             <element id="module-output" name="common" />
           </element>

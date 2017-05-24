@@ -56,7 +56,7 @@ public class ProcessServlet extends BaseServlet {
 			return UNKNOWN;
 		}
 
-		return SUCCESS.clone().setListToData(RESULT_LIST, processes, "id", "name");
+		return SUCCESS.clone().setListToData(LIST, processes, "id", "name");
 	}
 
 	private HttpResult getMyFinishProcessList(ProcessManager processManager, User user) {
@@ -65,7 +65,7 @@ public class ProcessServlet extends BaseServlet {
 			return UNKNOWN;
 		}
 
-		return SUCCESS.clone().setListToData(RESULT_LIST, processes, "id", "name");
+		return SUCCESS.clone().setListToData(LIST, processes, "id", "name");
 	}
 
 	private HttpResult loadProcessDetail(ProcessManager processManager, JSONObject jsonData) {

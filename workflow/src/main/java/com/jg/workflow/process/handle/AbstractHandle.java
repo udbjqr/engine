@@ -9,6 +9,8 @@ import com.jg.workflow.task.Task;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.List;
+
 /**
  * 操作类的虚类.
  * <p>
@@ -26,13 +28,20 @@ public abstract class AbstractHandle implements Handle {
 	protected String view_name;
 	protected String prompt;
 	protected int flag;
+	protected List<AdditionalHandle> additionalHandles;
 
-	protected String url;
-
-	protected AbstractHandle(String url) {
-		this.url = url;
+	protected AbstractHandle(List<AdditionalHandle> additionalHandles) {
+		this.additionalHandles = additionalHandles;
 	}
 
+	protected AbstractHandle() {
+		this(null);
+	}
+
+	@Override
+	public List<AdditionalHandle> getAdditionalHandle() {
+		return additionalHandles;
+	}
 
 	@Override
 	public HttpResult run(User user, Task task, Module module, Process process, JSONObject jsonData) {
