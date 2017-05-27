@@ -39,7 +39,7 @@ public interface Persistence {
 	 * @param value 要更新的值
 	 * @param <T>   值的类型。
 	 */
-	<T> void set(String name, T value) throws WriteValueException;
+	<T> Persistence set(String name, T value) throws WriteValueException;
 
 	/**
 	 * 将一个数据写入指定名称的值当中
@@ -48,7 +48,7 @@ public interface Persistence {
 	 * @param value 要更新的值
 	 * @param <T>   值的类型。
 	 */
-	<T> void set(Field field, T value) throws WriteValueException;
+	<T> Persistence set(Field field, T value) throws WriteValueException;
 	/**
 	 * 刷新数据至持久层.
 	 * <p>

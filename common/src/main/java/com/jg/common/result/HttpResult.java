@@ -24,6 +24,7 @@ public final class HttpResult {
 	public static final HttpResult ALREADY_EXISTS = new HttpResult(103, "已经存在，不允许再次增加");
 	public static final HttpResult TASK_UNAVAILABLE = new HttpResult(104, "任务不存在或当前不可用.");
 	public static final HttpResult HANDLE_NOT_ASSIGN = new HttpResult(105, "需要所操作未被指定.");
+	public static final HttpResult OBJECT_USED_NOT_DELETE = new HttpResult(106, "对象已经被使用，不能删除");
 	public static final HttpResult SUCCESS = new HttpResult(0, "成功", true);
 
 

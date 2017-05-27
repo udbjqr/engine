@@ -187,12 +187,15 @@ url：FormDesign
 保存：
 	{'type':'save',
 	'id':'id',
+	'module_name':'模型名称'
 	'content':模型表单的对象。}
 列表：
 	{'type':'list'}
 	返回：
 		{.....'data':[{'id':id,'name':module_name}]}
-
+删除：
+  {'type':'delete',
+   	'id':'id'}
 数据字典：
 url:dict
 读：
@@ -308,6 +311,7 @@ url:task
 }
 
 人员：
+url:/user
 列表：
 {	"type":"list"}
 	返回：

@@ -1,10 +1,7 @@
 package com.jg.workflow.task;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.persistence.AbstractPersistence;
-import com.jg.common.persistence.AbstractPersistenceFactory;
-import com.jg.common.persistence.Field;
-import com.jg.common.persistence.WriteValueException;
+import com.jg.common.persistence.*;
 import com.jg.common.result.HttpResult;
 import com.jg.common.util.DateUtil;
 import com.jg.identification.User;
@@ -22,7 +19,7 @@ import java.util.Set;
  */
 
 public class TaskImpl extends AbstractPersistence implements Task {
-//	private static final Logger log = LogManager.getLogger(TaskImpl.class.getName());
+	//	private static final Logger log = LogManager.getLogger(TaskImpl.class.getName());
 	private TaskDefinition taskDefinition;
 	private Integer id;
 	private Process process;
@@ -40,7 +37,7 @@ public class TaskImpl extends AbstractPersistence implements Task {
 		this.process = process;
 		this.taskDefinition = taskDefinition;
 
-		if(isNewCreate) {
+		if (isNewCreate) {
 			this.setIdBySequence();
 			set("execution_id", process.getId());
 			set("definition_id", taskDefinition.getId());
@@ -105,12 +102,14 @@ public class TaskImpl extends AbstractPersistence implements Task {
 	}
 
 	@Override
-	public synchronized void set(Field field, Object value) throws WriteValueException {
+	public synchronized Persistence set(Field field, Object value) throws WriteValueException {
 		if (field.name.equals("id")) {
 			this.id = (Integer) value;
 		}
 
 		super.set(field, value);
+
+		return this;
 	}
 
 	public TaskDefinition getDefinition() {

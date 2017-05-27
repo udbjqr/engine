@@ -2,10 +2,7 @@ package com.jg.workflow.process.definition;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.persistence.AbstractPersistence;
-import com.jg.common.persistence.AbstractPersistenceFactory;
-import com.jg.common.persistence.Field;
-import com.jg.common.persistence.WriteValueException;
+import com.jg.common.persistence.*;
 import com.jg.workflow.exception.ModelAlreadyDeploy;
 import com.jg.workflow.exception.ProcessDefinitionNotIntegrity;
 import com.jg.workflow.process.model.Model;
@@ -127,7 +124,7 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 
 
 	@Override
-	public synchronized void set(Field field, Object value) throws WriteValueException {
+	public synchronized Persistence set(Field field, Object value) throws WriteValueException {
 		super.set(field, value);
 
 		if (field.name.equals("id")) {
@@ -135,5 +132,7 @@ public class ProcessDefinitionImpl extends AbstractPersistence implements Proces
 		} else if (field.name.equals("content")) {
 			buildStructure(get("content"));
 		}
+
+		return this;
 	}
 }

@@ -35,6 +35,8 @@ public class FormDesign extends BaseServlet {
 		JSONObject jsonData = (JSONObject) servletData.get(JSON_DATA);
 
 		switch (type) {
+			case delete:
+				return delete(jsonData);
 			case list:
 				return list(servletData);
 			case load:
@@ -48,10 +50,28 @@ public class FormDesign extends BaseServlet {
 		}
 	}
 
+	private HttpResult delete(JSONObject data) {
+		Integer moduleId = data.getInteger("id");
+		if (moduleId == null) {
+			return NO_SET_REQUEST_TYPE.clone().setMessage("未找到需要的参数：id");
+		}
+
+		ModuleImpl module = MODULE_FACTORY.getObject("id", moduleId);
+		if (module == null) {
+			return NOT_FOUND_OBJECT;
+		}
+
+		if (module.delete()) {
+			return SUCCESS;
+		}
+
+		return OBJECT_USED_NOT_DELETE;
+	}
+
 	private HttpResult list(ServletData servletData) {
 		User user = (User) servletData.get(USER);
 
-		List<ModuleImpl> list = MODULE_FACTORY.getAllObjects(user);
+		List<ModuleImpl> list = MODULE_FACTORY.getAllObjects(user, " order by 1 asc");
 		if (list != null) {
 			return SUCCESS.clone().setListToData(LIST, list, "id", "module_name");
 		}
@@ -62,8 +82,16 @@ public class FormDesign extends BaseServlet {
 	private HttpResult saveToModule(JSONObject jsonData, Company company, ServletData servletData) {
 		ModuleImpl module;
 
-		Integer moduleId = jsonData.getInteger("module_id");
+		Integer moduleId = jsonData.getInteger("id");
+		if (moduleId == null) {
+			return NO_SET_REQUEST_TYPE.clone().setMessage("未找到需要的参数：id");
+		}
+
 		JSONObject structure = (JSONObject) jsonData.get(CONTENT);
+		if (structure == null) {
+			structure = new JSONObject();
+		}
+
 
 		if (moduleId != null) {
 			module = MODULE_FACTORY.getObject(ID, moduleId);

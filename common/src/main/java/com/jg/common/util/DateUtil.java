@@ -20,10 +20,15 @@ public class DateUtil {
 	}
 
 	public static Date toDateNowAddInterval(Long durationTime) {
-		if(durationTime == null){
+		if (durationTime == null) {
 			return null;
 		}
 
 		return new Date(System.currentTimeMillis() + durationTime);
+	}
+
+	public static String convertNowToString() {
+		final SimpleDateFormat format = new SimpleDateFormat(InternalConstant.DATEFORMAT);
+		return format.format(new Date(System.currentTimeMillis()));
 	}
 }

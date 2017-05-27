@@ -119,12 +119,12 @@ public abstract class AbstractPersistence implements Persistence {
 	}
 
 	@Override
-	public <T> void set(String name, T value) throws WriteValueException {
-		set(getFieldByName(name), value);
+	public <T> Persistence set(String name, T value) throws WriteValueException {
+		return set(getFieldByName(name), value);
 	}
 
 	@Override
-	public synchronized void set(Field field, Object value) throws WriteValueException {
+	public synchronized Persistence set(Field field, Object value) throws WriteValueException {
 		if (field == null) {
 			WriteValueException exception = new WriteValueException("NULL", value, "请求不存在的名称");
 			logger.error("设置数据值字段为空。", exception);
@@ -133,17 +133,17 @@ public abstract class AbstractPersistence implements Persistence {
 
 		if (value == null) {
 			put(field, null);
-			return;
+			return this;
 		}
 
 		//如果本来就是同一个对象，直接退出
 		if (get(field) != null && values[field.order].equals(value)) {
-			return;
+			return this;
 		}
 
 		if (field.fieldClass == String.class) {
 			put(field, value);
-			return;
+			return this;
 		}
 
 		try {
@@ -181,6 +181,8 @@ public abstract class AbstractPersistence implements Persistence {
 			logger.error("发生未知错误。从{} 转 {}，name:{},value:{}", value.getClass().getName(), field.fieldClass.getName(), field, value, e);
 			throw exception;
 		}
+
+		return this;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -199,9 +201,13 @@ public abstract class AbstractPersistence implements Persistence {
 			}
 		}
 
-		dbHelper.update(sql);
+		int res = dbHelper.update(sql);
 
-		factory.removeObject(this);
+		if (res != -1) {
+			factory.removeObject(this);
+			return true;
+		}
+
 		return false;
 	}
 

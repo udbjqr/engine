@@ -1,10 +1,7 @@
 package com.jg.workflow.process.module;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jg.common.persistence.AbstractPersistence;
-import com.jg.common.persistence.AbstractPersistenceFactory;
-import com.jg.common.persistence.Field;
-import com.jg.common.persistence.WriteValueException;
+import com.jg.common.persistence.*;
 import com.jg.common.sql.DBHelperFactory;
 import com.jg.workflow.process.handle.Handle;
 import com.jg.workflow.process.handle.HandleFactory;
@@ -24,7 +21,7 @@ public class ModuleImpl extends AbstractPersistence implements Module {
 	}
 
 	@Override
-	public synchronized void set(Field field, Object value) throws WriteValueException {
+	public synchronized Persistence set(Field field, Object value) throws WriteValueException {
 		super.set(field, value);
 
 		if (field.name.equals("id")) {
@@ -32,6 +29,8 @@ public class ModuleImpl extends AbstractPersistence implements Module {
 		} else if (field.name.equals("form_structure")) {
 			refreshFormStructure();
 		}
+
+		return this;
 	}
 
 	private void refreshFormStructure() {

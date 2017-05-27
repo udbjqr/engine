@@ -194,6 +194,16 @@ public abstract class AbstractPersistenceFactory<T extends AbstractPersistence> 
 			user, -1, -1);
 	}
 
+	/**
+	 * 给出所有的对象的集合.
+	 *
+	 * @param user 当前用户。
+	 * @return 对象的列表
+	 */
+	public List<T> getAllObjects(User user, String order) {
+		return findMultipleObject(selectStr + (selectCondition.length() > 1 ? " where " : " ") + selectCondition + " " + order + ";", user, -1, -1);
+	}
+
 	protected Set<Integer> getLimitList(User user) {
 		if (user != null) {
 			LookOverPermission permission = user.getLookOverPermission();

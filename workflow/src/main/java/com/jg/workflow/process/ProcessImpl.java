@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.jg.common.InternalConstant;
 import com.jg.common.persistence.AbstractPersistence;
 import com.jg.common.persistence.Field;
+import com.jg.common.persistence.Persistence;
 import com.jg.common.persistence.WriteValueException;
 import com.jg.identification.Company;
 import com.jg.identification.Context;
@@ -60,7 +61,7 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 	}
 
 	@Override
-	public synchronized void set(Field field, Object value) throws WriteValueException {
+	public synchronized Persistence set(Field field, Object value) throws WriteValueException {
 		if (field.name.equals("id")) {
 			this.id = (int) value;
 
@@ -72,7 +73,7 @@ public class ProcessImpl extends AbstractPersistence implements Process {
 			this.definition = PROCESS_DEFINITION_FACTORY.getAbsolutelyObjectById(value);
 		}
 
-		super.set(field, value);
+		return super.set(field, value);
 	}
 
 	private void createActivityTasks() {
