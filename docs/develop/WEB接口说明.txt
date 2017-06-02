@@ -186,7 +186,7 @@ url：FormDesign
 	'id':模型的id.}
 保存：
 	{'type':'save',
-	'id':'id',
+	'module_id': 'id',
 	'module_name':'模型名称'
 	'content':模型表单的对象。}
 列表：

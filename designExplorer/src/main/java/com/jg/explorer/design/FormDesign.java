@@ -82,16 +82,12 @@ public class FormDesign extends BaseServlet {
 	private HttpResult saveToModule(JSONObject jsonData, Company company, ServletData servletData) {
 		ModuleImpl module;
 
-		Integer moduleId = jsonData.getInteger("id");
-		if (moduleId == null) {
-			return NO_SET_REQUEST_TYPE.clone().setMessage("未找到需要的参数：id");
-		}
+		Integer moduleId = jsonData.getInteger("module_id");
 
 		JSONObject structure = (JSONObject) jsonData.get(CONTENT);
 		if (structure == null) {
 			structure = new JSONObject();
 		}
-
 
 		if (moduleId != null) {
 			module = MODULE_FACTORY.getObject(ID, moduleId);
@@ -111,7 +107,9 @@ public class FormDesign extends BaseServlet {
 		JSONObject oldStru = module.get("form_structure");
 		structure.put("version", oldStru.getInteger("version") + 1);
 
-		module.set("module_name", jsonData.get("module_name"));
+		String moduleName = jsonData.getString("module_name");
+		if (moduleName != null)
+			module.set("module_name", moduleName);
 		module.set("update_time", new Date(System.currentTimeMillis()));
 		module.set("update_user", ((User) servletData.get(USER)).getId());
 		module.set("form_structure", structure);
